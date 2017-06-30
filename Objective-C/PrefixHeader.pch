@@ -1,0 +1,14 @@
+//
+//  PrefixHeader.pch
+//  Objective-C
+//
+//  Created by 王乙涵 on 2017/6/14.
+//  Copyright © 2017年 simpleway. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "MacroBaseClass.h"
+#import <SDAutoLayout.h>
+#endif /* PrefixHeader_pch */
