@@ -276,6 +276,10 @@
 		7CA55BAC1F06318A00ABF90B /* AppKit */ = {
 			isa = PBXGroup;
 			children = (
+				7CA55C441F065C9400ABF90B /* ExtendedTypes */,
+				7CA55C451F065C9400ABF90B /* Reference */,
+				7CA55C461F065C9400ABF90B /* Protocols */,
+				7CA55C471F065C9400ABF90B /* Classes */,
 			);
 			path = AppKit;
 			sourceTree = "<group>";
@@ -283,6 +287,10 @@
 		7CA55BAD1F06318A00ABF90B /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				7CA55C481F065C9A00ABF90B /* ExtendedTypes */,
+				7CA55C491F065C9A00ABF90B /* Reference */,
+				7CA55C4A1F065C9A00ABF90B /* Protocols */,
+				7CA55C4B1F065C9A00ABF90B /* Classes */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -290,6 +298,9 @@
 		7CA55BAE1F06318A00ABF90B /* Objective-C */ = {
 			isa = PBXGroup;
 			children = (
+				7CA55C4C1F065CA100ABF90B /* Reference */,
+				7CA55C4D1F065CA100ABF90B /* Protocols */,
+				7CA55C4E1F065CA100ABF90B /* Classes */,
 			);
 			path = "Objective-C";
 			sourceTree = "<group>";
@@ -297,6 +308,10 @@
 		7CA55BAF1F06318A00ABF90B /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				7CA55C4F1F065CA700ABF90B /* ExtendedTypes */,
+				7CA55C501F065CA700ABF90B /* Reference */,
+				7CA55C511F065CA700ABF90B /* Protocols */,
+				7CA55C521F065CA700ABF90B /* Classes */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -304,6 +319,10 @@
 		7CA55BB01F06318A00ABF90B /* WatchKit */ = {
 			isa = PBXGroup;
 			children = (
+				7CA55C531F065CAD00ABF90B /* ExtendedTypes */,
+				7CA55C541F065CAD00ABF90B /* Reference */,
+				7CA55C551F065CAD00ABF90B /* Protocols */,
+				7CA55C561F065CAD00ABF90B /* Classes */,
 			);
 			path = WatchKit;
 			sourceTree = "<group>";
@@ -1333,6 +1352,139 @@
 			children = (
 			);
 			path = Acceierate;
+			sourceTree = "<group>";
+		};
+		7CA55C441F065C9400ABF90B /* ExtendedTypes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ExtendedTypes;
+			sourceTree = "<group>";
+		};
+		7CA55C451F065C9400ABF90B /* Reference */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Reference;
+			sourceTree = "<group>";
+		};
+		7CA55C461F065C9400ABF90B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		7CA55C471F065C9400ABF90B /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		7CA55C481F065C9A00ABF90B /* ExtendedTypes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ExtendedTypes;
+			sourceTree = "<group>";
+		};
+		7CA55C491F065C9A00ABF90B /* Reference */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Reference;
+			sourceTree = "<group>";
+		};
+		7CA55C4A1F065C9A00ABF90B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		7CA55C4B1F065C9A00ABF90B /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		7CA55C4C1F065CA100ABF90B /* Reference */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Reference;
+			sourceTree = "<group>";
+		};
+		7CA55C4D1F065CA100ABF90B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		7CA55C4E1F065CA100ABF90B /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		7CA55C4F1F065CA700ABF90B /* ExtendedTypes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ExtendedTypes;
+			sourceTree = "<group>";
+		};
+		7CA55C501F065CA700ABF90B /* Reference */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Reference;
+			sourceTree = "<group>";
+		};
+		7CA55C511F065CA700ABF90B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		7CA55C521F065CA700ABF90B /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		7CA55C531F065CAD00ABF90B /* ExtendedTypes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ExtendedTypes;
+			sourceTree = "<group>";
+		};
+		7CA55C541F065CAD00ABF90B /* Reference */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Reference;
+			sourceTree = "<group>";
+		};
+		7CA55C551F065CAD00ABF90B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		7CA55C561F065CAD00ABF90B /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		EE4A03453C2C9746CD26F18D /* Pods */ = {
