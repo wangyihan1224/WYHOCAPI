@@ -102,6 +102,22 @@ static NSString *systemViewController = @"SystemViewController";
         AppServicesViewController *vc  = [AppServicesViewController new];
         vc.title = selecTitle;
         [self.navigationController pushViewController:vc animated:YES];
+    }else if ([selecTitle isEqualToString:developerToolsViewController]){
+        DeveloperToolsViewController *vc  = [DeveloperToolsViewController new];
+        vc.title = selecTitle;
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if ([selecTitle isEqualToString:graphicsAndGamesViewController]){
+        GraphicsAndGamesViewController *vc  = [GraphicsAndGamesViewController new];
+        vc.title = selecTitle;
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if ([selecTitle isEqualToString:mediaAndWebViewController]){
+        MediaAndWebViewController *vc  = [MediaAndWebViewController new];
+        vc.title = selecTitle;
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if ([selecTitle isEqualToString:systemViewController]){
+        SystemViewController *vc  = [SystemViewController new];
+        vc.title = selecTitle;
+        [self.navigationController pushViewController:vc animated:YES];
     }
 }
 //每个分区头的高度
