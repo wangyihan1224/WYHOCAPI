@@ -7,12 +7,12 @@
 //
 
 #import "AppFrameworksViewController.h"
-#import "AppKitViewController.h"
+
 #import "FoundationViewController.h"
 #import "ObjectiveCViewController.h"
 #import "UIKitViewController.h"
 #import "WatchKitViewController.h"
-static NSString *appKitViewController=@"AppKitViewController";
+
 static NSString *foundationViewController=@"FoundationViewController";
 static NSString *objectiveCViewController=@"ObjectiveCViewController";
 static NSString *uIKitViewController=@"UIKitViewController";
@@ -40,7 +40,7 @@ static NSString *templateCell = @"templateCell";
 -(NSMutableArray *)dataArray{
     if (!_dataArray) {
         _dataArray = [NSMutableArray new];
-        [_dataArray addObject:appKitViewController];
+        
         [_dataArray addObject:foundationViewController];
         [_dataArray addObject:objectiveCViewController];
         [_dataArray addObject:uIKitViewController];
@@ -66,7 +66,27 @@ static NSString *templateCell = @"templateCell";
     return cell;
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 
+    NSString *selecTitle = self.dataArray[indexPath.row];
+    if ([selecTitle isEqualToString:foundationViewController]){
+        FoundationViewController *vc  = [FoundationViewController new];
+        vc.title = selecTitle;
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if ([selecTitle isEqualToString:objectiveCViewController]){
+        ObjectiveCViewController *vc  = [ObjectiveCViewController new];
+        vc.title = selecTitle;
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if ([selecTitle isEqualToString:uIKitViewController]){
+        UIKitViewController *vc  = [UIKitViewController new];
+        vc.title = selecTitle;
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if ([selecTitle isEqualToString:watchKitViewController]){
+        WatchKitViewController *vc  = [WatchKitViewController new];
+        vc.title = selecTitle;
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

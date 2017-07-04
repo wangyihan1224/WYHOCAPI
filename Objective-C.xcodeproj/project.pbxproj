@@ -15,7 +15,6 @@
 		7C444A491EF11B2D00F99891 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C444A481EF11B2D00F99891 /* BaseViewController.m */; };
 		7C444A4E1EF11CB700F99891 /* AppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C444A4D1EF11CB700F99891 /* AppViewController.m */; };
 		7C444A571EF16C1800F99891 /* UILabelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C444A561EF16C1800F99891 /* UILabelController.m */; };
-		7C77BA5E1F0B80470035B440 /* AppKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C77BA5D1F0B80470035B440 /* AppKitViewController.m */; };
 		7C77BA611F0B80580035B440 /* FoundationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C77BA601F0B80580035B440 /* FoundationViewController.m */; };
 		7C77BA641F0B80670035B440 /* ObjectiveCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C77BA631F0B80670035B440 /* ObjectiveCViewController.m */; };
 		7C77BA671F0B80720035B440 /* UIKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C77BA661F0B80720035B440 /* UIKitViewController.m */; };
@@ -45,8 +44,6 @@
 		7C444A4D1EF11CB700F99891 /* AppViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppViewController.m; sourceTree = "<group>"; };
 		7C444A551EF16C1800F99891 /* UILabelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UILabelController.h; sourceTree = "<group>"; };
 		7C444A561EF16C1800F99891 /* UILabelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UILabelController.m; sourceTree = "<group>"; };
-		7C77BA5C1F0B80470035B440 /* AppKitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppKitViewController.h; sourceTree = "<group>"; };
-		7C77BA5D1F0B80470035B440 /* AppKitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppKitViewController.m; sourceTree = "<group>"; };
 		7C77BA5F1F0B80580035B440 /* FoundationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoundationViewController.h; sourceTree = "<group>"; };
 		7C77BA601F0B80580035B440 /* FoundationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoundationViewController.m; sourceTree = "<group>"; };
 		7C77BA621F0B80670035B440 /* ObjectiveCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectiveCViewController.h; sourceTree = "<group>"; };
@@ -279,26 +276,12 @@
 		7CA55BAB1F06318A00ABF90B /* Framework */ = {
 			isa = PBXGroup;
 			children = (
-				7CA55BAC1F06318A00ABF90B /* AppKit */,
 				7CA55BAD1F06318A00ABF90B /* Foundation */,
 				7CA55BAE1F06318A00ABF90B /* Objective-C */,
 				7CA55BAF1F06318A00ABF90B /* UIKit */,
 				7CA55BB01F06318A00ABF90B /* WatchKit */,
 			);
 			path = Framework;
-			sourceTree = "<group>";
-		};
-		7CA55BAC1F06318A00ABF90B /* AppKit */ = {
-			isa = PBXGroup;
-			children = (
-				7CA55C441F065C9400ABF90B /* ExtendedTypes */,
-				7CA55C451F065C9400ABF90B /* Reference */,
-				7CA55C461F065C9400ABF90B /* Protocols */,
-				7CA55C471F065C9400ABF90B /* Classes */,
-				7C77BA5C1F0B80470035B440 /* AppKitViewController.h */,
-				7C77BA5D1F0B80470035B440 /* AppKitViewController.m */,
-			);
-			path = AppKit;
 			sourceTree = "<group>";
 		};
 		7CA55BAD1F06318A00ABF90B /* Foundation */ = {
@@ -1379,34 +1362,6 @@
 			path = Acceierate;
 			sourceTree = "<group>";
 		};
-		7CA55C441F065C9400ABF90B /* ExtendedTypes */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ExtendedTypes;
-			sourceTree = "<group>";
-		};
-		7CA55C451F065C9400ABF90B /* Reference */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Reference;
-			sourceTree = "<group>";
-		};
-		7CA55C461F065C9400ABF90B /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Protocols;
-			sourceTree = "<group>";
-		};
-		7CA55C471F065C9400ABF90B /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
 		7CA55C481F065C9A00ABF90B /* ExtendedTypes */ = {
 			isa = PBXGroup;
 			children = (
@@ -1664,7 +1619,6 @@
 				7C444A4E1EF11CB700F99891 /* AppViewController.m in Sources */,
 				7C444A281EF119A000F99891 /* main.m in Sources */,
 				7CA55C371F063BCE00ABF90B /* AppServicesViewController.m in Sources */,
-				7C77BA5E1F0B80470035B440 /* AppKitViewController.m in Sources */,
 				7CA55C3A1F063BE500ABF90B /* DeveloperToolsViewController.m in Sources */,
 				7CA55C401F063C3C00ABF90B /* SystemViewController.m in Sources */,
 			);
