@@ -37,6 +37,8 @@ static NSString *systemViewController = @"SystemViewController";
 @implementation AppViewController
 
 -(UITableView *)appTableView{
+   
+    
     
     if (!_appTableView) {
         _appTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREENMAINWIDTH, SCREENMAINHEIGHT) style:UITableViewStyleGrouped];
