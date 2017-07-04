@@ -8,17 +8,63 @@
 
 #import "FoundationViewController.h"
 
-@interface FoundationViewController ()
-
+#import "NSArrayViewController.h"
+static NSString *nSArrayViewController=@"NSArrayViewController";
+static NSString *templateCell = @"templateCell";
+@interface FoundationViewController ()<UITableViewDelegate,UITableViewDataSource>
+@property(nonatomic,strong)UITableView *wyhTable;
+@property(nonatomic,strong)NSMutableArray *dataArray;
 @end
 
 @implementation FoundationViewController
 
+-(UITableView *)wyhTable{
+    
+    if (!_wyhTable) {
+        _wyhTable = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREENMAINWIDTH, SCREENMAINHEIGHT) style:UITableViewStylePlain];
+        _wyhTable.delegate = self;
+        _wyhTable.dataSource = self;
+        _wyhTable.separatorStyle = UITableViewCellSeparatorStyleNone;
+        [_wyhTable registerClass:[UITableViewCell class] forCellReuseIdentifier:templateCell];
+        
+    }
+    return _wyhTable;
+}
+-(NSMutableArray *)dataArray{
+    if (!_dataArray) {
+        _dataArray = [NSMutableArray new];
+        [_dataArray addObject:nSArrayViewController];
+    }
+    return _dataArray;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.view addSubview:self.wyhTable];
     // Do any additional setup after loading the view.
 }
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 1;
+}
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    
+    return self.dataArray.count;
+}
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:templateCell];
+    cell.textLabel.text = self.dataArray[indexPath.row];
+    return cell;
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSString *selecTitle = self.dataArray[indexPath.row];
+    if ([selecTitle isEqualToString:nSArrayViewController]){
+        NSArrayViewController *vc  = [NSArrayViewController new];
+        vc.title = selecTitle;
+        [self.navigationController pushViewController:vc animated:YES];
+    }
 
+}
+
+ 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
