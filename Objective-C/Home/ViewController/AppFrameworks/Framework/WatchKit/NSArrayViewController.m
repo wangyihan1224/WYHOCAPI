@@ -55,7 +55,27 @@
         .autoHeightRatio(0);
         [deslb setSd_maxWidth:@(SCREENMAINWIDTH)];
         
-        [_arrayView setupAutoHeightWithBottomView:deslb bottomMargin:10];
+        UILabel *titleLb2 = [UILabel new];
+        titleLb2.text = @"+ (instancetype)arrayWithArray:(NSArray<ObjectType> *)array;";
+        [_arrayView addSubview:titleLb2];
+        titleLb2.sd_layout
+        .topSpaceToView(deslb, 10)
+        .leftEqualToView(_arrayView)
+        .autoHeightRatio(0);
+        [titleLb2 setSd_maxWidth:@(SCREENMAINWIDTH)];
+        
+        
+        
+        UILabel *deslb2 = [UILabel new];
+        deslb2.text = @"创建并返回包含在另一个给定数组中的对象的数组。\n例子：NSArray *array1 = [NSArray new];\nNSArray *array2 = [NSArray arrayWithArray:array1];";
+        [_arrayView addSubview:deslb2];
+        deslb2.sd_layout
+        .topSpaceToView(titleLb2, 10)
+        .leftEqualToView(_arrayView)
+        .autoHeightRatio(0);
+        [deslb2 setSd_maxWidth:@(SCREENMAINWIDTH)];
+        
+        [_arrayView setupAutoHeightWithBottomView:deslb2 bottomMargin:10];
     }
     return _arrayView;
 }
