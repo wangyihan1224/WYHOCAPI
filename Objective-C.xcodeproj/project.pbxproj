@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2E9ED6A6277284CF04753CF1 /* libPods-Objective-C.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC6EBF780F90F2B9F817FAFC /* libPods-Objective-C.a */; };
+		7C31BBDB1F0C91090012AFB5 /* NSArrayEmple.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7C31BBDA1F0C91090012AFB5 /* NSArrayEmple.plist */; };
 		7C444A281EF119A000F99891 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C444A271EF119A000F99891 /* main.m */; };
 		7C444A2B1EF119A000F99891 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C444A2A1EF119A000F99891 /* AppDelegate.m */; };
 		7C444A331EF119A000F99891 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C444A321EF119A000F99891 /* Assets.xcassets */; };
@@ -30,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		0EBB9B3491D9C50013382E22 /* Pods-Objective-C.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Objective-C.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Objective-C/Pods-Objective-C.debug.xcconfig"; sourceTree = "<group>"; };
+		7C31BBDA1F0C91090012AFB5 /* NSArrayEmple.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = NSArrayEmple.plist; path = "Objective-C/Home/ViewController/AppFrameworks/Framework/WatchKit/NSArrayEmple.plist"; sourceTree = SOURCE_ROOT; };
 		7C444A231EF119A000F99891 /* Objective-C.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Objective-C.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C444A271EF119A000F99891 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7C444A291EF119A000F99891 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -1391,6 +1393,7 @@
 			children = (
 				7C47625A1F0B98E600685007 /* NSArrayViewController.h */,
 				7C47625B1F0B98E600685007 /* NSArrayViewController.m */,
+				7C31BBDA1F0C91090012AFB5 /* NSArrayEmple.plist */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -1553,6 +1556,7 @@
 			files = (
 				7C444A361EF119A000F99891 /* LaunchScreen.storyboard in Resources */,
 				7C444A331EF119A000F99891 /* Assets.xcassets in Resources */,
+				7C31BBDB1F0C91090012AFB5 /* NSArrayEmple.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
