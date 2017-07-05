@@ -80,19 +80,28 @@
         .rightEqualToView(_arrayView);
         
         //............................................................................................
-        
-        BaseView *base6 = [BaseView oneLb:@"+ (instancetype)array;" twoLb:@"创建并返回一个空数组。\n例子：NSArray *array = [NSArray array];"];
+       
+        BaseView *base6 = [BaseView oneLb:@"+ (instancetype)arrayWithObjects:(const ObjectType  _Nonnull [])objects count:(NSUInteger)cnt;" twoLb:@"创建并返回一个数组，其中包含给定的C数组中的给定数量的对象。\n例子： NSString *strings[3];\nstrings[0] = @\"first\";\nstrings[1]= @\"second\";\nstrings[2] = @\"three\";\nNSArray *arr2 = [NSArray arrayWithObjects: strings count:2];;"];
         [_arrayView addSubview:base6];
         base6.sd_layout
         .topSpaceToView(base5, 0)
         .leftEqualToView(_arrayView)
         .rightEqualToView(_arrayView);
         
+         //............................................................................................
+        
+        BaseView *base7 = [BaseView oneLb:@"+ (instancetype)arrayWithObjects:(ObjectType)firstObj, ...;" twoLb:@"创建并返回包含参数列表中的对象的数组。\n例子： NSArray *arr = [NSArray arrayWithObjects:@\"first\",@\"second\", nil];"];
+        [_arrayView addSubview:base7];
+        base7.sd_layout
+        .topSpaceToView(base6, 0)
+        .leftEqualToView(_arrayView)
+        .rightEqualToView(_arrayView);
+
         //............................................................................................
  
 
         
-        [_arrayView setupAutoHeightWithBottomView:base6 bottomMargin:0];
+        [_arrayView setupAutoHeightWithBottomView:base7 bottomMargin:0];
     }
     return _arrayView;
 }
