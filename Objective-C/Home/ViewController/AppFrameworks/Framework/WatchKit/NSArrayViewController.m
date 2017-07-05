@@ -106,7 +106,63 @@ static NSString *templateCell = @"templateCell";
         
         //querying an array
         
+        WyhModel *model15 = [WyhModel new];
+        model15.firstName = @"- (BOOL)containsObject:(ObjectType)anObject;";
+        model15.secondName = @"返回一个布尔值，表示给定对象是否存在于数组中。\n例子：  NSArray *arr = @[@\"1\",@\"2\",@\"3\"];\nBOOL isHas = [arr containsObject:@\"1\"];";
+        [_dataArray addObject:model15];
+        
+        WyhModel *model16 = [WyhModel new];
+        model16.firstName = @"@property(readonly) NSUInteger count;";
+        model16.secondName = @"数组中对象的数量。\n例子：  NSArray *arr = @[@\"1\",@\"2\",@\"3\"];\n NSUInteger arrCount = arr.count;";
+        [_dataArray addObject:model16];
        
+        WyhModel *model17 = [WyhModel new];
+        model17.firstName = @"- (void)getObjects:(ObjectType  _Nonnull [])objects;";
+        model17.secondName = @"将数组中包含的所有对象复制到aBuffer中。\n例子：NSArray *arr = @[@\"1\",@\"2\",@\"3\"];\nid objects;\nobjects = malloc(sizeof(id) * arr.count);\n[arr getObjects:objects];";
+        [_dataArray addObject:model17];
+        
+        WyhModel *model18 = [WyhModel new];
+        model18.firstName = @"- (void)getObjects:(ObjectType  _Nonnull [])objects range:(NSRange)range;";
+        model18.secondName = @"将包含在指定范围内的数组中的对象复制到aBuffer中。\n例子：  NSArray *arr = @[@\"1\",@\"2\",@\"3\"];\nid objects;\nobjects = malloc(sizeof(idn) * arr.count);\n  NSRange range = NSMakeRange(1, 5);\n[arr getObjects:objects range:range];";
+        [_dataArray addObject:model18];
+        
+        WyhModel *model19 = [WyhModel new];
+        model19.firstName = @"@property(nonatomic, readonly) ObjectType firstObject;";
+        model19.secondName = @"数组中的第一个对象。\n例子：  NSArray *arr = @[@\"1\",@\"2\",@\"3\"];\nid fitst  = arr.firstObject;";
+        [_dataArray addObject:model19];
+        
+        WyhModel *model20 = [WyhModel new];
+        model20.firstName = @"@property(nonatomic, readonly) ObjectType lastObject;";
+        model20.secondName = @"数组中的最后一个对象。\n例子：  NSArray *arr = @[@\"1\",@\"2\",@\"3\"];\nid fitst  = arr.lastObject;";
+        [_dataArray addObject:model20];
+        
+        WyhModel *model21 = [WyhModel new];
+        model21.firstName = @"- (ObjectType)objectAtIndex:(NSUInteger)index;";
+        model21.secondName = @"返回位于指定索引的对象。\n例子：  NSArray *arr = @[@\"1\",@\"2\",@\"3\"];\nid fitst  = [arr objectAtIndex:0];";
+        [_dataArray addObject:model21];
+        
+        WyhModel *model22 = [WyhModel new];
+        model22.firstName = @"- (ObjectType)objectAtIndexedSubscript:(NSUInteger)idx;";
+        model22.secondName = @"在指定的索引中返回对象。\n例子：  NSArray *arr = @[@\"1\",@\"2\",@\"3\"];\nid fitst  = [arr objectAtIndexedSubscript:0];";
+        [_dataArray addObject:model22];
+       
+        WyhModel *model23 = [WyhModel new];
+        model23.firstName = @"- (NSArray<ObjectType> *)objectsAtIndexes:(NSIndexSet *)indexes;";
+        model23.secondName = @"返回一个数组，其中包含给定索引集指定的索引中数组中的对象。\n例子：  NSArray *arr = @[@\"1\",@\"2\",@\"3\"];\n NSIndexSet *set  = [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, 2)];\nNSArray *arr1 = [arr objectsAtIndexes:set];";
+        [_dataArray addObject:model23];
+    
+        WyhModel *model24 = [WyhModel new];
+        model24.firstName = @"- (NSEnumerator<ObjectType> *)objectEnumerator;";
+        model24.secondName = @"返回一个枚举器对象，它允许您访问数组中的每个对象。\n例子：  NSEnumerator *enu = [arr objectEnumerator];";
+        [_dataArray addObject:model24];
+      
+        WyhModel *model25 = [WyhModel new];
+        model25.firstName = @"- (NSEnumerator<ObjectType> *)reverseObjectEnumerator;";
+        model25.secondName = @"返回一个枚举器对象，该对象允许您以相反的顺序访问数组中的每个对象。\n例子：  NSEnumerator *enu = [arr reverseObjectEnumerator];";
+        [_dataArray addObject:model25];
+        
+        //finding objects in an array
+        
     }
     return _dataArray;
 }
