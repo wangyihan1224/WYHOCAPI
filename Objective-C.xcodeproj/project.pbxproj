@@ -10,6 +10,8 @@
 		2E9ED6A6277284CF04753CF1 /* libPods-Objective-C.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC6EBF780F90F2B9F817FAFC /* libPods-Objective-C.a */; };
 		7C31BBDB1F0C91090012AFB5 /* NSArrayEmple.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7C31BBDA1F0C91090012AFB5 /* NSArrayEmple.plist */; };
 		7C31BBDE1F0C99AE0012AFB5 /* BaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C31BBDD1F0C99AE0012AFB5 /* BaseView.m */; };
+		7C31BBE81F0CC50E0012AFB5 /* WyhModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C31BBE71F0CC50E0012AFB5 /* WyhModel.m */; };
+		7C31BBEB1F0CC5F80012AFB5 /* NSArrayTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C31BBEA1F0CC5F80012AFB5 /* NSArrayTableViewCell.m */; };
 		7C444A281EF119A000F99891 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C444A271EF119A000F99891 /* main.m */; };
 		7C444A2B1EF119A000F99891 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C444A2A1EF119A000F99891 /* AppDelegate.m */; };
 		7C444A331EF119A000F99891 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C444A321EF119A000F99891 /* Assets.xcassets */; };
@@ -35,6 +37,10 @@
 		7C31BBDA1F0C91090012AFB5 /* NSArrayEmple.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = NSArrayEmple.plist; path = "Objective-C/Home/ViewController/AppFrameworks/Framework/WatchKit/NSArrayEmple.plist"; sourceTree = SOURCE_ROOT; };
 		7C31BBDC1F0C99AE0012AFB5 /* BaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseView.h; path = "Objective-C/Home/ViewController/AppFrameworks/Framework/WatchKit/BaseView.h"; sourceTree = SOURCE_ROOT; };
 		7C31BBDD1F0C99AE0012AFB5 /* BaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseView.m; path = "Objective-C/Home/ViewController/AppFrameworks/Framework/WatchKit/BaseView.m"; sourceTree = SOURCE_ROOT; };
+		7C31BBE61F0CC50E0012AFB5 /* WyhModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WyhModel.h; sourceTree = "<group>"; };
+		7C31BBE71F0CC50E0012AFB5 /* WyhModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WyhModel.m; sourceTree = "<group>"; };
+		7C31BBE91F0CC5F80012AFB5 /* NSArrayTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSArrayTableViewCell.h; path = "Objective-C/Home/Model/NSArrayTableViewCell.h"; sourceTree = SOURCE_ROOT; };
+		7C31BBEA1F0CC5F80012AFB5 /* NSArrayTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSArrayTableViewCell.m; path = "Objective-C/Home/Model/NSArrayTableViewCell.m"; sourceTree = SOURCE_ROOT; };
 		7C444A231EF119A000F99891 /* Objective-C.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Objective-C.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C444A271EF119A000F99891 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7C444A291EF119A000F99891 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -147,6 +153,8 @@
 		7C444A3E1EF11AD200F99891 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7C31BBE61F0CC50E0012AFB5 /* WyhModel.h */,
+				7C31BBE71F0CC50E0012AFB5 /* WyhModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1398,6 +1406,8 @@
 			children = (
 				7C47625A1F0B98E600685007 /* NSArrayViewController.h */,
 				7C47625B1F0B98E600685007 /* NSArrayViewController.m */,
+				7C31BBE91F0CC5F80012AFB5 /* NSArrayTableViewCell.h */,
+				7C31BBEA1F0CC5F80012AFB5 /* NSArrayTableViewCell.m */,
 				7C31BBDA1F0C91090012AFB5 /* NSArrayEmple.plist */,
 			);
 			path = Classes;
@@ -1622,6 +1632,8 @@
 			files = (
 				7C31BBDE1F0C99AE0012AFB5 /* BaseView.m in Sources */,
 				7C77BA671F0B80720035B440 /* UIKitViewController.m in Sources */,
+				7C31BBEB1F0CC5F80012AFB5 /* NSArrayTableViewCell.m in Sources */,
+				7C31BBE81F0CC50E0012AFB5 /* WyhModel.m in Sources */,
 				7C47625C1F0B98E600685007 /* NSArrayViewController.m in Sources */,
 				7C77BA6A1F0B807E0035B440 /* WatchKitViewController.m in Sources */,
 				7C444A571EF16C1800F99891 /* UILabelController.m in Sources */,

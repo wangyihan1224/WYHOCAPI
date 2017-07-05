@@ -13,25 +13,25 @@
 +(BaseView *)oneLb:(NSString *)onetitle twoLb:(NSString *)twotitle{
     BaseView *baseView = [BaseView new];
     
-    UILabel *titleLb5 = [UILabel new];
-    titleLb5.text = onetitle;
-    [baseView addSubview:titleLb5];
-    titleLb5.sd_layout
+    baseView.titleLb = [UILabel new];
+    baseView.titleLb.text = onetitle;
+    [baseView addSubview:baseView.titleLb];
+    baseView.titleLb.sd_layout
     .topSpaceToView(baseView, 10)
     .leftEqualToView(baseView)
     .autoHeightRatio(0);
-    [titleLb5 setSd_maxWidth:@(SCREENMAINWIDTH)];
+    [baseView.titleLb setSd_maxWidth:@(SCREENMAINWIDTH)];
     
     
     
-    UILabel *deslb5 = [UILabel new];
-    deslb5.text = twotitle;
-    [baseView addSubview:deslb5];
-    deslb5.sd_layout
-    .topSpaceToView(titleLb5, 10)
+    baseView.descripLb = [UILabel new];
+     baseView.descripLb.text = twotitle;
+    [baseView addSubview: baseView.descripLb];
+     baseView.descripLb.sd_layout
+    .topSpaceToView(baseView.titleLb, 10)
     .leftEqualToView(baseView)
     .autoHeightRatio(0);
-    [deslb5 setSd_maxWidth:@(SCREENMAINWIDTH)];
+    [ baseView.descripLb setSd_maxWidth:@(SCREENMAINWIDTH)];
     
     UIView *line5 = [UIView new];
     line5.backgroundColor = REDCOLOR;
@@ -40,9 +40,9 @@
     .leftEqualToView(baseView)
     .rightEqualToView(baseView)
     .heightIs(1)
-    .topSpaceToView(deslb5, 10);
+    .topSpaceToView( baseView.descripLb, 10);
     
-    [baseView setupAutoHeightWithBottomView:line5 bottomMargin:10];
+    [baseView setupAutoHeightWithBottomView:line5 bottomMargin:0];
     return baseView;
 }
 /*

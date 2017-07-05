@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface BaseView : UIView
-
+@property(nonatomic,strong)UILabel *titleLb;
+@property(nonatomic,strong)UILabel *descripLb;
 +(BaseView *)oneLb:(NSString *)onetitle twoLb:(NSString *)twotitle;
 @end
