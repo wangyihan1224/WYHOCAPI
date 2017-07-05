@@ -11,4 +11,5 @@
 
 #import "MacroBaseClass.h"
 #import <SDAutoLayout.h>
+#import "BaseView.h"
 #endif /* PrefixHeader_pch */
