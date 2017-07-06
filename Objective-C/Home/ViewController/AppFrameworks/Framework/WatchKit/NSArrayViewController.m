@@ -42,6 +42,9 @@ static NSString *templateCell = @"templateCell";
         [_titleArray addObject:@"Comparing Arrays"];
         [_titleArray addObject:@"Deriving New Arrays"];
         [_titleArray addObject:@"Sorting"];
+        [_titleArray addObject:@"Working with String Elements"];
+        [_titleArray addObject:@"Creating a Decription"];
+        
     }
     return _titleArray;
 }
@@ -364,9 +367,45 @@ static NSString *templateCell = @"templateCell";
         model54.secondName = @"返回一个数组，该数组按升序排列接收数组的元素，由给定的NSComparator块指定的比较方法确定。\n例子：NSArray *arr = @[@\"1\",@\"2\",@\"3\"];\nNSArray *arr2 = [arr sortedArrayWithOptions:NSSortConcurrent usingComparator:^NSComparisonResult(id  _Nonnull obj1, id  _Nonnull obj2) {\nint value1 = [obj1 intValue];\nint value2 = [obj2 intValue];\nif (value1 > value2) {\nreturn NSOrderedDescending;\n}else if (value1 == value2){\nreturn NSOrderedSame;\n}else{\nreturn NSOrderedAscending;\n}\n}];";
         [sortingArr addObject:model54];
        
-        //Working with String Elements
+       
+        
         
         [_dataArray addObject:sortingArr];
+        
+         //Working with String Elements
+        NSMutableArray *workingArr = [NSMutableArray new];
+        
+        WyhModel *model55 = [WyhModel new];
+        model55.firstName = @"- (NSString *)componentsJoinedByString:(NSString *)separator;";
+        model55.secondName = @"构造并返回一个NSString对象，这是在数组元素之间插入一个给定的分隔符的结果。\n例子：NSArray *arr = @[@\"1\",@\"2\",@\"3\"];\nNSString *string = [arr componentsJoinedByString:@\",\"];";
+        [workingArr addObject:model55];
+        
+        
+        
+        [_dataArray addObject:workingArr];
+        
+        //Creating a Decription
+        NSMutableArray *decriptionArr = [NSMutableArray new];
+        
+        
+        WyhModel *model56 = [WyhModel new];
+        model56.firstName = @"@property(readonly, copy) NSString *description;";
+        model56.secondName = @"表示数组内容的字符串，格式为属性列表。\n例子：NSArray *arr = @[@\"1\",@\"2\",@\"3\"];\nNSString *string = arr.description;";
+        [decriptionArr addObject:model56];
+        
+        WyhModel *model57 = [WyhModel new];
+        model57.firstName = @"- (NSString *)descriptionWithLocale:(id)locale;";
+        model57.secondName = @"返回一个表示数组内容的字符串，格式为属性列表。\n例子：NSArray *arr = @[@\"1\",@\"2\",@\"3\"];\n NSLocale *locale = [NSLocale systemLocale];\nNSString *string = [arr descriptionWithLocale:locale];";
+        [decriptionArr addObject:model57];
+        
+        WyhModel *model58 = [WyhModel new];
+        model58.firstName = @"- (NSString *)descriptionWithLocale:(id)locale indent:(NSUInteger)level;";
+        model58.secondName = @"返回一个表示数组内容的字符串，格式为属性列表。\n例子：NSArray *arr = @[@\"1\",@\"2\",@\"3\"];\n NSLocale *locale = [NSLocale systemLocale];\n NSString *string = [arr descriptionWithLocale:locale indent:1];";
+        [decriptionArr addObject:model58];
+        
+       
+       
+        [_dataArray addObject:decriptionArr];
     }
     return _dataArray;
 }
