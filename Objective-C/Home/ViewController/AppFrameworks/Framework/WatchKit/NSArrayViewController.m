@@ -39,11 +39,14 @@ static NSString *templateCell = @"templateCell";
         [_titleArray addObject:@"Querying an Array"];
         [_titleArray addObject:@"Finding Objects in an Array"];
         [_titleArray addObject:@"Sending Messages to Elements"];
+        [_titleArray addObject:@"Comparing Arrays"];
     }
     return _titleArray;
 }
 -(NSMutableArray *)dataArray{
     if (!_dataArray) {
+        NSArray *arr = [NSArray new];
+        
         _dataArray = [NSMutableArray new];
         
          //creating an array
@@ -249,15 +252,58 @@ static NSString *templateCell = @"templateCell";
         model37.secondName = @"发送给数组中的每一个对象，一个给定的选择器所标识的消息，从第一个对象开始，并通过数组一直到最后一个对象。\n例子：NSArray *arr = @[@\"1\",@\"2\",@\"3\"];\n   [arr makeObjectsPerformSelector:@selector(logtest)];";
         [sendArr addObject:model37];
         
+        WyhModel *model38 = [WyhModel new];
+        model38.firstName = @"- (void)makeObjectsPerformSelector:(SEL)aSelector withObject:(id)argument;";
+        model38.secondName = @"将as选举人消息发送到数组中的每个对象，从第一个对象开始，并通过数组一直传递到最后一个对象。\n例子：NSArray *arr = @[@\"1\",@\"2\",@\"3\"];\n  [arr makeObjectsPerformSelector:@selector(logwith:) withObject:@\"3\"];";
+        [sendArr addObject:model38];
+      
+        WyhModel *model39 = [WyhModel new];
+        model39.firstName = @"- (void)enumerateObjectsUsingBlock:(void (^)(ObjectType obj, NSUInteger idx, BOOL *stop))block;";
+        model39.secondName = @"使用数组中的每个对象执行一个给定的块，从第一个对象开始，并通过数组一直到最后一个对象。\n例子：NSArray *arr = @[@\"1\",@\"2\",@\"3\"];\n  [arr enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {\n}];";
+        [sendArr addObject:model39];
+       
+        
+        WyhModel *model40 = [WyhModel new];
+        model40.firstName = @"- (void)enumerateObjectsWithOptions:(NSEnumerationOptions)opts usingBlock:(void (^)(ObjectType obj, NSUInteger idx, BOOL *stop))block;";
+        model40.secondName = @"使用数组中的每个对象执行一个给定的块。\n例子：NSArray *arr = @[@\"1\",@\"2\",@\"3\"];\n   [arr enumerateObjectsWithOptions:NSEnumerationConcurrent usingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {\n}];";
+        [sendArr addObject:model40];
+        
+        WyhModel *model41 = [WyhModel new];
+        model41.firstName = @"- (void)enumerateObjectsAtIndexes:(NSIndexSet *)s options:(NSEnumerationOptions)opts usingBlock:(void (^)(ObjectType obj, NSUInteger idx, BOOL *stop))block;";
+        model41.secondName = @"使用指定索引中的数组中的对象执行给定的块。\n例子：NSArray *arr = @[@\"1\",@\"2\",@\"3\"];\n   NSIndexSet *set  = [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, 2)];\n[arr enumerateObjectsAtIndexes:set options:NSEnumerationConcurrent usingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {\n}];";
+        [sendArr addObject:model41];
         
        
+       
         [_dataArray addObject:sendArr];
+        
+         //Comparing Arrays
+        NSMutableArray *comparingArr = [NSMutableArray new];
+        
+        WyhModel *model42 = [WyhModel new];
+        model42.firstName = @"- (ObjectType)firstObjectCommonWithArray:(NSArray<ObjectType> *)otherArray;";
+        model42.secondName = @"返回接收数组中包含的第一个对象，该数组等于另一个给定数组中的对象。\n例子：NSArray *arr = @[@\"1\",@\"2\",@\"3\"];\n    NSArray *arr2 = [NSArray new];\n[arr firstObjectCommonWithArray:arr2];";
+        [comparingArr addObject:model42];
+       
+        
+        
+        WyhModel *model43 = [WyhModel new];
+        model43.firstName = @"- (BOOL)isEqualToArray:(NSArray<ObjectType> *)otherArray;";
+        model43.secondName = @"将接收数组与另一个数组进行比较。\n例子：NSArray *arr = @[@\"1\",@\"2\",@\"3\"];\n     NSArray *arr2 = [NSArray new];\nBOOL isEqualArr = [arr isEqualToArray:arr2];";
+        [comparingArr addObject:model43];
+       
+        [_dataArray addObject:comparingArr];
     }
     return _dataArray;
 }
 
 -(void)logtest{
     NSLog(@"log log log...");
+}
+
+-(void)logwith:(NSString *)text{
+
+    NSLog(@"log log with %@",text);
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -285,6 +331,14 @@ static NSString *templateCell = @"templateCell";
 
 -(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
     return self.titleArray[section];
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+
+    return 30;
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+
+    return 0.1;
 }
 -(NSArray<NSString *> *)sectionIndexTitlesForTableView:(UITableView *)tableView{
 
