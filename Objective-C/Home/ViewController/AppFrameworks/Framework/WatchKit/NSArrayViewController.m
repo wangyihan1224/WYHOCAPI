@@ -40,6 +40,8 @@ static NSString *templateCell = @"templateCell";
         [_titleArray addObject:@"Finding Objects in an Array"];
         [_titleArray addObject:@"Sending Messages to Elements"];
         [_titleArray addObject:@"Comparing Arrays"];
+        [_titleArray addObject:@"Deriving New Arrays"];
+        [_titleArray addObject:@"Sorting"];
     }
     return _titleArray;
 }
@@ -291,10 +293,94 @@ static NSString *templateCell = @"templateCell";
         model43.firstName = @"- (BOOL)isEqualToArray:(NSArray<ObjectType> *)otherArray;";
         model43.secondName = @"将接收数组与另一个数组进行比较。\n例子：NSArray *arr = @[@\"1\",@\"2\",@\"3\"];\n     NSArray *arr2 = [NSArray new];\nBOOL isEqualArr = [arr isEqualToArray:arr2];";
         [comparingArr addObject:model43];
+        
+       
        
         [_dataArray addObject:comparingArr];
+        
+         //Deriving New Arrays
+        
+        NSMutableArray *derivingArr = [NSMutableArray new];
+        
+        WyhModel *model44 = [WyhModel new];
+        model44.firstName = @"- (NSArray<ObjectType> *)arrayByAddingObject:(ObjectType)anObject;";
+        model44.secondName = @"返回一个新的数组，该数组是接收数组的副本，其中添加了一个给定对象。\n例子：NSArray *arr = @[@\"1\",@\"2\",@\"3\"];\n   NSArray *arr2 = [arr arrayByAddingObject:@\"4\"];";
+        [derivingArr addObject:model44];
+        
+       
+        WyhModel *model45 = [WyhModel new];
+        model45.firstName = @"- (NSArray<ObjectType> *)arrayByAddingObjectsFromArray:(NSArray<ObjectType> *)otherArray;";
+        model45.secondName = @"返回一个新的数组，该数组是接收数组的副本，其中包含在另一个数组中包含的对象。\n例子：NSArray *arr = @[@\"1\",@\"2\",@\"3\"];\n   NSArray *arr2 = [arr arrayByAddingObjectsFromArray:arr];";
+        [derivingArr addObject:model45];
+        
+        WyhModel *model46 = [WyhModel new];
+        model46.firstName = @"- (NSArray<ObjectType> *)filteredArrayUsingPredicate:(NSPredicate *)predicate;";
+        model46.secondName = @"对接收数组中的每个对象进行一个给定的谓词，并返回一个包含谓词返回true的对象的新数组。\n例子：NSArray *arr = @[@\"1\",@\"2\",@\"3\"];\n     NSArray *arr2 = @[@\"1\",@\"2\"];\nNSPredicate *predicate = [NSPredicate predicateWithFormat:@\"NOT (SELF in %@)\",arr2];\nNSArray *arr3 = [arr filteredArrayUsingPredicate:predicate];";
+        [derivingArr addObject:model46];
+        
+        WyhModel *model47 = [WyhModel new];
+        model47.firstName = @"- (NSArray<ObjectType> *)subarrayWithRange:(NSRange)range;";
+        model47.secondName = @"返回一个包含接收数组元素的新数组，该数组的元素位于给定范围指定的范围内。\n例子：NSArray *arr = @[@\"1\",@\"2\",@\"3\"];\n      NSArray *arr2 = [arr subarrayWithRange:NSMakeRange(0, 2)];";
+        [derivingArr addObject:model47];
+       
+      
+        [_dataArray addObject:derivingArr];
+        
+        //Sorting
+        NSMutableArray *sortingArr = [NSMutableArray new];
+        
+        WyhModel *model48 = [WyhModel new];
+        model48.firstName = @"@property(readonly, copy) NSData *sortedArrayHint;";
+        model48.secondName = @"分析这个数组并返回一个“提示”，当提示被提供给数组时，它将加速数组的排序。\n例子：NSArray *arr = @[@\"1\",@\"2\",@\"3\"];\nNSData *data = arr.sortedArrayHint;";
+        [sortingArr addObject:model48];
+        
+        WyhModel *model49 = [WyhModel new];
+        model49.firstName = @"- (NSArray<ObjectType> *)sortedArrayUsingFunction:(NSInteger (*)(ObjectType, ObjectType, void *))comparator context:(void *)context;";
+        model49.secondName = @"返回一个新的数组，该数组按照比较函数比较器的定义，以升序排列接收数组的元素。\n例子：NSArray *arr = @[@\"1\",@\"2\",@\"3\"];\n NSArray *arr2 = [arr sortedArrayUsingFunction:intSort context:nil];";
+        [sortingArr addObject:model49];
+       
+        WyhModel *model50 = [WyhModel new];
+        model50.firstName = @"- (NSArray<ObjectType> *)sortedArrayUsingFunction:(NSInteger (*)(ObjectType, ObjectType, void *))comparator context:(void *)context hint:(NSData *)hint;";
+        model50.secondName = @"返回一个新的数组，该数组按照比较函数比较器的定义，以升序排列接收数组的元素。\n例子：NSArray *arr = @[@\"1\",@\"2\",@\"3\"];\n NSData *data = arr.sortedArrayHint;\nNSArray *arr2 = [arr sortedArrayUsingFunction:intSort context:nil hint:data];";
+        [sortingArr addObject:model50];
+       
+        WyhModel *model51 = [WyhModel new];
+        model51.firstName = @"- (NSArray<ObjectType> *)sortedArrayUsingDescriptors:(NSArray<NSSortDescriptor *> *)sortDescriptors;";
+        model51.secondName = @"返回一个由排序描述符指定数组指定的接收数组的副本。\n例子：NSArray *arr = @[@\"1\",@\"2\",@\"3\"];\n  NSSortDescriptor *descriptor = [NSSortDescriptor sortDescriptorWithKey:@\"intValue\" ascending:YES];\nNSArray *arr2 = [arr sortedArrayUsingDescriptors:@[descriptor]];";
+        [sortingArr addObject:model51];
+        
+        WyhModel *model52 = [WyhModel new];
+        model52.firstName = @"- (NSArray<ObjectType> *)sortedArrayUsingSelector:(SEL)comparator;";
+        model52.secondName = @"返回一个数组，该数组按升序排列接收数组的元素，由给定选择器指定的比较方法确定。\n例子：NSArray *arr = @[@\"1\",@\"2\",@\"3\"];\nNSArray *arr2 = [arr sortedArrayUsingSelector:@selector(compare:)];";
+        [sortingArr addObject:model52];
+        
+        WyhModel *model53 = [WyhModel new];
+        model53.firstName = @"- (NSArray<ObjectType> *)sortedArrayUsingComparator:(NSComparator)cmptr;";
+        model53.secondName = @"返回一个数组，该数组以升序列出接收数组的元素，由一个给定的NSComparator块指定的比较方法确定。\n例子：NSArray *arr = @[@\"1\",@\"2\",@\"3\"];\nNSArray *arr2 = [arr sortedArrayUsingComparator:^NSComparisonResult(id  _Nonnull obj1, id  _Nonnull obj2) {\nint value1 = [obj1 intValue];\nint value2 = [obj2 intValue];\nif (value1 > value2) {\nreturn NSOrderedDescending;\n}else if (value1 == value2){\nreturn NSOrderedSame;\n}else{\nreturn NSOrderedAscending;\n}\n}];";
+        [sortingArr addObject:model53];
+    
+        WyhModel *model54 = [WyhModel new];
+        model54.firstName = @"- (NSArray<ObjectType> *)sortedArrayWithOptions:(NSSortOptions)opts usingComparator:(NSComparator)cmptr;";
+        model54.secondName = @"返回一个数组，该数组按升序排列接收数组的元素，由给定的NSComparator块指定的比较方法确定。\n例子：NSArray *arr = @[@\"1\",@\"2\",@\"3\"];\nNSArray *arr2 = [arr sortedArrayWithOptions:NSSortConcurrent usingComparator:^NSComparisonResult(id  _Nonnull obj1, id  _Nonnull obj2) {\nint value1 = [obj1 intValue];\nint value2 = [obj2 intValue];\nif (value1 > value2) {\nreturn NSOrderedDescending;\n}else if (value1 == value2){\nreturn NSOrderedSame;\n}else{\nreturn NSOrderedAscending;\n}\n}];";
+        [sortingArr addObject:model54];
+       
+        //Working with String Elements
+        
+        [_dataArray addObject:sortingArr];
     }
     return _dataArray;
+}
+
+NSInteger intSort(id num1,id mu2,void *context){
+    int v1 = [num1 intValue];
+    int v2 = [mu2 intValue];
+    if (v1<v2) {
+        return NSOrderedAscending;
+    }else if (v1>v2){
+        return NSOrderedDescending;
+    }
+    
+    return NSOrderedSame;
 }
 
 -(void)logtest{

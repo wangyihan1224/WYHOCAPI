@@ -14,6 +14,7 @@
     BaseView *baseView = [BaseView new];
     
     baseView.titleLb = [UILabel new];
+    baseView.titleLb.textColor = [BLUECOLOR colorWithAlphaComponent:0.5];
     baseView.titleLb.text = onetitle;
     [baseView addSubview:baseView.titleLb];
     baseView.titleLb.sd_layout
@@ -25,6 +26,7 @@
     
     
     baseView.descripLb = [UILabel new];
+    baseView.descripLb.textColor = [BLUECOLOR colorWithAlphaComponent:0.5];
      baseView.descripLb.text = twotitle;
     [baseView addSubview: baseView.descripLb];
      baseView.descripLb.sd_layout
