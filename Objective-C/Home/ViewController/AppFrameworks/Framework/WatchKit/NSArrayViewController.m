@@ -25,7 +25,7 @@ static NSString *templateCell = @"templateCell";
         _wyhTable.delegate = self;
         _wyhTable.dataSource = self;
         _wyhTable.sectionIndexBackgroundColor = CLEARCOLOR;
-        _wyhTable.separatorStyle = UITableViewCellSelectionStyleBlue;
+        _wyhTable.separatorStyle = UITableViewCellSelectionStyleNone;
         [_wyhTable registerClass:[NSArrayTableViewCell class] forCellReuseIdentifier:templateCell];
         
     }
@@ -37,6 +37,8 @@ static NSString *templateCell = @"templateCell";
         [_titleArray addObject:@"Creating an Array"];
         [_titleArray addObject:@"Initializing an Array"];
         [_titleArray addObject:@"Querying an Array"];
+        [_titleArray addObject:@"Finding Objects in an Array"];
+        [_titleArray addObject:@"Sending Messages to Elements"];
     }
     return _titleArray;
 }
@@ -81,43 +83,45 @@ static NSString *templateCell = @"templateCell";
         model7.secondName = @"创建并返回包含参数列表中的对象的数组。\n例子： NSArray *arr = [NSArray arrayWithObjects:@\"first\",@\"second\", nil];";
         [creatingArr addObject:model7];
         
+        [_dataArray addObject:creatingArr];
         //initializing an array
+        NSMutableArray *initArr = [NSMutableArray new];
         WyhModel *model8 = [WyhModel new];
         model8.firstName = @"- (instancetype)init;";
         model8.secondName = @"初始化一个新分配的数组。\n例子： NSArray *arr = [[NSArray alloc]init];";
-        [creatingArr addObject:model8];
+        [initArr addObject:model8];
         
         WyhModel *model9 = [WyhModel new];
         model9.firstName = @"- (instancetype)initWithArray:(NSArray<ObjectType> *)array;";
         model9.secondName = @"初始化一个新分配的数组，将数组中的对象放在一个给定数组中。\n例子：   NSArray *arr1 =@[@\"fit\",@\"hit\",@\"eit\"];\nNSArray *arr = [[NSArray alloc]initWithArray:arr1];";
-        [creatingArr addObject:model9];
+        [initArr addObject:model9];
         
         WyhModel *model10 = [WyhModel new];
         model10.firstName = @"- (instancetype)initWithArray:(NSArray<ObjectType> *)array copyItems:(BOOL)flag;";
         model10.secondName = @"初始化一个新分配的数组，使用anArray作为数组的数据对象的源。\n例子：  NSArray *arr = @[@\"1\",@\"2\",@\"3\"];\nNSArray *arr1 = [[NSArray alloc]initWithArray:arr copyItems:YES];";
-        [creatingArr addObject:model10];
+        [initArr addObject:model10];
         
         WyhModel *model11 = [WyhModel new];
         model11.firstName = @"- (NSArray<ObjectType> *)initWithContentsOfFile:(NSString *)path;";
         model11.secondName = @"初始化一个新分配的数组，其中有指定路径指定的文件的内容。\n例子： NSString *path = [[NSBundle mainBundle] pathForResource:@\"NSArrayEmple\" ofType:@\"plist\"];\nNSArray *arr = [[NSArray alloc]initWithContentsOfFile:path];";
-        [creatingArr addObject:model11];
+        [initArr addObject:model11];
         
         WyhModel *model12 = [WyhModel new];
         model12.firstName = @"- (NSArray<ObjectType> *)initWithContentsOfURL:(NSURL *)url;";
         model12.secondName = @"初始化一个新分配的数组，并使用指定URL指定的位置的内容。\n例子：NSURL *arrurl = [[NSBundle mainBundle]URLForResource:@\"NSArrayEmple.plist\" withExtension:nil];\nNSArray *arr =  [[NSArray alloc]initWithContentsOfURL:arrurl];";
-        [creatingArr addObject:model12];
+        [initArr addObject:model12];
         
         WyhModel *model13 = [WyhModel new];
         model13.firstName = @"- (instancetype)initWithObjects:(ObjectType)firstObj, ...;";
         model13.secondName = @"通过在参数列表中放置对象来初始化一个新分配的数组。\n例子： NSArray *arr = [[NSArray alloc]initWithObjects:@\"1\",@\"2\", nil];";
-        [creatingArr addObject:model13];
+        [initArr addObject:model13];
        
         WyhModel *model14 = [WyhModel new];
         model14.firstName = @"- (instancetype)initWithObjects:(ObjectType  _Nonnull const *)objects count:(NSUInteger)cnt;";
         model14.secondName = @"初始化一个新分配的数组，以包含给定的C数组中的给定数量的对象。\n例子： NSString *strings[3];\nstrings[0] = @\"first\";\nstrings[1]= @\"second\";\nstrings[2] = @\"three\";\n NSArray *arr = [[NSArray alloc]initWithObjects:strings count:2];";
-        [creatingArr addObject:model14];
+        [initArr addObject:model14];
         
-        [_dataArray addObject:creatingArr];
+        [_dataArray addObject:initArr];
         //querying an array
         NSMutableArray *queryingArr = [NSMutableArray new];
         WyhModel *model15 = [WyhModel new];
@@ -176,6 +180,7 @@ static NSString *templateCell = @"templateCell";
         [queryingArr addObject:model25];
         
         [_dataArray addObject:queryingArr];
+        
         //finding objects in an array
         NSMutableArray *findingArr = [NSMutableArray new];
         WyhModel *model26 = [WyhModel new];
@@ -183,9 +188,76 @@ static NSString *templateCell = @"templateCell";
         model26.secondName = @"返回对应的数组值等于给定对象的最低索引。\n例子：NSArray *arr = @[@\"1\",@\"2\",@\"3\"];\n   NSUInteger index = [arr indexOfObject:@\"1\"];";
         [findingArr addObject:model26];
         
+       
+        WyhModel *model27 = [WyhModel new];
+        model27.firstName = @"- (NSUInteger)indexOfObject:(ObjectType)anObject inRange:(NSRange)range;";
+        model27.secondName = @"返回在指定范围内的最低索引，其对应的数组值等于给定的对象。\n例子：NSArray *arr = @[@\"1\",@\"2\",@\"3\"];\n    NSRange rang = NSMakeRange(0, 2);\nNSUInteger index = [arr indexOfObject:@\"1\" inRange:rang];";
+        [findingArr addObject:model27];
+       
+        WyhModel *model28 = [WyhModel new];
+        model28.firstName = @"- (NSUInteger)indexOfObjectIdenticalTo:(ObjectType)anObject;";
+        model28.secondName = @"返回对应的数组值与给定对象相同的最低索引。\n例子：NSArray *arr = @[@\"1\",@\"2\",@\"3\"];\n    NSUInteger index = [arr indexOfObjectIdenticalTo:@\"1\"];";
+        [findingArr addObject:model28];
+        
+        WyhModel *model29 = [WyhModel new];
+        model29.firstName = @"- (NSUInteger)indexOfObjectIdenticalTo:(ObjectType)anObject inRange:(NSRange)range;";
+        model29.secondName = @"返回在指定范围内的最低索引，其对应的数组值等于给定的对象。\n例子：NSArray *arr = @[@\"1\",@\"2\",@\"3\"];\n   NSRange rang = NSMakeRange(0, 2);\nNSUInteger index = [arr indexOfObjectIdenticalTo:@\"1\" inRange:rang];";
+        [findingArr addObject:model29];
+        
+        WyhModel *model30 = [WyhModel new];
+        model30.firstName = @"- (NSUInteger)indexOfObjectPassingTest:(BOOL (^)(ObjectType obj, NSUInteger idx, BOOL *stop))predicate;";
+        model30.secondName = @"返回在给定块中通过测试的数组中的第一个对象的索引。\n例子：NSArray *arr = @[@\"1\",@\"2\",@\"3\"];\n     NSUInteger index = [arr indexOfObjectPassingTest:^BOOL(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) { \nreturn YES; \n}];";
+        [findingArr addObject:model30];
+    
+        WyhModel *model31 = [WyhModel new];
+        model31.firstName = @"- (NSUInteger)indexOfObjectWithOptions:(NSEnumerationOptions)opts passingTest:(BOOL (^)(ObjectType obj, NSUInteger idx, BOOL *stop))predicate;";
+        model31.secondName = @"返回数组中的一个对象的索引，该数组在给定的块中为给定的枚举选项进行测试。\n例子：NSArray *arr = @[@\"1\",@\"2\",@\"3\"];\n       NSUInteger index = [arr indexOfObjectWithOptions:NSEnumerationConcurrent passingTest:^BOOL(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {\nreturn YES;\n}];";
+        [findingArr addObject:model31];
+    
+        
+        WyhModel *model32 = [WyhModel new];
+        model32.firstName = @"- (NSUInteger)indexOfObjectAtIndexes:(NSIndexSet *)s options:(NSEnumerationOptions)opts passingTest:(BOOL (^)(ObjectType obj, NSUInteger idx, BOOL *stop))predicate;";
+        model32.secondName = @"从给定的一组索引中返回索引，该数组中的第一个对象将为给定的枚举选项集在给定的块中传递一个测试。\n例子：NSArray *arr = @[@\"1\",@\"2\",@\"3\"];\n NSIndexSet *set  = [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, 2)];\n  [arr indexOfObjectAtIndexes:set options:NSEnumerationConcurrent passingTest:^BOOL(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {\nreturn YES;\n}];";
+        [findingArr addObject:model32];
+        
+        WyhModel *model33 = [WyhModel new];
+        model33.firstName = @"- (NSIndexSet *)indexesOfObjectsPassingTest:(BOOL (^)(ObjectType obj, NSUInteger idx, BOOL *stop))predicate;";
+        model33.secondName = @"返回在给定块中通过测试的数组中的对象的索引。\n例子：NSArray *arr = @[@\"1\",@\"2\",@\"3\"];\n  NSIndexSet *set =   [arr indexesOfObjectsPassingTest:^BOOL(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {\nreturn YES;\n}];";
+        [findingArr addObject:model33];
+    
+        WyhModel *model34 = [WyhModel new];
+        model34.firstName = @"- (NSIndexSet *)indexesOfObjectsWithOptions:(NSEnumerationOptions)opts passingTest:(BOOL (^)(ObjectType obj, NSUInteger idx, BOOL *stop))predicate;";
+        model34.secondName = @"返回数组中的对象的索引，在给定的块中通过一个给定的枚举选项的测试。\n例子：NSArray *arr = @[@\"1\",@\"2\",@\"3\"];\n   NSIndexSet *set = [arr indexesOfObjectsWithOptions:NSEnumerationConcurrent passingTest:^BOOL(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {\nreturn YES;\n}];";
+        [findingArr addObject:model34];
+        
+        WyhModel *model35 = [WyhModel new];
+        model35.firstName = @"- (NSIndexSet *)indexesOfObjectsAtIndexes:(NSIndexSet *)s options:(NSEnumerationOptions)opts passingTest:(BOOL (^)(ObjectType obj, NSUInteger idx, BOOL *stop))predicate;";
+        model35.secondName = @"从给定的一组索引中返回索引，该数组中的对象会在给定的一组枚举选项中对给定的块进行测试。\n例子：NSArray *arr = @[@\"1\",@\"2\",@\"3\"];\n   NSIndexSet *set  = [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, 2)];\nNSIndexSet *set2 = [arr indexesOfObjectsAtIndexes:set options:NSEnumerationConcurrent passingTest:^BOOL(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {\nreturn YES;\n}];";
+        [findingArr addObject:model35];
+    
+        WyhModel *model36 = [WyhModel new];
+        model36.firstName = @"- (NSUInteger)indexOfObject:(ObjectType)obj inSortedRange:(NSRange)r options:(NSBinarySearchingOptions)opts usingComparator:(NSComparator)cmp;";
+        model36.secondName = @"使用给定的NSComparator块与数组中的元素相比较，在指定范围内返回一个对象的索引。\n例子：NSArray *arr = @[@\"1\",@\"2\",@\"3\"];\n  NSUInteger index = [arr indexOfObject:@\"1\" inSortedRange:NSMakeRange(0, 2) options:NSBinarySearchingFirstEqual usingComparator:^NSComparisonResult(id  _Nonnull obj1, id  _Nonnull obj2) {\nreturn NSOrderedAscending;\n}];";
+        [findingArr addObject:model36];
+        
         [_dataArray addObject:findingArr];
+        //Sending Messages to Elements
+        NSMutableArray *sendArr = [NSMutableArray new];
+       
+        WyhModel *model37 = [WyhModel new];
+        model37.firstName = @"- (void)makeObjectsPerformSelector:(SEL)aSelector;";
+        model37.secondName = @"发送给数组中的每一个对象，一个给定的选择器所标识的消息，从第一个对象开始，并通过数组一直到最后一个对象。\n例子：NSArray *arr = @[@\"1\",@\"2\",@\"3\"];\n   [arr makeObjectsPerformSelector:@selector(logtest)];";
+        [sendArr addObject:model37];
+        
+        
+       
+        [_dataArray addObject:sendArr];
     }
     return _dataArray;
+}
+
+-(void)logtest{
+    NSLog(@"log log log...");
 }
 - (void)viewDidLoad {
     [super viewDidLoad];

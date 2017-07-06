@@ -33,9 +33,16 @@
     .autoHeightRatio(0);
     [ baseView.descripLb setSd_maxWidth:@(SCREENMAINWIDTH)];
     
-  
+    UIView *line = [UIView new];
+    line.backgroundColor = REDCOLOR;
+    [baseView addSubview:line];
+    line.sd_layout
+    .topSpaceToView(baseView.descripLb, 10)
+    .leftEqualToView(baseView)
+    .rightEqualToView(baseView)
+    .heightIs(1);
     
-    [baseView setupAutoHeightWithBottomView:baseView.descripLb bottomMargin:10];
+    [baseView setupAutoHeightWithBottomView:line bottomMargin:0];
     return baseView;
 }
 /*
