@@ -8,9 +8,13 @@
 
 #import "FoundationViewController.h"
 
+#import "NSBlockOperationViewController.h"
+#import "NSAutoreleasePoolViewController.h"
 #import "NSAttributedStringViewController.h"
 #import "NSArrayViewController.h"
 #import "NSAssertionHandlerViewController.h"
+static NSString *nSBlockOperationViewController=@"NSBlockOperationViewController";
+static NSString *nSAutoreleasePoolViewController=@"NSAutoreleasePoolViewController";
 static NSString *nSAttributedStringViewController=@"NSAttributedStringViewController";
 static NSString *nSAssertionHandlerViewController=@"NSAssertionHandlerViewController";
 static NSString *nSArrayViewController=@"NSArrayViewController";
@@ -40,6 +44,8 @@ static NSString *templateCell = @"templateCell";
         [_dataArray addObject:nSArrayViewController];
         [_dataArray addObject:nSAssertionHandlerViewController];
         [_dataArray addObject:nSAttributedStringViewController];
+        [_dataArray addObject:nSAutoreleasePoolViewController];
+        [_dataArray addObject:nSBlockOperationViewController];
     }
     return _dataArray;
 }
@@ -74,11 +80,19 @@ static NSString *templateCell = @"templateCell";
         NSAttributedStringViewController *vc  = [NSAttributedStringViewController new];
         vc.title = selecTitle;
         [self.navigationController pushViewController:vc animated:YES];
+    }else if ([selecTitle isEqualToString:nSAutoreleasePoolViewController]){
+        NSAutoreleasePoolViewController *vc  = [NSAutoreleasePoolViewController new];
+        vc.title = selecTitle;
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if ([selecTitle isEqualToString:nSBlockOperationViewController]){
+        NSBlockOperationViewController *vc  = [NSBlockOperationViewController new];
+        vc.title = selecTitle;
+        [self.navigationController pushViewController:vc animated:YES];
     }
 
 }
 
- 
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

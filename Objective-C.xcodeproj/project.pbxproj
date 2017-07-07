@@ -22,6 +22,8 @@
 		7C47625C1F0B98E600685007 /* NSArrayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C47625B1F0B98E600685007 /* NSArrayViewController.m */; };
 		7C74FA871F0F2DF900209412 /* NSAssertionHandlerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C74FA861F0F2DF900209412 /* NSAssertionHandlerViewController.m */; };
 		7C74FA8A1F0F341A00209412 /* NSAttributedStringViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C74FA891F0F341A00209412 /* NSAttributedStringViewController.m */; };
+		7C74FA911F0F7B5D00209412 /* NSAutoreleasePoolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C74FA901F0F7B5D00209412 /* NSAutoreleasePoolViewController.m */; };
+		7C74FA941F0F815600209412 /* NSBlockOperationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C74FA931F0F815600209412 /* NSBlockOperationViewController.m */; };
 		7C77BA611F0B80580035B440 /* FoundationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C77BA601F0B80580035B440 /* FoundationViewController.m */; };
 		7C77BA641F0B80670035B440 /* ObjectiveCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C77BA631F0B80670035B440 /* ObjectiveCViewController.m */; };
 		7C77BA671F0B80720035B440 /* UIKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C77BA661F0B80720035B440 /* UIKitViewController.m */; };
@@ -64,6 +66,10 @@
 		7C74FA861F0F2DF900209412 /* NSAssertionHandlerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSAssertionHandlerViewController.m; path = "Objective-C/Home/Model/NSAssertionHandlerViewController.m"; sourceTree = SOURCE_ROOT; };
 		7C74FA881F0F341A00209412 /* NSAttributedStringViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSAttributedStringViewController.h; path = "Objective-C/Home/Model/NSAttributedStringViewController.h"; sourceTree = SOURCE_ROOT; };
 		7C74FA891F0F341A00209412 /* NSAttributedStringViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSAttributedStringViewController.m; path = "Objective-C/Home/Model/NSAttributedStringViewController.m"; sourceTree = SOURCE_ROOT; };
+		7C74FA8F1F0F7B5D00209412 /* NSAutoreleasePoolViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSAutoreleasePoolViewController.h; path = "Objective-C/Home/Model/NSAutoreleasePoolViewController.h"; sourceTree = SOURCE_ROOT; };
+		7C74FA901F0F7B5D00209412 /* NSAutoreleasePoolViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSAutoreleasePoolViewController.m; path = "Objective-C/Home/Model/NSAutoreleasePoolViewController.m"; sourceTree = SOURCE_ROOT; };
+		7C74FA921F0F815600209412 /* NSBlockOperationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSBlockOperationViewController.h; path = "Objective-C/Home/Model/NSBlockOperationViewController.h"; sourceTree = SOURCE_ROOT; };
+		7C74FA931F0F815600209412 /* NSBlockOperationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSBlockOperationViewController.m; path = "Objective-C/Home/Model/NSBlockOperationViewController.m"; sourceTree = SOURCE_ROOT; };
 		7C77BA5F1F0B80580035B440 /* FoundationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoundationViewController.h; sourceTree = "<group>"; };
 		7C77BA601F0B80580035B440 /* FoundationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoundationViewController.m; sourceTree = "<group>"; };
 		7C77BA621F0B80670035B440 /* ObjectiveCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectiveCViewController.h; sourceTree = "<group>"; };
@@ -1419,6 +1425,10 @@
 				7C74FA861F0F2DF900209412 /* NSAssertionHandlerViewController.m */,
 				7C74FA881F0F341A00209412 /* NSAttributedStringViewController.h */,
 				7C74FA891F0F341A00209412 /* NSAttributedStringViewController.m */,
+				7C74FA8F1F0F7B5D00209412 /* NSAutoreleasePoolViewController.h */,
+				7C74FA901F0F7B5D00209412 /* NSAutoreleasePoolViewController.m */,
+				7C74FA921F0F815600209412 /* NSBlockOperationViewController.h */,
+				7C74FA931F0F815600209412 /* NSBlockOperationViewController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -1647,9 +1657,11 @@
 				7C47625C1F0B98E600685007 /* NSArrayViewController.m in Sources */,
 				7C77BA6A1F0B807E0035B440 /* WatchKitViewController.m in Sources */,
 				7C444A571EF16C1800F99891 /* UILabelController.m in Sources */,
+				7C74FA941F0F815600209412 /* NSBlockOperationViewController.m in Sources */,
 				7CA55C341F063BBD00ABF90B /* AppFrameworksViewController.m in Sources */,
 				7C444A2B1EF119A000F99891 /* AppDelegate.m in Sources */,
 				7CA55C3D1F063C0200ABF90B /* GraphicsAndGamesViewController.m in Sources */,
+				7C74FA911F0F7B5D00209412 /* NSAutoreleasePoolViewController.m in Sources */,
 				7C74FA8A1F0F341A00209412 /* NSAttributedStringViewController.m in Sources */,
 				7C77BA641F0B80670035B440 /* ObjectiveCViewController.m in Sources */,
 				7C444A491EF11B2D00F99891 /* BaseViewController.m in Sources */,
