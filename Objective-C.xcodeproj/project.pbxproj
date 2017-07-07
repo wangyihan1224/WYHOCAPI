@@ -28,10 +28,8 @@
 		7C77BA611F0B80580035B440 /* FoundationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C77BA601F0B80580035B440 /* FoundationViewController.m */; };
 		7C77BA641F0B80670035B440 /* ObjectiveCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C77BA631F0B80670035B440 /* ObjectiveCViewController.m */; };
 		7C77BA671F0B80720035B440 /* UIKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C77BA661F0B80720035B440 /* UIKitViewController.m */; };
-		7C77BA6A1F0B807E0035B440 /* WatchKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C77BA691F0B807E0035B440 /* WatchKitViewController.m */; };
 		7CA55C341F063BBD00ABF90B /* AppFrameworksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA55C331F063BBD00ABF90B /* AppFrameworksViewController.m */; };
 		7CA55C371F063BCE00ABF90B /* AppServicesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA55C361F063BCE00ABF90B /* AppServicesViewController.m */; };
-		7CA55C3A1F063BE500ABF90B /* DeveloperToolsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA55C391F063BE500ABF90B /* DeveloperToolsViewController.m */; };
 		7CA55C3D1F063C0200ABF90B /* GraphicsAndGamesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA55C3C1F063C0200ABF90B /* GraphicsAndGamesViewController.m */; };
 		7CA55C401F063C3C00ABF90B /* SystemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA55C3F1F063C3C00ABF90B /* SystemViewController.m */; };
 		7CA55C431F063C4800ABF90B /* MediaAndWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CA55C421F063C4800ABF90B /* MediaAndWebViewController.m */; };
@@ -79,14 +77,10 @@
 		7C77BA631F0B80670035B440 /* ObjectiveCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectiveCViewController.m; sourceTree = "<group>"; };
 		7C77BA651F0B80720035B440 /* UIKitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIKitViewController.h; sourceTree = "<group>"; };
 		7C77BA661F0B80720035B440 /* UIKitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIKitViewController.m; sourceTree = "<group>"; };
-		7C77BA681F0B807E0035B440 /* WatchKitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WatchKitViewController.h; sourceTree = "<group>"; };
-		7C77BA691F0B807E0035B440 /* WatchKitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WatchKitViewController.m; sourceTree = "<group>"; };
 		7CA55C321F063BBD00ABF90B /* AppFrameworksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppFrameworksViewController.h; sourceTree = "<group>"; };
 		7CA55C331F063BBD00ABF90B /* AppFrameworksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppFrameworksViewController.m; sourceTree = "<group>"; };
 		7CA55C351F063BCE00ABF90B /* AppServicesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppServicesViewController.h; sourceTree = "<group>"; };
 		7CA55C361F063BCE00ABF90B /* AppServicesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppServicesViewController.m; sourceTree = "<group>"; };
-		7CA55C381F063BE500ABF90B /* DeveloperToolsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeveloperToolsViewController.h; sourceTree = "<group>"; };
-		7CA55C391F063BE500ABF90B /* DeveloperToolsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeveloperToolsViewController.m; sourceTree = "<group>"; };
 		7CA55C3B1F063C0200ABF90B /* GraphicsAndGamesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphicsAndGamesViewController.h; sourceTree = "<group>"; };
 		7CA55C3C1F063C0200ABF90B /* GraphicsAndGamesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphicsAndGamesViewController.m; sourceTree = "<group>"; };
 		7CA55C3E1F063C3C00ABF90B /* SystemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemViewController.h; sourceTree = "<group>"; };
@@ -194,7 +188,6 @@
 				7CA55B8D1F062F0A00ABF90B /* MediaAndWeb */,
 				7CA55B921F062F0A00ABF90B /* System */,
 				7CA55B971F062F0A00ABF90B /* GraphicsAndGames */,
-				7CA55B9C1F062F0A00ABF90B /* DeveloperTools */,
 				7CA55BA11F062F0A00ABF90B /* AppServices */,
 				7CA55BA61F062F0A00ABF90B /* AppFrameworks */,
 				7C444A551EF16C1800F99891 /* UILabelController.h */,
@@ -276,16 +269,6 @@
 			path = GraphicsAndGames;
 			sourceTree = "<group>";
 		};
-		7CA55B9C1F062F0A00ABF90B /* DeveloperTools */ = {
-			isa = PBXGroup;
-			children = (
-				7CA55BB21F0631EF00ABF90B /* Framework */,
-				7CA55C381F063BE500ABF90B /* DeveloperToolsViewController.h */,
-				7CA55C391F063BE500ABF90B /* DeveloperToolsViewController.m */,
-			);
-			path = DeveloperTools;
-			sourceTree = "<group>";
-		};
 		7CA55BA11F062F0A00ABF90B /* AppServices */ = {
 			isa = PBXGroup;
 			children = (
@@ -312,7 +295,6 @@
 				7CA55BAD1F06318A00ABF90B /* Foundation */,
 				7CA55BAE1F06318A00ABF90B /* Objective-C */,
 				7CA55BAF1F06318A00ABF90B /* UIKit */,
-				7CA55BB01F06318A00ABF90B /* WatchKit */,
 			);
 			path = Framework;
 			sourceTree = "<group>";
@@ -353,19 +335,6 @@
 				7C77BA661F0B80720035B440 /* UIKitViewController.m */,
 			);
 			path = UIKit;
-			sourceTree = "<group>";
-		};
-		7CA55BB01F06318A00ABF90B /* WatchKit */ = {
-			isa = PBXGroup;
-			children = (
-				7CA55C531F065CAD00ABF90B /* ExtendedTypes */,
-				7CA55C541F065CAD00ABF90B /* Reference */,
-				7CA55C551F065CAD00ABF90B /* Protocols */,
-				7CA55C561F065CAD00ABF90B /* Classes */,
-				7C77BA681F0B807E0035B440 /* WatchKitViewController.h */,
-				7C77BA691F0B807E0035B440 /* WatchKitViewController.m */,
-			);
-			path = WatchKit;
 			sourceTree = "<group>";
 		};
 		7CA55BB11F0631CC00ABF90B /* Framework */ = {
@@ -410,17 +379,6 @@
 				7CA55BDA1F06378E00ABF90B /* AddressBookUI */,
 				7CA55BDB1F06378E00ABF90B /* AddressBook */,
 				7CA55BDC1F06378E00ABF90B /* Accounts */,
-			);
-			path = Framework;
-			sourceTree = "<group>";
-		};
-		7CA55BB21F0631EF00ABF90B /* Framework */ = {
-			isa = PBXGroup;
-			children = (
-				7CA55BDD1F0637AF00ABF90B /* XCTest */,
-				7CA55BDE1F0637AF00ABF90B /* XcodeKit */,
-				7CA55BDF1F0637AF00ABF90B /* ScriptingBridge */,
-				7CA55BE01F0637AF00ABF90B /* Automator */,
 			);
 			path = Framework;
 			sourceTree = "<group>";
@@ -798,34 +756,6 @@
 			children = (
 			);
 			path = Accounts;
-			sourceTree = "<group>";
-		};
-		7CA55BDD1F0637AF00ABF90B /* XCTest */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = XCTest;
-			sourceTree = "<group>";
-		};
-		7CA55BDE1F0637AF00ABF90B /* XcodeKit */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = XcodeKit;
-			sourceTree = "<group>";
-		};
-		7CA55BDF1F0637AF00ABF90B /* ScriptingBridge */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ScriptingBridge;
-			sourceTree = "<group>";
-		};
-		7CA55BE01F0637AF00ABF90B /* Automator */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Automator;
 			sourceTree = "<group>";
 		};
 		7CA55BE11F06385700ABF90B /* SpriteKit */ = {
@@ -1487,34 +1417,6 @@
 			path = Classes;
 			sourceTree = "<group>";
 		};
-		7CA55C531F065CAD00ABF90B /* ExtendedTypes */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ExtendedTypes;
-			sourceTree = "<group>";
-		};
-		7CA55C541F065CAD00ABF90B /* Reference */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Reference;
-			sourceTree = "<group>";
-		};
-		7CA55C551F065CAD00ABF90B /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Protocols;
-			sourceTree = "<group>";
-		};
-		7CA55C561F065CAD00ABF90B /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
 		EE4A03453C2C9746CD26F18D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1660,7 +1562,6 @@
 				7C31BBEB1F0CC5F80012AFB5 /* NSArrayTableViewCell.m in Sources */,
 				7C31BBE81F0CC50E0012AFB5 /* WyhModel.m in Sources */,
 				7C47625C1F0B98E600685007 /* NSArrayViewController.m in Sources */,
-				7C77BA6A1F0B807E0035B440 /* WatchKitViewController.m in Sources */,
 				7C444A571EF16C1800F99891 /* UILabelController.m in Sources */,
 				7C74FA941F0F815600209412 /* NSBlockOperationViewController.m in Sources */,
 				7CA55C341F063BBD00ABF90B /* AppFrameworksViewController.m in Sources */,
@@ -1677,7 +1578,6 @@
 				7C74FA871F0F2DF900209412 /* NSAssertionHandlerViewController.m in Sources */,
 				7C444A281EF119A000F99891 /* main.m in Sources */,
 				7CA55C371F063BCE00ABF90B /* AppServicesViewController.m in Sources */,
-				7CA55C3A1F063BE500ABF90B /* DeveloperToolsViewController.m in Sources */,
 				7CA55C401F063C3C00ABF90B /* SystemViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

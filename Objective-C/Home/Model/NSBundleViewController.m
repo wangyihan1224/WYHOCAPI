@@ -36,6 +36,7 @@ static NSString *templateCell = @"templateCell";
         _titleArray = [NSMutableArray new];
         [_titleArray addObject:@"Getting Standard Bundle Objects"];
         [_titleArray addObject:@"Creating and Initializing a Bundle"];
+        [_titleArray addObject:@"Loading Nib Files"];
     }
     return _titleArray;
 }
@@ -94,9 +95,15 @@ static NSString *templateCell = @"templateCell";
         model9.firstName = @"- (instancetype)initWithPath:(NSString *)path;";
         model9.secondName = @"返回一个初始化的NSBundle对象，以与指定的目录相对应。\n例子： NSString *path = [[NSBundle mainBundle]pathForResource:@\"NSArrayEmple\" ofType:@\"plist\"];\nNSBundle *bundle1 = [[NSBundle alloc]initWithPath:path];";
         [creatArr addObject:model9];
-        //Loading Nib Files
+       
        
         [_dataArray addObject:creatArr];
+        
+         //Loading Nib Files
+        NSMutableArray *loadArr = [NSMutableArray new];
+        
+        
+        [_dataArray addObject:loadArr];
     }
     return _dataArray;
 }

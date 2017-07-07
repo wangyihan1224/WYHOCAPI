@@ -11,12 +11,12 @@
 #import "FoundationViewController.h"
 #import "ObjectiveCViewController.h"
 #import "UIKitViewController.h"
-#import "WatchKitViewController.h"
+
 
 static NSString *foundationViewController=@"FoundationViewController";
 static NSString *objectiveCViewController=@"ObjectiveCViewController";
 static NSString *uIKitViewController=@"UIKitViewController";
-static NSString *watchKitViewController=@"WatchKitViewController";
+
 static NSString *templateCell = @"templateCell";
 @interface AppFrameworksViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong)UITableView *wyhTable;
@@ -44,7 +44,7 @@ static NSString *templateCell = @"templateCell";
         [_dataArray addObject:foundationViewController];
         [_dataArray addObject:objectiveCViewController];
         [_dataArray addObject:uIKitViewController];
-        [_dataArray addObject:watchKitViewController];
+      
     }
     return _dataArray;
 }
@@ -79,10 +79,6 @@ static NSString *templateCell = @"templateCell";
         [self.navigationController pushViewController:vc animated:YES];
     }else if ([selecTitle isEqualToString:uIKitViewController]){
         UIKitViewController *vc  = [UIKitViewController new];
-        vc.title = selecTitle;
-        [self.navigationController pushViewController:vc animated:YES];
-    }else if ([selecTitle isEqualToString:watchKitViewController]){
-        WatchKitViewController *vc  = [WatchKitViewController new];
         vc.title = selecTitle;
         [self.navigationController pushViewController:vc animated:YES];
     }
