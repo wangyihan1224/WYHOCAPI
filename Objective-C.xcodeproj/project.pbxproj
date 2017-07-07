@@ -20,6 +20,7 @@
 		7C444A4E1EF11CB700F99891 /* AppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C444A4D1EF11CB700F99891 /* AppViewController.m */; };
 		7C444A571EF16C1800F99891 /* UILabelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C444A561EF16C1800F99891 /* UILabelController.m */; };
 		7C47625C1F0B98E600685007 /* NSArrayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C47625B1F0B98E600685007 /* NSArrayViewController.m */; };
+		7C74FA871F0F2DF900209412 /* NSAssertionHandlerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C74FA861F0F2DF900209412 /* NSAssertionHandlerViewController.m */; };
 		7C77BA611F0B80580035B440 /* FoundationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C77BA601F0B80580035B440 /* FoundationViewController.m */; };
 		7C77BA641F0B80670035B440 /* ObjectiveCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C77BA631F0B80670035B440 /* ObjectiveCViewController.m */; };
 		7C77BA671F0B80720035B440 /* UIKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C77BA661F0B80720035B440 /* UIKitViewController.m */; };
@@ -58,6 +59,8 @@
 		7C444A561EF16C1800F99891 /* UILabelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UILabelController.m; sourceTree = "<group>"; };
 		7C47625A1F0B98E600685007 /* NSArrayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSArrayViewController.h; path = "Objective-C/Home/ViewController/AppFrameworks/Framework/WatchKit/NSArrayViewController.h"; sourceTree = SOURCE_ROOT; };
 		7C47625B1F0B98E600685007 /* NSArrayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSArrayViewController.m; path = "Objective-C/Home/ViewController/AppFrameworks/Framework/WatchKit/NSArrayViewController.m"; sourceTree = SOURCE_ROOT; };
+		7C74FA851F0F2DF900209412 /* NSAssertionHandlerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSAssertionHandlerViewController.h; path = "Objective-C/Home/Model/NSAssertionHandlerViewController.h"; sourceTree = SOURCE_ROOT; };
+		7C74FA861F0F2DF900209412 /* NSAssertionHandlerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSAssertionHandlerViewController.m; path = "Objective-C/Home/Model/NSAssertionHandlerViewController.m"; sourceTree = SOURCE_ROOT; };
 		7C77BA5F1F0B80580035B440 /* FoundationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoundationViewController.h; sourceTree = "<group>"; };
 		7C77BA601F0B80580035B440 /* FoundationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoundationViewController.m; sourceTree = "<group>"; };
 		7C77BA621F0B80670035B440 /* ObjectiveCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectiveCViewController.h; sourceTree = "<group>"; };
@@ -1409,6 +1412,8 @@
 				7C31BBE91F0CC5F80012AFB5 /* NSArrayTableViewCell.h */,
 				7C31BBEA1F0CC5F80012AFB5 /* NSArrayTableViewCell.m */,
 				7C31BBDA1F0C91090012AFB5 /* NSArrayEmple.plist */,
+				7C74FA851F0F2DF900209412 /* NSAssertionHandlerViewController.h */,
+				7C74FA861F0F2DF900209412 /* NSAssertionHandlerViewController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -1645,6 +1650,7 @@
 				7C77BA611F0B80580035B440 /* FoundationViewController.m in Sources */,
 				7CA55C431F063C4800ABF90B /* MediaAndWebViewController.m in Sources */,
 				7C444A4E1EF11CB700F99891 /* AppViewController.m in Sources */,
+				7C74FA871F0F2DF900209412 /* NSAssertionHandlerViewController.m in Sources */,
 				7C444A281EF119A000F99891 /* main.m in Sources */,
 				7CA55C371F063BCE00ABF90B /* AppServicesViewController.m in Sources */,
 				7CA55C3A1F063BE500ABF90B /* DeveloperToolsViewController.m in Sources */,
