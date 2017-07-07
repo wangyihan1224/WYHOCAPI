@@ -36,6 +36,13 @@ static NSString *templateCell = @"templateCell";
         _titleArray = [NSMutableArray new];
         [_titleArray addObject:@"Creating an NSAttributedString Object"];
         [_titleArray addObject:@"Retrieving Character Information"];
+        [_titleArray addObject:@"Retrieving Attriute Information"];
+        [_titleArray addObject:@"Comparing Attributed Strings"];
+        [_titleArray addObject:@"Extracting a Substring"];
+        [_titleArray addObject:@"Enumerating over Attributes in a String"];
+        [_titleArray addObject:@"Generating Data"];
+        [_titleArray addObject:@"Drawing the String"];
+        [_titleArray addObject:@"Gettting Metrics for the String"];
     }
     return _titleArray;
 }
@@ -44,7 +51,7 @@ static NSString *templateCell = @"templateCell";
         _dataArray = [NSMutableArray new];
         //Creating an NSAttributedString Object
         NSMutableArray *creatArr =  [NSMutableArray new];
-        
+        NSAttributedString *string = [NSAttributedString new];
       
         WyhModel *model1 = [WyhModel new];
         model1.firstName = @"- (instancetype)initWithString:(NSString *)str;";
@@ -123,9 +130,122 @@ static NSString *templateCell = @"templateCell";
         model14.secondName = @"接收者的字符内容作为NSString对象。\n例子： NSString *string = [NSAttributedString new].string;";
         [retrievingArr addObject:model14];
         
+        WyhModel *model15 = [WyhModel new];
+        model15.firstName = @"@property(readonly) NSUInteger length;";
+        model15.secondName = @"接收方的字符串对象的长度。\n例子：  NSUInteger length = [NSAttributedString new].length;";
+        [retrievingArr addObject:model15];
+        
        
         
         [_dataArray addObject:retrievingArr];
+        //Retrieving Attriute Information
+        NSMutableArray *attArr = [NSMutableArray new];
+        
+        WyhModel *model16 = [WyhModel new];
+        model16.firstName = @"- (NSDictionary<NSString *,id> *)attributesAtIndex:(NSUInteger)location effectiveRange:(NSRangePointer)range;";
+        model16.secondName = @"返回给定索引中的字符的属性。\n例子： NSAttributedString *string = [NSAttributedString new];\nNSRange rang = NSMakeRange(0, 1);\nNSRangePointer pointer = &rang;\nNSDictionary *dict = [string attributesAtIndex:1 effectiveRange:pointer];";
+        [attArr addObject:model16];
+        
+        WyhModel *model17 = [WyhModel new];
+        model17.firstName = @"- (NSDictionary<NSString *,id> *)attributesAtIndex:(NSUInteger)location longestEffectiveRange:(NSRangePointer)range inRange:(NSRange)rangeLimit;";
+        model17.secondName = @"在给定的索引中返回该字符的属性，并引用属性应用的范围。\n例子： NSAttributedString *string = [NSAttributedString new];\nNSRange rang = NSMakeRange(0, 1);\nNSRangePointer pointer = &rang;\nNSDictionary *dict = [string attributesAtIndex:1 longestEffectiveRange:pointer inRange:rang];";
+        [attArr addObject:model17];
+        
+        WyhModel *model18 = [WyhModel new];
+        model18.firstName = @"- (id)attribute:(NSString *)attrName atIndex:(NSUInteger)location effectiveRange:(NSRangePointer)range;";
+        model18.secondName = @"返回给定索引中给定名称的给定名称的属性的值，并引用该属性应用的范围。\n例子： NSAttributedString *string = [NSAttributedString new];\nNSRange rang = NSMakeRange(0, 1);\nNSRangePointer pointer = &rang;\nid attributeValue = [string attribute:@\"NSFontAttributeName\" atIndex:1 effectiveRange:pointer];";
+        [attArr addObject:model18];
+        
+        WyhModel *model19 = [WyhModel new];
+        model19.firstName = @"- (id)attribute:(NSString *)attrName atIndex:(NSUInteger)location longestEffectiveRange:(NSRangePointer)range inRange:(NSRange)rangeLimit;";
+        model19.secondName = @"在给定的索引中使用给定名称的给定名称的属性返回该属性的值，并引用该属性应用的范围。\n例子： NSAttributedString *string = [NSAttributedString new];\nNSRange rang = NSMakeRange(0, 1);\nNSRangePointer pointer = &rang;\nid attributeValue = [string attribute:@\"NSFontAttributeName\" atIndex:1 longestEffectiveRange:pointer inRange:rang];";
+        [attArr addObject:model19];
+        
+        [_dataArray addObject:attArr];
+        
+        //Comparing Attributed Strings
+        NSMutableArray *comArr = [NSMutableArray new];
+        
+        WyhModel *model20 = [WyhModel new];
+        model20.firstName = @"- (BOOL)isEqualToAttributedString:(NSAttributedString *)other;";
+        model20.secondName = @"返回一个布尔值，该值表示接收方是否等于另一个给定的属性字符串。\n例子： NSAttributedString *string = [NSAttributedString new];\n  NSAttributedString *string2 = [NSAttributedString new];\nBOOL isEqual = [string2 isEqualToAttributedString:string];";
+        [comArr addObject:model20];
+        
+      
+        
+      
+        [_dataArray addObject: comArr];
+        
+        //Extracting a Substring
+        NSMutableArray *subArr = [NSMutableArray new];
+        
+        WyhModel *model21 = [WyhModel new];
+        model21.firstName = @"- (NSAttributedString *)attributedSubstringFromRange:(NSRange)range;";
+        model21.secondName = @"返回一个布尔值，该值表示接收方是否等于另一个给定的属性字符串。\n例子： NSAttributedString *string = [NSAttributedString new];\n NSAttributedString *string2 = [string attributedSubstringFromRange:NSMakeRange(0, 1)];";
+        [subArr addObject:model21];
+        
+        
+        [_dataArray addObject:subArr];
+        
+        //Enumerating over Attributes in a String
+        NSMutableArray *enumeratingArr = [NSMutableArray new];
+        
+        WyhModel *model22 = [WyhModel new];
+        model22.firstName = @"- (void)enumerateAttribute:(NSString *)attrName inRange:(NSRange)enumerationRange options:(NSAttributedStringEnumerationOptions)opts usingBlock:(void (^)(id value, NSRange range, BOOL *stop))block;";
+        model22.secondName = @"在指定的范围中执行指定的属性的块。\n例子： [string enumerateAttribute:@\"NSFontAttributeName\" inRange:NSMakeRange(0, 2) options:NSAttributedStringEnumerationReverse usingBlock:^(id  _Nullable value, NSRange range, BOOL * _Nonnull stop) {\n}];";
+        [enumeratingArr addObject:model22];
+        
+        WyhModel *model23 = [WyhModel new];
+        model23.firstName = @"- (void)enumerateAttributesInRange:(NSRange)enumerationRange options:(NSAttributedStringEnumerationOptions)opts usingBlock:(void (^)(NSDictionary<NSString *,id> *attrs, NSRange range, BOOL *stop))block;";
+        model23.secondName = @"在范围内执行每个属性的块。\n例子： [string enumerateAttributesInRange:NSMakeRange(0, 2) options:NSAttributedStringEnumerationLongestEffectiveRangeNotRequired usingBlock:^(id  _Nullable value, NSRange range, BOOL * _Nonnull stop) {\n}];";
+        [enumeratingArr addObject:model23];
+       
+        [_dataArray addObject:enumeratingArr];
+        
+       //Generating Data
+        NSMutableArray *generatingArr = [NSMutableArray new];
+        
+        WyhModel *model24 = [WyhModel new];
+        model24.firstName = @"- (NSData *)dataFromRange:(NSRange)range documentAttributes:(NSDictionary<NSString *,id> *)dict error:(NSError * _Nullable *)error;";
+        model24.secondName = @"返回一个包含文本流的数据对象，该对象与给定范围内的字符和属性相对应。\n例子：NSData *data = [string dataFromRange:NSMakeRange(0, 1) documentAttributes:@{} error:nil];";
+        [generatingArr addObject:model24];
+        
+        WyhModel *model25 = [WyhModel new];
+        model25.firstName = @"- (NSFileWrapper *)fileWrapperFromRange:(NSRange)range documentAttributes:(NSDictionary<NSString *,id> *)dict error:(NSError * _Nullable *)error;";
+        model25.secondName = @"返回一个nsfile封装器对象，该对象包含与给定范围内的字符和属性相对应的文本流。\n例子： NSFileWrapper *wrapper = [string fileWrapperFromRange:NSMakeRange(0, 1) documentAttributes:@{} error:nil];";
+        [generatingArr addObject:model25];
+       
+        [_dataArray addObject:generatingArr];
+        
+        //Drawing the String
+        NSMutableArray *drawArr = [NSMutableArray new];
+        
+        WyhModel *model26 = [WyhModel new];
+        model26.firstName = @"- (void)drawAtPoint:(CGPoint)point;";
+        model26.secondName = @"在当前的图形环境中，从指定的点开始绘制带属性的字符串。\n例子： [string drawAtPoint:CGPointMake(200, 200)];";
+        [drawArr addObject:model26];
+       
+        WyhModel *model27 = [WyhModel new];
+        model27.firstName = @"- (void)drawInRect:(CGRect)rect;";
+        model27.secondName = @"在当前的图形环境中，在指定的边界矩形中绘制属性字符串。\n例子：[string drawInRect:CGRectMake(0, 100, 100, 100)];";
+        [drawArr addObject:model27];
+        
+        WyhModel *model28 = [WyhModel new];
+        model28.firstName = @"- (void)drawWithRect:(CGRect)rect options:(NSStringDrawingOptions)options context:(NSStringDrawingContext *)context;";
+        model28.secondName = @"使用所提供的选项来绘制指定的边界矩形中的带属性字符串。\n例子：[string drawWithRect:CGRectMake(0, 100, 100, 100) options:NSStringDrawingUsesLineFragmentOrigin context:nil];";
+        [drawArr addObject:model28];
+        
+        [_dataArray addObject:drawArr];
+        
+        //Gettting Metrics for the String
+        NSMutableArray *getArr = [NSMutableArray new];
+        
+        WyhModel *model29 = [WyhModel new];
+        model29.firstName = @"- (CGSize)size;";
+        model29.secondName = @"返回绘制字符串所需的大小。\n例子：CGSize size = string.size;";
+        [getArr addObject:model29];
+        
+        [_dataArray addObject:getArr];
     }
     return _dataArray;
 }
