@@ -45,6 +45,10 @@ static NSString *templateCell = @"templateCell";
         [_titleArray addObject:@"Working with String Elements"];
         [_titleArray addObject:@"Creating a Decription"];
          [_titleArray addObject:@"Storing Arrays"];
+         [_titleArray addObject:@"Collecting Paths"];
+         [_titleArray addObject:@"Key-Value Observing"];
+        
+        
         
     }
     return _titleArray;
@@ -425,7 +429,55 @@ static NSString *templateCell = @"templateCell";
        
         [_dataArray addObject:storingArr];
         
-        //
+        //Collecting Paths
+        NSMutableArray *collectionArr = [NSMutableArray new];
+        
+        WyhModel *model61 = [WyhModel new];
+        model61.firstName = @"- (NSArray<NSString *> *)pathsMatchingExtensions:(NSArray<NSString *> *)filterTypes;";
+        model61.secondName = @"返回包含从给定数组中获得文件名扩展的接收数组中的所有路径名元素的数组。\n例子：  NSArray *arr2 = [arr pathsMatchingExtensions:[NSArray arrayWithObject:@\"png\"]];";
+        [collectionArr addObject:model61];
+        
+      
+        [_dataArray addObject:collectionArr];
+        
+        
+        //Key-Value Observing
+        NSMutableArray *keyArr = [NSMutableArray new];
+        
+        WyhModel *model62 = [WyhModel new];
+        model62.firstName = @"- (void)addObserver:(NSObject *)observer forKeyPath:(NSString *)keyPath options:(NSKeyValueObservingOptions)options context:(void *)context;";
+        model62.secondName = @"添加观察者。\n例子： [arr addObserver:self forKeyPath:@\"1\" options:NSKeyValueObservingOptionNew context:nil];";
+        [keyArr addObject:model62];
+        
+        WyhModel *model63 = [WyhModel new];
+        model63.firstName = @"- (void)removeObserver:(NSObject *)observer forKeyPath:(NSString *)keyPath;";
+        model63.secondName = @"移除观察者。\n例子： [arr removeObserver:self forKeyPath:@\"1\"];";
+        [keyArr addObject:model63];
+        
+        WyhModel *model64 = [WyhModel new];
+        model64.firstName = @"- (void)removeObserver:(NSObject *)observer forKeyPath:(NSString *)keyPath context:(void *)context;";
+        model64.secondName = @"移除观察者。\n例子： [arr removeObserver:self forKeyPath:@\"1\" context:nil];";
+        [keyArr addObject:model64];
+        
+        WyhModel *model65 = [WyhModel new];
+        model65.firstName = @"- (void)removeObserver:(NSObject *)observer fromObjectsAtIndexes:(NSIndexSet *)indexes forKeyPath:(NSString *)keyPath context:(void *)context;";
+        model65.secondName = @"移除观察者。\n例子： NSIndexSet *set = [NSIndexSet indexSetWithIndex:1];\n [arr removeObserver:self fromObjectsAtIndexes:set forKeyPath:@\"1\" context:nil];";
+        [keyArr addObject:model65];
+       
+        WyhModel *model66 = [WyhModel new];
+        model66.firstName = @"- (void)addObserver:(NSObject *)observer toObjectsAtIndexes:(NSIndexSet *)indexes forKeyPath:(NSString *)keyPath options:(NSKeyValueObservingOptions)options context:(void *)context;";
+        model66.secondName = @"注册一个观察者，接收指定键路径的键值观察者通知，相对于索引中的对象。\n例子： NSIndexSet *set = [NSIndexSet indexSetWithIndex:1];\n  [arr addObserver:self toObjectsAtIndexes:set forKeyPath:@\"1\" options:NSKeyValueObservingOptionOld context:nil];";
+        [keyArr addObject:model66];
+        
+        WyhModel *model67 = [WyhModel new];
+        model67.firstName = @"- (void)removeObserver:(NSObject *)observer fromObjectsAtIndexes:(NSIndexSet *)indexes forKeyPath:(NSString *)keyPath;";
+        model67.secondName = @"从与指定的键值相关的所有键值观察者通知中删除an观察者，相对于该数组在索引中的对象。\n例子： NSIndexSet *set = [NSIndexSet indexSetWithIndex:1];\n  [arr removeObserver:self fromObjectsAtIndexes:set forKeyPath:@\"1\"];";
+        [keyArr addObject:model67];
+        
+        
+       
+        [_dataArray addObject:keyArr];
+        
         
     }
     return _dataArray;
