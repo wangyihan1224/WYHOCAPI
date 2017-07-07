@@ -44,6 +44,7 @@ static NSString *templateCell = @"templateCell";
         [_titleArray addObject:@"Sorting"];
         [_titleArray addObject:@"Working with String Elements"];
         [_titleArray addObject:@"Creating a Decription"];
+         [_titleArray addObject:@"Storing Arrays"];
         
     }
     return _titleArray;
@@ -402,10 +403,30 @@ static NSString *templateCell = @"templateCell";
         model58.firstName = @"- (NSString *)descriptionWithLocale:(id)locale indent:(NSUInteger)level;";
         model58.secondName = @"返回一个表示数组内容的字符串，格式为属性列表。\n例子：NSArray *arr = @[@\"1\",@\"2\",@\"3\"];\n NSLocale *locale = [NSLocale systemLocale];\n NSString *string = [arr descriptionWithLocale:locale indent:1];";
         [decriptionArr addObject:model58];
-        
+      
        
        
         [_dataArray addObject:decriptionArr];
+        
+        //Storing Arrays
+        NSMutableArray *storingArr = [NSMutableArray new];
+        
+        WyhModel *model59 = [WyhModel new];
+        model59.firstName = @"- (BOOL)writeToFile:(NSString *)path atomically:(BOOL)useAuxiliaryFile;";
+        model59.secondName = @"将数组的内容写入给定路径中的文件。\n例子：NSString *nsarray = [[NSBundle mainBundle] pathForResource:@\"NSArrayEmple\" ofType:@\"plist\"];\n[arr writeToFile:nsarray atomically:YES];";
+        [storingArr addObject:model59];
+        
+  
+        
+        WyhModel *model60 = [WyhModel new];
+        model60.firstName = @"- (BOOL)writeToURL:(NSURL *)url atomically:(BOOL)atomically;";
+        model60.secondName = @"将数组的内容写到指定URL指定的位置。\n例子：NSURL *arrurl = [[NSBundle mainBundle]URLForResource:@\"NSArrayEmple.plist\" withExtension:nil];\n [arr writeToURL:arrurl atomically:YES];";
+        [storingArr addObject:model60];
+       
+        [_dataArray addObject:storingArr];
+        
+        //
+        
     }
     return _dataArray;
 }
