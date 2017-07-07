@@ -8,11 +8,13 @@
 
 #import "FoundationViewController.h"
 
+#import "NSBundleViewController.h"
 #import "NSBlockOperationViewController.h"
 #import "NSAutoreleasePoolViewController.h"
 #import "NSAttributedStringViewController.h"
 #import "NSArrayViewController.h"
 #import "NSAssertionHandlerViewController.h"
+static NSString *nSBundleViewController=@"NSBundleViewController";
 static NSString *nSBlockOperationViewController=@"NSBlockOperationViewController";
 static NSString *nSAutoreleasePoolViewController=@"NSAutoreleasePoolViewController";
 static NSString *nSAttributedStringViewController=@"NSAttributedStringViewController";
@@ -46,6 +48,7 @@ static NSString *templateCell = @"templateCell";
         [_dataArray addObject:nSAttributedStringViewController];
         [_dataArray addObject:nSAutoreleasePoolViewController];
         [_dataArray addObject:nSBlockOperationViewController];
+        [_dataArray addObject:nSBundleViewController];
     }
     return _dataArray;
 }
@@ -86,6 +89,10 @@ static NSString *templateCell = @"templateCell";
         [self.navigationController pushViewController:vc animated:YES];
     }else if ([selecTitle isEqualToString:nSBlockOperationViewController]){
         NSBlockOperationViewController *vc  = [NSBlockOperationViewController new];
+        vc.title = selecTitle;
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if ([selecTitle isEqualToString:nSBundleViewController]){
+        NSBundleViewController *vc  = [NSBundleViewController new];
         vc.title = selecTitle;
         [self.navigationController pushViewController:vc animated:YES];
     }

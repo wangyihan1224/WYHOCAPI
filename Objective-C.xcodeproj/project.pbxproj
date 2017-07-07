@@ -24,6 +24,7 @@
 		7C74FA8A1F0F341A00209412 /* NSAttributedStringViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C74FA891F0F341A00209412 /* NSAttributedStringViewController.m */; };
 		7C74FA911F0F7B5D00209412 /* NSAutoreleasePoolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C74FA901F0F7B5D00209412 /* NSAutoreleasePoolViewController.m */; };
 		7C74FA941F0F815600209412 /* NSBlockOperationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C74FA931F0F815600209412 /* NSBlockOperationViewController.m */; };
+		7C74FA971F0F844A00209412 /* NSBundleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C74FA961F0F844A00209412 /* NSBundleViewController.m */; };
 		7C77BA611F0B80580035B440 /* FoundationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C77BA601F0B80580035B440 /* FoundationViewController.m */; };
 		7C77BA641F0B80670035B440 /* ObjectiveCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C77BA631F0B80670035B440 /* ObjectiveCViewController.m */; };
 		7C77BA671F0B80720035B440 /* UIKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C77BA661F0B80720035B440 /* UIKitViewController.m */; };
@@ -70,6 +71,8 @@
 		7C74FA901F0F7B5D00209412 /* NSAutoreleasePoolViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSAutoreleasePoolViewController.m; path = "Objective-C/Home/Model/NSAutoreleasePoolViewController.m"; sourceTree = SOURCE_ROOT; };
 		7C74FA921F0F815600209412 /* NSBlockOperationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSBlockOperationViewController.h; path = "Objective-C/Home/Model/NSBlockOperationViewController.h"; sourceTree = SOURCE_ROOT; };
 		7C74FA931F0F815600209412 /* NSBlockOperationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSBlockOperationViewController.m; path = "Objective-C/Home/Model/NSBlockOperationViewController.m"; sourceTree = SOURCE_ROOT; };
+		7C74FA951F0F844A00209412 /* NSBundleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSBundleViewController.h; path = "Objective-C/Home/Model/NSBundleViewController.h"; sourceTree = SOURCE_ROOT; };
+		7C74FA961F0F844A00209412 /* NSBundleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSBundleViewController.m; path = "Objective-C/Home/Model/NSBundleViewController.m"; sourceTree = SOURCE_ROOT; };
 		7C77BA5F1F0B80580035B440 /* FoundationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoundationViewController.h; sourceTree = "<group>"; };
 		7C77BA601F0B80580035B440 /* FoundationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoundationViewController.m; sourceTree = "<group>"; };
 		7C77BA621F0B80670035B440 /* ObjectiveCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectiveCViewController.h; sourceTree = "<group>"; };
@@ -1429,6 +1432,8 @@
 				7C74FA901F0F7B5D00209412 /* NSAutoreleasePoolViewController.m */,
 				7C74FA921F0F815600209412 /* NSBlockOperationViewController.h */,
 				7C74FA931F0F815600209412 /* NSBlockOperationViewController.m */,
+				7C74FA951F0F844A00209412 /* NSBundleViewController.h */,
+				7C74FA961F0F844A00209412 /* NSBundleViewController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -1663,6 +1668,7 @@
 				7CA55C3D1F063C0200ABF90B /* GraphicsAndGamesViewController.m in Sources */,
 				7C74FA911F0F7B5D00209412 /* NSAutoreleasePoolViewController.m in Sources */,
 				7C74FA8A1F0F341A00209412 /* NSAttributedStringViewController.m in Sources */,
+				7C74FA971F0F844A00209412 /* NSBundleViewController.m in Sources */,
 				7C77BA641F0B80670035B440 /* ObjectiveCViewController.m in Sources */,
 				7C444A491EF11B2D00F99891 /* BaseViewController.m in Sources */,
 				7C77BA611F0B80580035B440 /* FoundationViewController.m in Sources */,
