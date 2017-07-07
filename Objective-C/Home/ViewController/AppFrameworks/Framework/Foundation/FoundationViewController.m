@@ -8,8 +8,10 @@
 
 #import "FoundationViewController.h"
 
+#import "NSAttributedStringViewController.h"
 #import "NSArrayViewController.h"
 #import "NSAssertionHandlerViewController.h"
+static NSString *nSAttributedStringViewController=@"NSAttributedStringViewController";
 static NSString *nSAssertionHandlerViewController=@"NSAssertionHandlerViewController";
 static NSString *nSArrayViewController=@"NSArrayViewController";
 static NSString *templateCell = @"templateCell";
@@ -37,6 +39,7 @@ static NSString *templateCell = @"templateCell";
         _dataArray = [NSMutableArray new];
         [_dataArray addObject:nSArrayViewController];
         [_dataArray addObject:nSAssertionHandlerViewController];
+        [_dataArray addObject:nSAttributedStringViewController];
     }
     return _dataArray;
 }
@@ -65,6 +68,10 @@ static NSString *templateCell = @"templateCell";
         [self.navigationController pushViewController:vc animated:YES];
     }else if ([selecTitle isEqualToString:nSAssertionHandlerViewController]){
         NSAssertionHandlerViewController *vc  = [NSAssertionHandlerViewController new];
+        vc.title = selecTitle;
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if ([selecTitle isEqualToString:nSAttributedStringViewController]){
+        NSAttributedStringViewController *vc  = [NSAttributedStringViewController new];
         vc.title = selecTitle;
         [self.navigationController pushViewController:vc animated:YES];
     }
