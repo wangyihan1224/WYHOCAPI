@@ -9,6 +9,7 @@
 #import "NSArrayViewController.h"
 #import "WyhModel.h"
 #import "NSArrayTableViewCell.h"
+#import <GameplayKit/GameplayKit.h>
 static NSString *templateCell = @"templateCell";
 @interface NSArrayViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong)UITableView *wyhTable;
@@ -44,10 +45,13 @@ static NSString *templateCell = @"templateCell";
         [_titleArray addObject:@"Sorting"];
         [_titleArray addObject:@"Working with String Elements"];
         [_titleArray addObject:@"Creating a Decription"];
-         [_titleArray addObject:@"Storing Arrays"];
-         [_titleArray addObject:@"Collecting Paths"];
-         [_titleArray addObject:@"Key-Value Observing"];
-        
+        [_titleArray addObject:@"Storing Arrays"];
+        [_titleArray addObject:@"Collecting Paths"];
+        [_titleArray addObject:@"Key-Value Observing"];
+        [_titleArray addObject:@"Key-Value Coding"];
+        [_titleArray addObject:@"Randomly Shuffling an Array"];
+        [_titleArray addObject:@"New Methods"];
+        [_titleArray addObject:@"Constants"];
         
         
     }
@@ -55,7 +59,7 @@ static NSString *templateCell = @"templateCell";
 }
 -(NSMutableArray *)dataArray{
     if (!_dataArray) {
-        NSArray *arr = [NSArray new];
+//        NSArray *arr = [NSArray new];
         
         _dataArray = [NSMutableArray new];
         
@@ -478,6 +482,57 @@ static NSString *templateCell = @"templateCell";
        
         [_dataArray addObject:keyArr];
         
+        //Key-Value Coding
+        NSMutableArray *kvcArr = [NSMutableArray new];
+        
+        WyhModel *model68 = [WyhModel new];
+        model68.firstName = @"- (void)setValue:(id)value forKey:(NSString *)key;";
+        model68.secondName = @"调用setValue:forKey:在每个数组的条目上使用指定的值和键。\n例子： [arr setValue:@\"4\" forKey:@\"6\"];";
+        [kvcArr addObject:model68];
+        
+        WyhModel *model69 = [WyhModel new];
+        model69.firstName = @"- (id)valueForKey:(NSString *)key;";
+        model69.secondName = @"返回一个包含调用valueForKey的结果的数组:在数组的每个对象上使用键。\n例子： NSString *string =  [arr valueForKey:@\"6\"];";
+        [kvcArr addObject:model69];
+      
+        
+        [_dataArray addObject:kvcArr];
+        
+        //Randomly Shuffling an Array
+        NSMutableArray *shufflingArr = [NSMutableArray new];
+        
+        WyhModel *model70 = [WyhModel new];
+        model70.firstName = @"- (NSArray<ObjectType> *)shuffledArray;";
+        model70.secondName = @"随机打乱一个arrayarea将一个新的数组，它以随机的顺序列出这个数组的元素。\n例子： NSArray *arr2 = [arr shuffledArray];(GamePlayKit)";
+        [shufflingArr addObject:model70];
+        
+        WyhModel *model71 = [WyhModel new];
+        model71.firstName = @"- (NSArray<ObjectType> *)shuffledArrayWithRandomSource:(GKRandomSource *)randomSource;";
+        model71.secondName = @"返回一个新的数组，该数组使用指定的随机源，以随机的顺序列出该数组的元素。\n例子： GKRandomSource *random = [GKRandomSource sharedRandom];\n[arr shuffledArrayWithRandomSource:random];(GamePlayKit)";
+        [shufflingArr addObject:model71];
+       
+        
+        [_dataArray addObject:shufflingArr];
+        
+        //New Methods
+        NSMutableArray *newArr = [NSMutableArray new];
+        
+        WyhModel *model72 = [WyhModel new];
+        model72.firstName = @"- (instancetype)initWithCoder:(NSCoder *)aDecoder;";
+        model72.secondName = @"返回一个新的数组，该数组使用指定的随机源，以随机的顺序列出该数组的元素。\n例子：  NSCoder *coder = [NSCoder new];\nNSArray *arr2 = [[NSArray alloc]initWithCoder:coder];";
+        [newArr addObject:model72];
+       
+        [_dataArray addObject:newArr];
+        
+        //Constants
+        NSMutableArray *constantsArr = [NSMutableArray new];
+        
+        WyhModel *model73 = [WyhModel new];
+        model73.firstName = @"NSBinarySearchingOptions";
+        model73.secondName = @"用于搜索和插入的选项。\n例子：  indexOfObject:inSortedRange:options:usingComparator:\nNSBinarySearchingFirstEqual:指定搜索应该返回与给定对象相等的范围内的第一个对象\nNSBinarySearchingLastEqual:指定搜索应该返回与给定对象相等的范围内的最后一个对象\nNSBinarySearchingInsertionIndex:返回你应该插入对象的索引，以维护一个排好序的数组";
+        [constantsArr addObject:model73];
+        
+        [_dataArray addObject:constantsArr];
         
     }
     return _dataArray;
