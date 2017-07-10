@@ -23,6 +23,9 @@
 		7C5D60231F13205B001F9AC8 /* NSBundleNibViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C5D60211F13205B001F9AC8 /* NSBundleNibViewController.m */; };
 		7C5D60241F13205B001F9AC8 /* NSBundleNibViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C5D60221F13205B001F9AC8 /* NSBundleNibViewController.xib */; };
 		7C5D60271F136C9F001F9AC8 /* NSBundleResourceRequestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C5D60261F136C9F001F9AC8 /* NSBundleResourceRequestViewController.m */; };
+		7C5D602A1F13760C001F9AC8 /* NSByteCountFormatterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C5D60291F13760C001F9AC8 /* NSByteCountFormatterViewController.m */; };
+		7C5D602D1F137E6E001F9AC8 /* NSCacheViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C5D602C1F137E6E001F9AC8 /* NSCacheViewController.m */; };
+		7C5D60301F13893D001F9AC8 /* NSCachedURLResponseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C5D602F1F13893D001F9AC8 /* NSCachedURLResponseViewController.m */; };
 		7C74FA871F0F2DF900209412 /* NSAssertionHandlerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C74FA861F0F2DF900209412 /* NSAssertionHandlerViewController.m */; };
 		7C74FA8A1F0F341A00209412 /* NSAttributedStringViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C74FA891F0F341A00209412 /* NSAttributedStringViewController.m */; };
 		7C74FA911F0F7B5D00209412 /* NSAutoreleasePoolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C74FA901F0F7B5D00209412 /* NSAutoreleasePoolViewController.m */; };
@@ -69,6 +72,12 @@
 		7C5D60221F13205B001F9AC8 /* NSBundleNibViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NSBundleNibViewController.xib; path = "Objective-C/Home/Model/NSBundleNibViewController.xib"; sourceTree = SOURCE_ROOT; };
 		7C5D60251F136C9F001F9AC8 /* NSBundleResourceRequestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSBundleResourceRequestViewController.h; path = "Objective-C/Home/Model/NSBundleResourceRequestViewController.h"; sourceTree = SOURCE_ROOT; };
 		7C5D60261F136C9F001F9AC8 /* NSBundleResourceRequestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSBundleResourceRequestViewController.m; path = "Objective-C/Home/Model/NSBundleResourceRequestViewController.m"; sourceTree = SOURCE_ROOT; };
+		7C5D60281F13760C001F9AC8 /* NSByteCountFormatterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSByteCountFormatterViewController.h; path = "Objective-C/Home/Model/NSByteCountFormatterViewController.h"; sourceTree = SOURCE_ROOT; };
+		7C5D60291F13760C001F9AC8 /* NSByteCountFormatterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSByteCountFormatterViewController.m; path = "Objective-C/Home/Model/NSByteCountFormatterViewController.m"; sourceTree = SOURCE_ROOT; };
+		7C5D602B1F137E6E001F9AC8 /* NSCacheViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSCacheViewController.h; path = "Objective-C/Home/Model/NSCacheViewController.h"; sourceTree = SOURCE_ROOT; };
+		7C5D602C1F137E6E001F9AC8 /* NSCacheViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSCacheViewController.m; path = "Objective-C/Home/Model/NSCacheViewController.m"; sourceTree = SOURCE_ROOT; };
+		7C5D602E1F13893D001F9AC8 /* NSCachedURLResponseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSCachedURLResponseViewController.h; path = "Objective-C/Home/Model/NSCachedURLResponseViewController.h"; sourceTree = SOURCE_ROOT; };
+		7C5D602F1F13893D001F9AC8 /* NSCachedURLResponseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSCachedURLResponseViewController.m; path = "Objective-C/Home/Model/NSCachedURLResponseViewController.m"; sourceTree = SOURCE_ROOT; };
 		7C74FA851F0F2DF900209412 /* NSAssertionHandlerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSAssertionHandlerViewController.h; path = "Objective-C/Home/Model/NSAssertionHandlerViewController.h"; sourceTree = SOURCE_ROOT; };
 		7C74FA861F0F2DF900209412 /* NSAssertionHandlerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSAssertionHandlerViewController.m; path = "Objective-C/Home/Model/NSAssertionHandlerViewController.m"; sourceTree = SOURCE_ROOT; };
 		7C74FA881F0F341A00209412 /* NSAttributedStringViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSAttributedStringViewController.h; path = "Objective-C/Home/Model/NSAttributedStringViewController.h"; sourceTree = SOURCE_ROOT; };
@@ -1377,6 +1386,12 @@
 				7C5D60221F13205B001F9AC8 /* NSBundleNibViewController.xib */,
 				7C5D60251F136C9F001F9AC8 /* NSBundleResourceRequestViewController.h */,
 				7C5D60261F136C9F001F9AC8 /* NSBundleResourceRequestViewController.m */,
+				7C5D60281F13760C001F9AC8 /* NSByteCountFormatterViewController.h */,
+				7C5D60291F13760C001F9AC8 /* NSByteCountFormatterViewController.m */,
+				7C5D602B1F137E6E001F9AC8 /* NSCacheViewController.h */,
+				7C5D602C1F137E6E001F9AC8 /* NSCacheViewController.m */,
+				7C5D602E1F13893D001F9AC8 /* NSCachedURLResponseViewController.h */,
+				7C5D602F1F13893D001F9AC8 /* NSCachedURLResponseViewController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -1586,12 +1601,15 @@
 				7C74FA8A1F0F341A00209412 /* NSAttributedStringViewController.m in Sources */,
 				7C74FA971F0F844A00209412 /* NSBundleViewController.m in Sources */,
 				7C77BA641F0B80670035B440 /* ObjectiveCViewController.m in Sources */,
+				7C5D60301F13893D001F9AC8 /* NSCachedURLResponseViewController.m in Sources */,
+				7C5D602A1F13760C001F9AC8 /* NSByteCountFormatterViewController.m in Sources */,
 				7C444A491EF11B2D00F99891 /* BaseViewController.m in Sources */,
 				7C77BA611F0B80580035B440 /* FoundationViewController.m in Sources */,
 				7CA55C431F063C4800ABF90B /* MediaAndWebViewController.m in Sources */,
 				7C444A4E1EF11CB700F99891 /* AppViewController.m in Sources */,
 				7C74FA871F0F2DF900209412 /* NSAssertionHandlerViewController.m in Sources */,
 				7C444A281EF119A000F99891 /* main.m in Sources */,
+				7C5D602D1F137E6E001F9AC8 /* NSCacheViewController.m in Sources */,
 				7C5D60271F136C9F001F9AC8 /* NSBundleResourceRequestViewController.m in Sources */,
 				7CA55C371F063BCE00ABF90B /* AppServicesViewController.m in Sources */,
 				7CA55C401F063C3C00ABF90B /* SystemViewController.m in Sources */,

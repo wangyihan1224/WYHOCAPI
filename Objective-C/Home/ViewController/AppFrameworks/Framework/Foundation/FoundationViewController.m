@@ -8,6 +8,9 @@
 
 #import "FoundationViewController.h"
 
+#import "NSCachedURLResponseViewController.h"
+#import "NSCacheViewController.h"
+#import "NSByteCountFormatterViewController.h"
 #import "NSBundleResourceRequestViewController.h"
 #import "NSBundleViewController.h"
 #import "NSBlockOperationViewController.h"
@@ -15,6 +18,9 @@
 #import "NSAttributedStringViewController.h"
 #import "NSArrayViewController.h"
 #import "NSAssertionHandlerViewController.h"
+static NSString *nSCachedURLResponseViewController=@"NSCachedURLResponseViewController";
+static NSString *nSCacheViewController=@"NSCacheViewController";
+static NSString *nSByteCountFormatterViewController=@"NSByteCountFormatterViewController";
 static NSString *nSBundleResourceRequestViewController=@"NSBundleResourceRequestViewController";
 static NSString *nSBundleViewController=@"NSBundleViewController";
 static NSString *nSBlockOperationViewController=@"NSBlockOperationViewController";
@@ -52,6 +58,9 @@ static NSString *templateCell = @"templateCell";
         [_dataArray addObject:nSBlockOperationViewController];
         [_dataArray addObject:nSBundleViewController];
         [_dataArray addObject:nSBundleResourceRequestViewController];
+        [_dataArray addObject:nSByteCountFormatterViewController];
+        [_dataArray addObject:nSCacheViewController];
+        [_dataArray addObject:nSCachedURLResponseViewController];
     }
     return _dataArray;
 }
@@ -100,6 +109,18 @@ static NSString *templateCell = @"templateCell";
         [self.navigationController pushViewController:vc animated:YES];
     }else if ([selecTitle isEqualToString:nSBundleResourceRequestViewController]){
         NSBundleResourceRequestViewController *vc  = [NSBundleResourceRequestViewController new];
+        vc.title = selecTitle;
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if ([selecTitle isEqualToString:nSByteCountFormatterViewController]){
+        NSByteCountFormatterViewController *vc  = [NSByteCountFormatterViewController new];
+        vc.title = selecTitle;
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if ([selecTitle isEqualToString:nSCacheViewController]){
+        NSCacheViewController *vc  = [NSCacheViewController new];
+        vc.title = selecTitle;
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if ([selecTitle isEqualToString:nSCachedURLResponseViewController]){
+        NSCachedURLResponseViewController *vc  = [NSCachedURLResponseViewController new];
         vc.title = selecTitle;
         [self.navigationController pushViewController:vc animated:YES];
     }
