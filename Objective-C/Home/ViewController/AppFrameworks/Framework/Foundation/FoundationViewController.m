@@ -8,12 +8,14 @@
 
 #import "FoundationViewController.h"
 
+#import "NSBundleResourceRequestViewController.h"
 #import "NSBundleViewController.h"
 #import "NSBlockOperationViewController.h"
 #import "NSAutoreleasePoolViewController.h"
 #import "NSAttributedStringViewController.h"
 #import "NSArrayViewController.h"
 #import "NSAssertionHandlerViewController.h"
+static NSString *nSBundleResourceRequestViewController=@"NSBundleResourceRequestViewController";
 static NSString *nSBundleViewController=@"NSBundleViewController";
 static NSString *nSBlockOperationViewController=@"NSBlockOperationViewController";
 static NSString *nSAutoreleasePoolViewController=@"NSAutoreleasePoolViewController";
@@ -49,6 +51,7 @@ static NSString *templateCell = @"templateCell";
         [_dataArray addObject:nSAutoreleasePoolViewController];
         [_dataArray addObject:nSBlockOperationViewController];
         [_dataArray addObject:nSBundleViewController];
+        [_dataArray addObject:nSBundleResourceRequestViewController];
     }
     return _dataArray;
 }
@@ -93,6 +96,10 @@ static NSString *templateCell = @"templateCell";
         [self.navigationController pushViewController:vc animated:YES];
     }else if ([selecTitle isEqualToString:nSBundleViewController]){
         NSBundleViewController *vc  = [NSBundleViewController new];
+        vc.title = selecTitle;
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if ([selecTitle isEqualToString:nSBundleResourceRequestViewController]){
+        NSBundleResourceRequestViewController *vc  = [NSBundleResourceRequestViewController new];
         vc.title = selecTitle;
         [self.navigationController pushViewController:vc animated:YES];
     }
