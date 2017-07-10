@@ -41,6 +41,12 @@ static NSString *templateCell = @"templateCell";
         [_titleArray addObject:@"Fetching Localized Strings"];
         [_titleArray addObject:@"Getting the Standard Bundle Directories"];
         [_titleArray addObject:@"Getting Bundle Information"];
+        [_titleArray addObject:@"Getting Localization Information"];
+        [_titleArray addObject:@"Managing Preservation Priority for On Demand Resources"];
+        [_titleArray addObject:@"Getting Classes from a Bundle"];
+        [_titleArray addObject:@"Loading Code from a Bundle"];
+        [_titleArray addObject:@"Constants"];
+        [_titleArray addObject:@"Notifications"];
     }
     return _titleArray;
 }
@@ -288,7 +294,156 @@ static NSString *templateCell = @"templateCell";
         model41.secondName = @"接收方的bundle目录的完整URL。\n例子：NSURL *url = bundle.bundleURL;";
         [soundArr addObject:model41];
         
+        WyhModel *model42= [WyhModel new];
+        model42.firstName = @"@property(readonly, copy) NSString *bundlePath;";
+        model42.secondName = @"接收者的bundle目录的完整路径名。\n例子：NSString *string = bundle.bundlePath;";
+        [soundArr addObject:model42];
+        
+        WyhModel *model43= [WyhModel new];
+        model43.firstName = @"@property(readonly, copy) NSString *bundleIdentifier;";
+        model43.secondName = @"接收机的包标识符。\n例子：NSString *string = bundle.bundleIdentifier;";
+        [soundArr addObject:model43];
+        
+        WyhModel *model44= [WyhModel new];
+        model44.firstName = @"@property(readonly, copy) NSDictionary<NSString *,id> *infoDictionary;";
+        model44.secondName = @"一个字典，由这个包的信息构成。plist文件包含关于接收者的信息。\n例子：NSDictionary *dict = bundle.infoDictionary;";
+        [soundArr addObject:model44];
+        
+        WyhModel *model45= [WyhModel new];
+        model45.firstName = @"- (id)objectForInfoDictionaryKey:(NSString *)key;";
+        model45.secondName = @"在接收者的信息属性列表中返回与指定键相关联的值。\n例子：id value = [bundle objectForInfoDictionaryKey:@\"key\"];";
+        [soundArr addObject:model45];
+        
         [_dataArray addObject:soundArr];
+        
+        //Getting Localization Information
+        NSMutableArray *localiArr = [NSMutableArray new];
+        
+        WyhModel *model46= [WyhModel new];
+        model46.firstName = @"@property(readonly, copy) NSArray<NSString *> *localizations;";
+        model46.secondName = @"包中包含的所有本地化的列表。\n例子：NSArray *arr = bundle.localizations;";
+        [localiArr addObject:model46];
+        
+        WyhModel *model47= [WyhModel new];
+        model47.firstName = @"@property(readonly, copy) NSArray<NSString *> *preferredLocalizations;";
+        model47.secondName = @"包中包含的一个有序的本地化包列表。\n例子：NSArray *arr = bundle.preferredLocalizations;";
+        [localiArr addObject:model47];
+        
+        WyhModel *model48= [WyhModel new];
+        model48.firstName = @"@property(readonly, copy) NSString *developmentLocalization;";
+        model48.secondName = @"开发语言的本地化。\n例子：NSString *string = bundle.developmentLocalization;";
+        [localiArr addObject:model48];
+        
+        WyhModel *model49= [WyhModel new];
+        model49.firstName = @"@property(readonly, copy) NSDictionary<NSString *,id> *localizedInfoDictionary;";
+        model49.secondName = @"带有来自bundle的本地化属性列表的键的字典。\n例子：NSDictionary *dict = bundle.localizedInfoDictionary;";
+        [localiArr addObject:model49];
+        
+        WyhModel *model50= [WyhModel new];
+        model50.firstName = @"+ (NSArray<NSString *> *)preferredLocalizationsFromArray:(NSArray<NSString *> *)localizationsArray;";
+        model50.secondName = @"返回一个或多个来自指定列表的本地化，该列表将用于为当前用户定位资源。\n例子：NSArray *arr = [NSBundle preferredLocalizationsFromArray:nil];";
+        [localiArr addObject:model50];
+        
+        WyhModel *model51= [WyhModel new];
+        model51.firstName = @"+ (NSArray<NSString *> *)preferredLocalizationsFromArray:(NSArray<NSString *> *)localizationsArray forPreferences:(NSArray<NSString *> *)preferencesArray;";
+        model51.secondName = @"返回一个捆绑包对象所喜欢的本地化，考虑到指定的包和用户的语言首选项。\n例子：NSArray *arr = [NSBundle preferredLocalizationsFromArray:nil forPreferences:nil];";
+        [localiArr addObject:model51];
+        
+        [_dataArray addObject:localiArr];
+        
+        //Managing Preservation Priority for On Demand Resources
+        NSMutableArray *demandArr = [NSMutableArray new];
+        
+        WyhModel *model52= [WyhModel new];
+        model52.firstName = @"- (void)setPreservationPriority:(double)priority forTags:(NSSet<NSString *> *)tags;";
+        model52.secondName = @"对该包中清除标记集的相对顺序的一个提示。\n例子：NSSet *set = [NSSet setWithObjects:@1,@2,@3,@4,@4,nil];\n[bundle setPreservationPriority:2.0 forTags:set];";
+        [demandArr addObject:model52];
+        
+        WyhModel *model53= [WyhModel new];
+        model53.firstName = @"- (double)preservationPriorityForTag:(NSString *)tag;";
+        model53.secondName = @"返回指定标签的当前保存优先级。\n例子：[bundle preservationPriorityForTag:@\"1\"];";
+        [demandArr addObject:model53];
+        
+        [_dataArray addObject:demandArr];
+        
+        //Getting Classes from a Bundle
+        NSMutableArray *classArr = [NSMutableArray new];
+        
+        WyhModel *model54= [WyhModel new];
+        model54.firstName = @"- (Class)classNamed:(NSString *)className;";
+        model54.secondName = @"返回指定名称的类对象。\n例子：Class class = [bundle classNamed:@\"NSArray\"];";
+        [classArr addObject:model54];
+        
+        WyhModel *model55= [WyhModel new];
+        model55.firstName = @"@property(readonly) Class principalClass;";
+        model55.secondName = @"包的主要类。\n例子：Class class = bundle.principalClass;";
+        [classArr addObject:model55];
+        
+        [_dataArray addObject:classArr];
+        
+        //Loading Code from a Bundle
+        NSMutableArray *codeArr = [NSMutableArray new];
+        
+        WyhModel *model56= [WyhModel new];
+        model56.firstName = @"@property(readonly, copy) NSArray<NSNumber *> *executableArchitectures;";
+        model56.secondName = @"一组数字表示由bundle的可执行文件支持的体系结构类型。\n例子：NSArray *arr = bundle.executableArchitectures;";
+        [codeArr addObject:model56];
+        
+        WyhModel *model57= [WyhModel new];
+        model57.firstName = @"- (BOOL)preflightAndReturnError:(NSError * _Nullable *)error;";
+        model57.secondName = @"返回一个布尔值，指示该bundle的可执行代码是否可以成功加载。\n例子：BOOL isSuccessLoad = [bundle preflightAndReturnError:nil];";
+        [codeArr addObject:model57];
+        
+        WyhModel *model58= [WyhModel new];
+        model58.firstName = @"- (BOOL)load;";
+        model58.secondName = @"如果代码还没有加载，那么可以动态地将bundle的可执行代码加载到一个正在运行的程序中。\n例子：BOOL isSuccessLoad = [bundle load];";
+        [codeArr addObject:model58];
+        
+        WyhModel *model59= [WyhModel new];
+        model59.firstName = @"- (BOOL)loadAndReturnError:(NSError * _Nullable *)error;";
+        model59.secondName = @"加载bundle的可执行代码并返回任何错误。\n例子：BOOL isSuccessLoad = [bundle loadAndReturnError:nil];";
+        [codeArr addObject:model59];
+        
+        WyhModel *model60= [WyhModel new];
+        model60.firstName = @"- (BOOL)unload;";
+        model60.secondName = @"卸载与接收方相关联的代码。\n例子：BOOL isSuccessLoad = [bundle unload];";
+        [codeArr addObject:model60];
+        
+        WyhModel *model61= [WyhModel new];
+        model61.firstName = @"@property(readonly, getter=isLoaded) BOOL loaded;";
+        model61.secondName = @"一个包的负载状态。\n例子：BOOL isSuccessLoad = bundle.loaded;";
+        [codeArr addObject:model61];
+        
+        [_dataArray addObject:codeArr];
+        //Constants
+        NSMutableArray *constantArr =[NSMutableArray new];
+        
+        WyhModel *model62= [WyhModel new];
+        model62.firstName = @"Mach-O Architecture";
+        model62.secondName = @"这些常量描述了一个bundle的可执行代码可能支持的CPU类型。\n例子：NSBundleExecutableArchitectureI386:指定32位Intel架构\nNSBundleExecutableArchitecturePPC:指定32位PowerPC架构\nNSBundleExecutableArchitectureX86_64:指定64位Intel架构\nNSBundleExecutableArchitecturePPC64:指定64位PowerPC体系结构";
+        [constantArr addObject:model62];
+        
+        WyhModel *model63= [WyhModel new];
+        model63.firstName = @"UIKit Nib Loading Options";
+        model63.secondName = @"可以在nib加载期间指定的选项。\n例子：UINibExternalObjects:在nib文件中替换任何代理对象。这个键的值是一个NSDictionary对象。字典的键是nib文件中任何代理对象的名称，每个键的值是用来代替代理的实际对象\nUINibProxiedObjectsKey:在iOS 2。这个键的值是一个字典，它包含了在nib文件中使用的任何代理对象的运行时替换对象。在这个字典中，键是与代理对象相关联的名称，而值是应该在其位置使用的代码中的实际对象";
+        [constantArr addObject:model63];
+        
+        WyhModel *model64= [WyhModel new];
+        model64.firstName = @"NSLoadedClasses";
+        model64.secondName = @"这个常数中提供了用户信息的字典NSBundleDidLoadNotification通知。\n例子：NSLoadedClasses:一个NSArray对象，其中包含加载的每个类的名称(作为NSString对象)";
+        [constantArr addObject:model64];
+        
+        [_dataArray addObject:constantArr];
+        
+        //Notifications
+        NSMutableArray *notiArr = [NSMutableArray new];
+        
+        WyhModel *model65= [WyhModel new];
+        model65.firstName = @"NSBundleDidLoadNotification";
+        model65.secondName = @"NSBundle帖子NSBundleDidLoadNotification通知观察者哪些类和类别动态加载的。\n例子：NSBundleDidLoadNotification:NSBundle帖子NSBundleDidLoadNotification通知观察者哪些类和类别动态加载的";
+        [notiArr addObject:model65];
+        
+        [_dataArray addObject:notiArr];
     }
     return _dataArray;
 }
