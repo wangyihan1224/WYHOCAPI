@@ -11,7 +11,7 @@
 
 #import "AppFrameworksViewController.h"
 #import "AppServicesViewController.h"
-#import "DeveloperToolsViewController.h"
+
 #import "GraphicsAndGamesViewController.h"
 #import "MediaAndWebViewController.h"
 #import "SystemViewController.h"
@@ -102,10 +102,6 @@ static NSString *systemViewController = @"SystemViewController";
    
     }else if ([selecTitle isEqualToString:appServicesViewController]){
         AppServicesViewController *vc  = [AppServicesViewController new];
-        vc.title = selecTitle;
-        [self.navigationController pushViewController:vc animated:YES];
-    }else if ([selecTitle isEqualToString:developerToolsViewController]){
-        DeveloperToolsViewController *vc  = [DeveloperToolsViewController new];
         vc.title = selecTitle;
         [self.navigationController pushViewController:vc animated:YES];
     }else if ([selecTitle isEqualToString:graphicsAndGamesViewController]){

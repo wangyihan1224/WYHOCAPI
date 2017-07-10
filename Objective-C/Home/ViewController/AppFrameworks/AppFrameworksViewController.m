@@ -54,6 +54,7 @@ static NSString *templateCell = @"templateCell";
     // Do any additional setup after loading the view.
 }
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    
     return 1;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -69,6 +70,7 @@ static NSString *templateCell = @"templateCell";
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 
     NSString *selecTitle = self.dataArray[indexPath.row];
+    
     if ([selecTitle isEqualToString:foundationViewController]){
         FoundationViewController *vc  = [FoundationViewController new];
         vc.title = selecTitle;

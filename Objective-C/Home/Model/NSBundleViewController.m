@@ -37,6 +37,7 @@ static NSString *templateCell = @"templateCell";
         [_titleArray addObject:@"Getting Standard Bundle Objects"];
         [_titleArray addObject:@"Creating and Initializing a Bundle"];
         [_titleArray addObject:@"Loading Nib Files"];
+        [_titleArray addObject:@"Finding Resource Files"];
     }
     return _titleArray;
 }
@@ -102,8 +103,33 @@ static NSString *templateCell = @"templateCell";
          //Loading Nib Files
         NSMutableArray *loadArr = [NSMutableArray new];
         
+        WyhModel *model10 = [WyhModel new];
+        model10.firstName = @"- (NSArray *)loadNibNamed:(NSString *)name owner:(id)owner options:(NSDictionary *)options;";
+        model10.secondName = @"将位于接收方包中的nib文件的内容解出。\n例子： NSArray *arr = [[NSBundle mainBundle] loadNibNamed:@\"NSBundleNibViewController\" owner:self options:nil];";
+        [loadArr addObject:model10];
         
+       
         [_dataArray addObject:loadArr];
+        
+        //Finding Resource Files
+        NSMutableArray *findArr = [NSMutableArray new];
+        
+        WyhModel *model11 = [WyhModel new];
+        model11.firstName = @"- (NSURL *)URLForResource:(NSString *)name withExtension:(NSString *)ext subdirectory:(NSString *)subpath;";
+        model11.secondName = @"返回指定的名称和扩展所标识的资源文件的文件URL，并驻留在给定的包目录中。\n例子：NSURL *url = [bundle URLForResource:@\"NSArrayEmple\" withExtension:@\"plist\" subdirectory:nil];";
+        [findArr addObject:model11];
+        
+        WyhModel *model12 = [WyhModel new];
+        model12.firstName = @"- (NSURL *)URLForResource:(NSString *)name withExtension:(NSString *)ext;";
+        model12.secondName = @"返回指定名称和文件扩展所标识的资源的文件URL。\n例子：NSURL *url = [bundle URLForResource:@\"NSArrayEmple\" withExtension:@\"plist\"];";
+        [findArr addObject:model12];
+        
+        WyhModel *model13= [WyhModel new];
+        model13.firstName = @"- (NSArray<NSURL *> *)URLsForResourcesWithExtension:(NSString *)ext subdirectory:(NSString *)subpath;";
+        model13.secondName = @"返回指定文件扩展所标识的所有资源的文件url数组，并位于指定的bundle子目录中。\n例子：NSArray *arr = [bundle URLsForResourcesWithExtension:@\"plist\" subdirectory:nil];";
+        [findArr addObject:model13];
+        
+        [_dataArray addObject:findArr];
     }
     return _dataArray;
 }

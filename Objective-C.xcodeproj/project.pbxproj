@@ -20,6 +20,8 @@
 		7C444A4E1EF11CB700F99891 /* AppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C444A4D1EF11CB700F99891 /* AppViewController.m */; };
 		7C444A571EF16C1800F99891 /* UILabelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C444A561EF16C1800F99891 /* UILabelController.m */; };
 		7C47625C1F0B98E600685007 /* NSArrayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C47625B1F0B98E600685007 /* NSArrayViewController.m */; };
+		7C5D60231F13205B001F9AC8 /* NSBundleNibViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C5D60211F13205B001F9AC8 /* NSBundleNibViewController.m */; };
+		7C5D60241F13205B001F9AC8 /* NSBundleNibViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C5D60221F13205B001F9AC8 /* NSBundleNibViewController.xib */; };
 		7C74FA871F0F2DF900209412 /* NSAssertionHandlerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C74FA861F0F2DF900209412 /* NSAssertionHandlerViewController.m */; };
 		7C74FA8A1F0F341A00209412 /* NSAttributedStringViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C74FA891F0F341A00209412 /* NSAttributedStringViewController.m */; };
 		7C74FA911F0F7B5D00209412 /* NSAutoreleasePoolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C74FA901F0F7B5D00209412 /* NSAutoreleasePoolViewController.m */; };
@@ -61,6 +63,9 @@
 		7C444A561EF16C1800F99891 /* UILabelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UILabelController.m; sourceTree = "<group>"; };
 		7C47625A1F0B98E600685007 /* NSArrayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSArrayViewController.h; path = "Objective-C/Home/ViewController/AppFrameworks/Framework/WatchKit/NSArrayViewController.h"; sourceTree = SOURCE_ROOT; };
 		7C47625B1F0B98E600685007 /* NSArrayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSArrayViewController.m; path = "Objective-C/Home/ViewController/AppFrameworks/Framework/WatchKit/NSArrayViewController.m"; sourceTree = SOURCE_ROOT; };
+		7C5D60201F13205B001F9AC8 /* NSBundleNibViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSBundleNibViewController.h; path = "Objective-C/Home/Model/NSBundleNibViewController.h"; sourceTree = SOURCE_ROOT; };
+		7C5D60211F13205B001F9AC8 /* NSBundleNibViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSBundleNibViewController.m; path = "Objective-C/Home/Model/NSBundleNibViewController.m"; sourceTree = SOURCE_ROOT; };
+		7C5D60221F13205B001F9AC8 /* NSBundleNibViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NSBundleNibViewController.xib; path = "Objective-C/Home/Model/NSBundleNibViewController.xib"; sourceTree = SOURCE_ROOT; };
 		7C74FA851F0F2DF900209412 /* NSAssertionHandlerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSAssertionHandlerViewController.h; path = "Objective-C/Home/Model/NSAssertionHandlerViewController.h"; sourceTree = SOURCE_ROOT; };
 		7C74FA861F0F2DF900209412 /* NSAssertionHandlerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSAssertionHandlerViewController.m; path = "Objective-C/Home/Model/NSAssertionHandlerViewController.m"; sourceTree = SOURCE_ROOT; };
 		7C74FA881F0F341A00209412 /* NSAttributedStringViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSAttributedStringViewController.h; path = "Objective-C/Home/Model/NSAttributedStringViewController.h"; sourceTree = SOURCE_ROOT; };
@@ -1364,6 +1369,9 @@
 				7C74FA931F0F815600209412 /* NSBlockOperationViewController.m */,
 				7C74FA951F0F844A00209412 /* NSBundleViewController.h */,
 				7C74FA961F0F844A00209412 /* NSBundleViewController.m */,
+				7C5D60201F13205B001F9AC8 /* NSBundleNibViewController.h */,
+				7C5D60211F13205B001F9AC8 /* NSBundleNibViewController.m */,
+				7C5D60221F13205B001F9AC8 /* NSBundleNibViewController.xib */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -1497,6 +1505,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C444A361EF119A000F99891 /* LaunchScreen.storyboard in Resources */,
+				7C5D60241F13205B001F9AC8 /* NSBundleNibViewController.xib in Resources */,
 				7C444A331EF119A000F99891 /* Assets.xcassets in Resources */,
 				7C31BBDB1F0C91090012AFB5 /* NSArrayEmple.plist in Resources */,
 			);
@@ -1564,6 +1573,7 @@
 				7C47625C1F0B98E600685007 /* NSArrayViewController.m in Sources */,
 				7C444A571EF16C1800F99891 /* UILabelController.m in Sources */,
 				7C74FA941F0F815600209412 /* NSBlockOperationViewController.m in Sources */,
+				7C5D60231F13205B001F9AC8 /* NSBundleNibViewController.m in Sources */,
 				7CA55C341F063BBD00ABF90B /* AppFrameworksViewController.m in Sources */,
 				7C444A2B1EF119A000F99891 /* AppDelegate.m in Sources */,
 				7CA55C3D1F063C0200ABF90B /* GraphicsAndGamesViewController.m in Sources */,
