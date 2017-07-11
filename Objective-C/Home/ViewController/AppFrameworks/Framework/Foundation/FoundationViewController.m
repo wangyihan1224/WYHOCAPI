@@ -8,6 +8,7 @@
 
 #import "FoundationViewController.h"
 
+#import "NSCalendarViewController.h"
 #import "NSCachedURLResponseViewController.h"
 #import "NSCacheViewController.h"
 #import "NSByteCountFormatterViewController.h"
@@ -18,6 +19,7 @@
 #import "NSAttributedStringViewController.h"
 #import "NSArrayViewController.h"
 #import "NSAssertionHandlerViewController.h"
+static NSString *nSCalendarViewController=@"NSCalendarViewController";
 static NSString *nSCachedURLResponseViewController=@"NSCachedURLResponseViewController";
 static NSString *nSCacheViewController=@"NSCacheViewController";
 static NSString *nSByteCountFormatterViewController=@"NSByteCountFormatterViewController";
@@ -61,6 +63,7 @@ static NSString *templateCell = @"templateCell";
         [_dataArray addObject:nSByteCountFormatterViewController];
         [_dataArray addObject:nSCacheViewController];
         [_dataArray addObject:nSCachedURLResponseViewController];
+        [_dataArray addObject:nSCalendarViewController];
     }
     return _dataArray;
 }
@@ -121,6 +124,10 @@ static NSString *templateCell = @"templateCell";
         [self.navigationController pushViewController:vc animated:YES];
     }else if ([selecTitle isEqualToString:nSCachedURLResponseViewController]){
         NSCachedURLResponseViewController *vc  = [NSCachedURLResponseViewController new];
+        vc.title = selecTitle;
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if ([selecTitle isEqualToString:nSCalendarViewController]){
+        NSCalendarViewController *vc  = [NSCalendarViewController new];
         vc.title = selecTitle;
         [self.navigationController pushViewController:vc animated:YES];
     }
