@@ -40,6 +40,12 @@ static NSString *templateCell = @"templateCell";
         [_titleArray addObject:@"Calendrical Calculations"];
         [_titleArray addObject:@"Comparing Dates"];
         [_titleArray addObject:@"Extracting Components"];
+        [_titleArray addObject:@"AM and PM Symbols"];
+        [_titleArray addObject:@"Weekday Symbols"];
+        [_titleArray addObject:@"Month Symbols"];
+        [_titleArray addObject:@"Quarter Symbols"];
+        [_titleArray addObject:@"Era Symbols"];
+        [_titleArray addObject:@"Constants"];
     }
     return _titleArray;
 }
@@ -259,7 +265,198 @@ static NSString *templateCell = @"templateCell";
         model37.secondName = @"从指定日期返回指定的日期组件。\n例子：NSInteger cf = [calendar component:NSCalendarUnitEra fromDate:[NSDate date]];";
         [extracArr addObject:model36];
         
+        WyhModel *model38 = [WyhModel new];
+        model38.firstName = @"- (NSDateComponents *)components:(NSCalendarUnit)unitFlags fromDate:(NSDate *)date;";
+        model38.secondName = @"返回一个包含给定日期的nsdatecomponent对象，它被分解为指定的组件。\n例子：NSDateComponents *comps = [calendar components:NSCalendarUnitEra fromDate:[NSDate date]];";
+        [extracArr addObject:model38];
+        
+        WyhModel *model39 = [WyhModel new];
+        model39.firstName = @"- (NSDateComponents *)components:(NSCalendarUnit)unitFlags fromDate:(NSDate *)startingDate toDate:(NSDate *)resultDate options:(NSCalendarOptions)opts;";
+        model39.secondName = @"返回，作为一个使用指定组件的nsdatecomponent对象，两个提供的日期之间的区别。\n例子：NSDateComponents *comps = [calendar  components:NSCalendarUnitEra fromDate:[NSDate date] toDate:[NSDate date] options:NSCalendarMatchFirst];";
+        [extracArr addObject:model39];
+        
+        WyhModel *model40 = [WyhModel new];
+        model40.firstName = @"- (NSDateComponents *)components:(NSCalendarUnit)unitFlags fromDateComponents:(NSDateComponents *)startingDateComp toDateComponents:(NSDateComponents *)resultDateComp options:(NSCalendarOptions)options;";
+        model40.secondName = @"返回一个nsdatecomponent对象表示从给定的nsdatecomponent对象构造的开始和结束NSDate对象之间的区别。\n例子：   NSDateComponents *comps = [NSDateComponents new];\n[comps setYear:2017];\n[comps setMonth:7];\n[comps setDay:11];\nNSDateComponents *comps2 = [NSDateComponents new];\n[comps2 setYear:2018];\n[comps2 setMonth:7];\n[comps2 setDay:11];\nNSDateComponents *comps3 = [calendar components:NSCalendarUnitYear fromDateComponents:comps toDateComponents:comps2 options:NSCalendarMatchFirst];";
+        [extracArr addObject:model40];
+        
+        WyhModel *model41 = [WyhModel new];
+        model41.firstName = @"- (NSDateComponents *)componentsInTimeZone:(NSTimeZone *)timezone fromDate:(NSDate *)date;";
+        model41.secondName = @"返回日期的所有日期组件，就像在给定的时区(而不是接收日历的时区)。\n例子：   NSTimeZone *timezone = calendar.timeZone;\nNSDateComponents *comps = [calendar componentsInTimeZone:timezone fromDate:[NSDate date]];";
+        [extracArr addObject:model41];
+        
+        WyhModel *model42 = [WyhModel new];
+        model42.firstName = @"- (void)getEra:(out NSInteger *)eraValuePointer year:(out NSInteger *)yearValuePointer month:(out NSInteger *)monthValuePointer day:(out NSInteger *)dayValuePointer fromDate:(NSDate *)date;";
+        model42.secondName = @"通过参考日期、年、年和工作日的组件值来返回一个给定的日期。\n例子：NSInteger era;\nNSInteger ye;\nNSInteger mt;\nNSInteger dy;\n[calendar getEra:&era year:&ye month:&mt day:&dy fromDate:[NSDate date]];";
+        [extracArr addObject:model42];
+        
+        WyhModel *model43 = [WyhModel new];
+        model43.firstName = @"- (void)getEra:(out NSInteger *)eraValuePointer yearForWeekOfYear:(out NSInteger *)yearValuePointer weekOfYear:(out NSInteger *)weekValuePointer weekday:(out NSInteger *)weekdayValuePointer fromDate:(NSDate *)date;";
+        model43.secondName = @"通过参考日期、年、年和工作日的组件值来返回一个给定的日期。\n例子：NSInteger era;\nNSInteger ye;\nNSInteger mt;\nNSInteger dy;\n[calendar getEra:&era yearForWeekOfYear:&ye weekOfYear:&mt weekday:&dy fromDate:[NSDate date]];";
+        [extracArr addObject:model43];
+        
+        WyhModel *model44 = [WyhModel new];
+        model44.firstName = @"- (void)getHour:(out NSInteger *)hourValuePointer minute:(out NSInteger *)minuteValuePointer second:(out NSInteger *)secondValuePointer nanosecond:(out NSInteger *)nanosecondValuePointer fromDate:(NSDate *)date;";
+        model44.secondName = @"通过引用给定日期的小时、分钟、秒和纳秒的组件值来返回。\n例子： NSInteger hour;\nNSInteger minute;\nNSInteger second;\nNSInteger nanosecond;\n[calendar getHour:&hour minute:&minute second:&second nanosecond:&nanosecond fromDate:[NSDate date]];";
+        [extracArr addObject:model44];
+       
         [_dataArray addObject:extracArr];
+        
+        //AM and PM Symbols
+        NSMutableArray *symbolArr = [NSMutableArray new];
+        
+        WyhModel *model45 = [WyhModel new];
+        model45.firstName = @"@property(readonly, copy) NSString *AMSymbol;";
+        model45.secondName = @"这是接收者的符号。\n例子：NSString *AMSymbol = calendar.AMSymbol;";
+        [symbolArr addObject:model45];
+        
+        WyhModel *model46 = [WyhModel new];
+        model46.firstName = @"@property(readonly, copy) NSString *PMSymbol;";
+        model46.secondName = @"接收方的PM符号。\n例子：NSString *PMSymbol = calendar.PMSymbol;";
+        [symbolArr addObject:model46];
+        
+        [_dataArray addObject:symbolArr];
+        
+        //Weekday Symbols
+        NSMutableArray *weekArr = [NSMutableArray new];
+        
+        WyhModel *model47 = [WyhModel new];
+        model47.firstName = @"@property(readonly, copy) NSArray<NSString *> *weekdaySymbols;";
+        model47.secondName = @"接收器的一组工作日符号。\n例子：NSArray *arr = calendar.weekdaySymbols;";
+        [weekArr addObject:model47];
+        
+        WyhModel *model48 = [WyhModel new];
+        model48.firstName = @"@property(readonly, copy) NSArray<NSString *> *shortWeekdaySymbols;";
+        model48.secondName = @"接收器的一组短的工作日符号。\n例子：NSArray *arr = calendar.shortWeekdaySymbols;";
+        [weekArr addObject:model48];
+        
+        WyhModel *model49 = [WyhModel new];
+        model49.firstName = @"@property(readonly, copy) NSArray<NSString *> *veryShortWeekdaySymbols;";
+        model49.secondName = @"一组非常短的工作日符号。\n例子：NSArray *arr = calendar.veryShortWeekdaySymbols;";
+        [weekArr addObject:model49];
+        
+        WyhModel *model50 = [WyhModel new];
+        model50.firstName = @"@property(readonly, copy) NSArray<NSString *> *standaloneWeekdaySymbols;";
+        model50.secondName = @"接收器的一组独立的工作日符号。\n例子：NSArray *arr = calendar.standaloneWeekdaySymbols;";
+        [weekArr addObject:model50];
+        
+        WyhModel *model51 = [WyhModel new];
+        model51.firstName = @"@property(readonly, copy) NSArray<NSString *> *shortStandaloneWeekdaySymbols;";
+        model51.secondName = @"接收器的一组短时间的独立工作日符号。\n例子：NSArray *arr = calendar.shortStandaloneWeekdaySymbols;";
+        [weekArr addObject:model51];
+        
+        WyhModel *model52 = [WyhModel new];
+        model52.firstName = @"@property(readonly, copy) NSArray<NSString *> *veryShortStandaloneWeekdaySymbols;";
+        model52.secondName = @"一组非常短的独立工作日符号。\n例子：NSArray *arr = calendar.veryShortStandaloneWeekdaySymbols;";
+        [weekArr addObject:model52];
+        
+        [_dataArray addObject:weekArr];
+        
+        //Month Symbols
+        NSMutableArray *monArr = [NSMutableArray new];
+        
+        WyhModel *model53 = [WyhModel new];
+        model53.firstName = @"@property(readonly, copy) NSArray<NSString *> *monthSymbols;";
+        model53.secondName = @"接收器的一组月符号。\n例子：NSArray *arr = calendar.monthSymbols;";
+        [monArr addObject:model53];
+        
+        WyhModel *model54 = [WyhModel new];
+        model54.firstName = @"@property(readonly, copy) NSArray<NSString *> *shortMonthSymbols;";
+        model54.secondName = @"接收器的一组短月符号。\n例子：NSArray *arr = calendar.shortMonthSymbols;";
+        [monArr addObject:model54];
+        
+        WyhModel *model55 = [WyhModel new];
+        model55.firstName = @"@property(readonly, copy) NSArray<NSString *> *veryShortMonthSymbols;";
+        model55.secondName = @"接收器的一个非常短的月符号的数组。\n例子：NSArray *arr = calendar.veryShortMonthSymbols;";
+        [monArr addObject:model55];
+        
+        WyhModel *model56 = [WyhModel new];
+        model56.firstName = @"@property(readonly, copy) NSArray<NSString *> *standaloneMonthSymbols;";
+        model56.secondName = @"接收器的一组独立月符号。\n例子：NSArray *arr = calendar.standaloneMonthSymbols;";
+        [monArr addObject:model56];
+        
+        WyhModel *model57 = [WyhModel new];
+        model57.firstName = @"@property(readonly, copy) NSArray<NSString *> *shortStandaloneMonthSymbols;";
+        model57.secondName = @"接收器的一组短时间的独立月符号。\n例子：NSArray *arr = calendar.shortStandaloneMonthSymbols;";
+        [monArr addObject:model57];
+        
+        WyhModel *model58 = [WyhModel new];
+        model58.firstName = @"@property(readonly, copy) NSArray<NSString *> *veryShortStandaloneMonthSymbols;";
+        model58.secondName = @"接收器的一个非常短的月符号的数组。\n例子：NSArray *arr = calendar.veryShortStandaloneMonthSymbols;";
+        [monArr addObject:model58];
+        
+        [_dataArray addObject:monArr];
+        
+        //Quarter Symbols
+        NSMutableArray *quarterArr = [NSMutableArray new];
+        
+        WyhModel *model59 = [WyhModel new];
+        model59.firstName = @"@property(readonly, copy) NSArray<NSString *> *quarterSymbols;";
+        model59.secondName = @"接收机的一组四分之一符号。\n例子：NSArray *arr = calendar.quarterSymbols;";
+        [quarterArr addObject:model59];
+        
+     
+        
+        WyhModel *model60 = [WyhModel new];
+        model60.firstName = @"@property(readonly, copy) NSArray<NSString *> *shortQuarterSymbols;";
+        model60.secondName = @"接收机的一组短四分之一符号。\n例子：NSArray *arr = calendar.shortQuarterSymbols;";
+        [quarterArr addObject:model60];
+        
+        WyhModel *model61 = [WyhModel new];
+        model61.firstName = @"@property(readonly, copy) NSArray<NSString *> *standaloneQuarterSymbols;";
+        model61.secondName = @"接收器的一组独立的四分之一符号。\n例子：NSArray *arr = calendar.standaloneQuarterSymbols;";
+        [quarterArr addObject:model61];
+        
+        WyhModel *model62 = [WyhModel new];
+        model62.firstName = @"@property(readonly, copy) NSArray<NSString *> *shortStandaloneQuarterSymbols;";
+        model62.secondName = @"接收器的一组短的独立的四分之一符号。\n例子：NSArray *arr = calendar.shortStandaloneQuarterSymbols;";
+        [quarterArr addObject:model62];
+        
+        [_dataArray addObject:quarterArr];
+        
+        //Era Symbols
+        NSMutableArray *eraArr = [NSMutableArray new];
+        
+        WyhModel *model63 = [WyhModel new];
+        model63.firstName = @"@property(readonly, copy) NSArray<NSString *> *eraSymbols;";
+        model63.secondName = @"接收器的一组时代符号。\n例子：NSArray *arr = calendar.eraSymbols;";
+        [eraArr addObject:model63];
+        
+        WyhModel *model64 = [WyhModel new];
+        model64.firstName = @"@property(readonly, copy) NSArray<NSString *> *longEraSymbols;";
+        model64.secondName = @"接收器的一组长时期符号。\n例子：NSArray *arr = calendar.longEraSymbols;";
+        [eraArr addObject:model64];
+        
+        [_dataArray addObject:eraArr];
+        //Constants
+        NSMutableArray *constantArr = [NSMutableArray new];
+        
+        WyhModel *model65 = [WyhModel new];
+        model65.firstName = @"NSCalendarIdentifier";
+        model65.secondName = @"日历标识符的类型。查看定义值的日历标识符。\n例子：NSCalendarIdentifier:日历标识符的类型。查看定义值的日历标识符";
+        [constantArr addObject:model65];
+        
+        WyhModel *model66 = [WyhModel new];
+        model66.firstName = @"Calendar Identifiers";
+        model66.secondName = @"指定日历的标识符，例如格里历，它是欧洲、西半球和其他地方的通用日历。\n例子：NSCalendarIdentifierGregorian:公历的标识符\nNSCalendarIdentifierBuddhist:佛教日历的标识符\nNSCalendarIdentifierChinese:中国日历的标识符\nNSCalendarIdentifierCoptic:科普特日历的标识符\nNSCalendarIdentifierEthiopicAmeteMihret:埃塞俄比亚(Amete Mihret)日历的标识符\nNSCalendarIdentifierEthiopicAmeteAlem:埃塞俄比亚(Amete Alem)日历的标识\nNSCalendarIdentifierHebrew:希伯来日历的标识符\nNSCalendarIdentifierISO8601:ISO8601日历的标识符。\nNSCalendarIdentifierIndian:印度日历的标识符\nNSCalendarIdentifierIslamic:伊斯兰历的标识符\nNSCalendarIdentifierIslamicCivil:伊斯兰文明日历的标识符\nNSCalendarIdentifierJapanese:日本日历的标识符。\nNSCalendarIdentifierPersian:波斯历的标识符\nNSCalendarIdentifierRepublicOfChina:中华民国(台湾)年历\nNSCalendarIdentifierIslamicTabular:列表伊斯兰日历的标识符\nNSCalendarIdentifierIslamicUmmAlQura:伊斯兰乌姆本图拉日历的标识符。";
+        [constantArr addObject:model66];
+        
+        WyhModel *model67 = [WyhModel new];
+        model67.firstName = @"NSCalendarDayChangedNotification";
+        model67.secondName = @"当系统的日历日发生变化时，由系统日历、地区和时区决定。这个通知不提供对象。\n例子：NSCalendarDayChangedNotification:当系统的日历日发生变化时，由系统日历、地区和时区决定。这个通知不提供对象";
+        [constantArr addObject:model67];
+        
+        WyhModel *model68 = [WyhModel new];
+        model68.firstName = @"NSCalendarUnit";
+        model68.secondName = @"指定calendrical单元，如日和月。\n例子：NSCalendarUnitEra:指定单位时代\nNSCalendarUnitYear:今年指定单位\nNSCalendarUnitMonth:这个月指定单位\nNSCalendarUnitDay:指定天单位。\nNSCalendarUnitHour:指定小时单位\nNSCalendarUnitMinute:指定分单元\nNSCalendarUnitSecond:指定秒单元\nNSCalendarUnitWeekday:指定工作日单位\nNSCalendarUnitWeekdayOrdinal:指定普通工作日单位\nNSCalendarUnitQuarter:指定日历的四分之一\nNSCalendarUnitWeekOfMonth:指定一个月日历单元的原始周\nNSCalendarUnitWeekOfYear:指定年度日历单元的原始周\nNSCalendarUnitYearForWeekOfYear:指定日历被解释为一个星期的日历\nNSCalendarUnitNanosecond:指定了纳秒单位\nNSCalendarUnitCalendar:指定日期组件对象的日历作为一个NSCalendar\nNSCalendarUnitTimeZone:指定日期组件对象的时区为NSTimeZone\nNSEraCalendarUnit:指定单位时代\nNSYearCalendarUnit:今年指定单位\nNSMonthCalendarUnit:这个月指定单位\nNSDayCalendarUnit:指定天单位\nNSHourCalendarUnit:指定小时单位\nNSMinuteCalendarUnit:指定分单位\nNSSecondCalendarUnit:指定秒单位\nNSWeekCalendarUnit:指定周单位\nNSWeekdayCalendarUnit:指定工作日单位\nNSWeekdayOrdinalCalendarUnit:指定普通工作日单位\nNSQuarterCalendarUnit:将日历的四分之一指定为kcf日历秒。在OS X v104.6中，这被定义为等于kcf日历。在macOS 10.7中，它被定义为(1小于20)\nNSWeekOfMonthCalendarUnit:指定一个月日历单元的原始周\nNSWeekOfYearCalendarUnit:指定年度日历单元的原始周\nNSYearForWeekOfYearCalendarUnit:指定日历被解释为基于周的日历的年份\nNSCalendarCalendarUnit:指定日历的日历\nNSTimeZoneCalendarUnit:指定日历的时区作为一个NSTimeZone";
+        [constantArr addObject:model68];
+        
+        WyhModel *model69 = [WyhModel new];
+        model69.firstName = @"NSCalendarOptions";
+        model69.secondName = @"包括日历的算术操作的选项。\n例子：NSCalendarWrapComponents:指定为一个nsdatecomponent对象指定的组件应该被增加，并将其缠绕到溢出的0/1上，但是不应该导致更高的单元被增加\nNSCalendarMatchStrictly:指定操作应该尽可能向前或向后移动，以查找匹配的匹配项\nNSCalendarSearchBackwards:指定操作应该向后移动以查找给定日期之前的匹配\nNSCalendarMatchPreviousTimePreservingSmallerUnits:指定当在给定的nsdatecomponent对象中指定的下一个最高单元的下一个实例结束之前没有匹配的时间，这个方法将使用丢失单元的先前的值，并保留较低单元的值\nNSCalendarMatchNextTimePreservingSmallerUnits:指定当在给定的nsdatecomponent对象中指定的下一个最高单元的下一个实例结束之前没有匹配的时间时，该方法将使用缺失单元的下一个现有值，并保留较低单元的值\nNSCalendarMatchNextTime:指定当在给定的nsdatecomponent对象中指定的下一个最高单元的下一个实例结束之前没有匹配的时间时，该方法将使用缺失单元的下一个现有值，并且不保存较低单元的值\nNSCalendarMatchFirst:指定如果有两个或多个匹配时间，则操作应该返回第一次出现的情况\nNSCalendarMatchLast:指定如果有两个或多个匹配时间，则操作应该返回最后一个发生的事件\nNSWrapCalendarComponents:指定为一个nsdatecomponent对象指定的组件应该被增加，并将其包装到溢出的zero/one上，但是不应该导致更高的单元被增加。";
+        [constantArr addObject:model69];
+        
+        [_dataArray addObject:constantArr];
     }
     return _dataArray;
 }
