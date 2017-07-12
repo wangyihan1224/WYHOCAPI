@@ -10,6 +10,8 @@
 #import "NSArrayTableViewCell.h"
 #import "WyhModel.h"
 #import <CoreMedia/CoreMedia.h>
+#import <Foundation/Foundation.h>
+#import <CoreFoundation/CoreFoundation.h>
 static NSString *templateCell = @"templateCell";
 @interface NSCoderViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong)UITableView *wyhTable;
@@ -42,6 +44,11 @@ static NSString *templateCell = @"templateCell";
         [_titleArray addObject:@"Decoding General Data"];
         [_titleArray addObject:@"Decoding Geometry-Based Data"];
         [_titleArray addObject:@"Decoding Core Media Time Structures"];
+        [_titleArray addObject:@"Secure Coding"];
+        [_titleArray addObject:@"Getting Version Information"];
+        [_titleArray addObject:@"Managing Zones"];
+        [_titleArray addObject:@"Instance Properties"];
+        [_titleArray addObject:@"Instance Methods"];
     }
     return _titleArray;
 }
@@ -220,7 +227,7 @@ static NSString *templateCell = @"templateCell";
         model31.firstName = @"- (void)encodeCMTime:(CMTime)time forKey:(NSString *)key;";
         model31.secondName = @"编码一个给定的CMTime结构，并将其与指定的键关联起来。\n例子：[coder encodeCMTime:CMTimeMake(3, 1) forKey:@\"1\"];(Core/Media)";
         [mediaArr addObject:model31];
-        
+      
         WyhModel *model32 = [WyhModel new];
         model32.firstName = @"- (void)encodeCMTimeRange:(CMTimeRange)timeRange forKey:(NSString *)key;";
         model32.secondName = @"对给定的CMTimeRange结构进行编码，并将其与指定的键关联起来。\n例子： CMTime start = CMTimeMake(10, 10);\nCMTime duration = CMTimeMake(202, 20);\n[coder encodeCMTimeRange:CMTimeRangeMake(start, duration) forKey:@\"1\"];(Core/Media)";
@@ -370,7 +377,114 @@ static NSString *templateCell = @"templateCell";
         //Decoding Core Media Time Structures
         NSMutableArray *coreMediaArr = [NSMutableArray new];
         
+        WyhModel *model59 = [WyhModel new];
+        model59.firstName = @"- (CMTime)decodeCMTimeForKey:(NSString *)key;";
+        model59.secondName = @"返回与给定键关联的CMTime结构。\n例子：CMTime time = [coder decodeCMTimeForKey:@\"1\"];";
+        [coreMediaArr addObject:model59];
+        
+        WyhModel *model60 = [WyhModel new];
+        model60.firstName = @"- (CMTimeRange)decodeCMTimeRangeForKey:(NSString *)key;";
+        model60.secondName = @"返回与给定键相关联的CMTimeRange结构。\n例子：CMTimeRange rang = [coder decodeCMTimeRangeForKey:@\"1\"];";
+        [coreMediaArr addObject:model60];
+        
+        WyhModel *model61 = [WyhModel new];
+        model61.firstName = @"- (CMTimeMapping)decodeCMTimeMappingForKey:(NSString *)key;";
+        model61.secondName = @"返回与给定键相关联的cmtimem说唱结构。\n例子：CMTimeMapping maooing = [coder decodeCMTimeMappingForKey:@\"1\"];";
+        [coreMediaArr addObject:model61];
+      
         [_dataArray addObject:coreMediaArr];
+        
+        //Secure Coding
+        NSMutableArray *secureArr = [NSMutableArray new];
+        
+        WyhModel *model62 = [WyhModel new];
+        model62.firstName = @"@property(readonly) BOOL requiresSecureCoding;";
+        model62.secondName = @"布尔值，表示程序员是否需要安全编码。\n例子： BOOL requiresSecureCoding = coder.requiresSecureCoding;";
+        [secureArr addObject:model62];
+        
+        WyhModel *model63 = [WyhModel new];
+        model63.firstName = @"@property(readonly, copy) NSSet<Class> *allowedClasses;";
+        model63.secondName = @"一组编码的类允许进行安全编码。\n例子：NSSet *set = coder.allowedClasses;";
+        [secureArr addObject:model63];
+        
+        [_dataArray addObject:secureArr];
+        
+        //Getting Version Information
+        NSMutableArray *versionArr = [NSMutableArray new];
+        
+        WyhModel *model64 = [WyhModel new];
+        model64.firstName = @"@property(readonly) unsigned int systemVersion;";
+        model64.secondName = @"一组编码的类允许进行安全编码。\n例子：unsigned int s = coder.systemVersion;";
+        [versionArr addObject:model64];
+        
+        WyhModel *model65 = [WyhModel new];
+        model65.firstName = @"- (NSInteger)versionForClassName:(NSString *)className;";
+        model65.secondName = @"这种方法是出于历史原因的，并且不用于键控的档案。\n例子：NSInteger s = [coder versionForClassName:@\"1\"];";
+        [versionArr addObject:model65];
+        
+        [_dataArray addObject:versionArr];
+        
+        //Managing Zones
+        NSMutableArray *zonesArr = [NSMutableArray new];
+        
+        WyhModel *model66 = [WyhModel new];
+        model66.firstName = @"- (NSZone *)objectZone;";
+        model66.secondName = @"这种方法是由于历史原因而产生的，没有效果。\n例子：";
+        [zonesArr addObject:model66];
+        
+        
+        
+        WyhModel *model67 = [WyhModel new];
+        model67.firstName = @"- (void)setObjectZone:(NSZone *)zone;";
+        model67.secondName = @"这种方法是由于历史原因而产生的，没有效果。\n例子：";
+        [zonesArr addObject:model67];
+        
+        [_dataArray addObject:zonesArr];
+        
+        //Instance Properties
+        NSMutableArray *instanceArr = [NSMutableArray new];
+        
+        WyhModel *model68 = [WyhModel new];
+        model68.firstName = @"@property(readonly) NSDecodingFailurePolicy decodingFailurePolicy;";
+        model68.secondName = @"。\n例子：NSDecodingFailurePolicy decodingFailurePolicy = coder.decodingFailurePolicy;";
+        [instanceArr addObject:model68];
+        
+        WyhModel *model69 = [WyhModel new];
+        model69.firstName = @"@property(readonly, copy) NSError *error;";
+        model69.secondName = @"。\n例子：NSError *error = coder.error;";
+        [instanceArr addObject:model69];
+        
+        [_dataArray addObject:instanceArr];
+        
+        //Instance Methods
+        NSMutableArray *methArr = [NSMutableArray new];
+        
+        WyhModel *model70 = [WyhModel new];
+        model70.firstName = @"- (void)failWithError:(NSError *)error;";
+        model70.secondName = @"。\n例子：[coder failWithError:nil];";
+        [methArr addObject:model70];
+        
+        WyhModel *model71 = [WyhModel new];
+        model71.firstName = @"- (id)decodeTopLevelObjectAndReturnError:(NSError * _Nullable *)error;";
+        model71.secondName = @"。\n例子：id ojo = [coder decodeTopLevelObjectAndReturnError:nil];";
+        [methArr addObject:model71];
+        
+        WyhModel *model72 = [WyhModel new];
+        model72.firstName = @"- (id)decodeTopLevelObjectForKey:(NSString *)key error:(NSError * _Nullable *)error;";
+        model72.secondName = @"。\n例子：id ojo = [coder decodeTopLevelObjectForKey:@\"1\" error:nil];";
+        [methArr addObject:model72];
+        
+        WyhModel *model73 = [WyhModel new];
+        model73.firstName = @"- (id)decodeTopLevelObjectOfClass:(Class)aClass forKey:(NSString *)key error:(NSError * _Nullable *)error;";
+        model73.secondName = @"。\n例子：id ojo = [coder decodeTopLevelObjectOfClass:[NSArray class] forKey:@\"1\" error:nil];";
+        [methArr addObject:model73];
+        
+        WyhModel *model74 = [WyhModel new];
+        model74.firstName = @"- (id)decodeTopLevelObjectOfClasses:(NSSet<Class> *)classes forKey:(NSString *)key error:(NSError * _Nullable *)error;";
+        model74.secondName = @"。\n例子：NSArray *arr = @[[NSArray class],[NSString class]];\nNSSet *set = [NSSet setWithArray:arr];\n[coder decodeTopLevelObjectOfClasses:set forKey:@\"1\" error:nil];";
+        [methArr addObject:model74];
+        
+        [_dataArray addObject:methArr];
     }
     return _dataArray;
 }
