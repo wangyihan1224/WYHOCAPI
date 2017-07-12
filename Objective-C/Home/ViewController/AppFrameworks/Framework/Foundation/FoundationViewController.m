@@ -8,6 +8,7 @@
 
 #import "FoundationViewController.h"
 
+#import "NSCoderViewController.h"
 #import "NSCharacterSetViewController.h"
 #import "NSCalendarViewController.h"
 #import "NSCachedURLResponseViewController.h"
@@ -20,6 +21,7 @@
 #import "NSAttributedStringViewController.h"
 #import "NSArrayViewController.h"
 #import "NSAssertionHandlerViewController.h"
+static NSString *nSCoderViewController=@"NSCoderViewController";
 static NSString *nSCharacterSetViewController=@"NSCharacterSetViewController";
 static NSString *nSCalendarViewController=@"NSCalendarViewController";
 static NSString *nSCachedURLResponseViewController=@"NSCachedURLResponseViewController";
@@ -67,6 +69,7 @@ static NSString *templateCell = @"templateCell";
         [_dataArray addObject:nSCachedURLResponseViewController];
         [_dataArray addObject:nSCalendarViewController];
         [_dataArray addObject:nSCharacterSetViewController];
+        [_dataArray addObject:nSCoderViewController];
     }
     return _dataArray;
 }
@@ -135,6 +138,10 @@ static NSString *templateCell = @"templateCell";
         [self.navigationController pushViewController:vc animated:YES];
     }else if ([selecTitle isEqualToString:nSCharacterSetViewController]){
         NSCharacterSetViewController *vc  = [NSCharacterSetViewController new];
+        vc.title = selecTitle;
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if ([selecTitle isEqualToString:nSCoderViewController]){
+        NSCoderViewController *vc  = [NSCoderViewController new];
         vc.title = selecTitle;
         [self.navigationController pushViewController:vc animated:YES];
     }

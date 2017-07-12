@@ -28,6 +28,7 @@
 		7C5D60301F13893D001F9AC8 /* NSCachedURLResponseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C5D602F1F13893D001F9AC8 /* NSCachedURLResponseViewController.m */; };
 		7C5D60331F145FEC001F9AC8 /* NSCalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C5D60321F145FEC001F9AC8 /* NSCalendarViewController.m */; };
 		7C5D60361F14AF6D001F9AC8 /* NSCharacterSetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C5D60351F14AF6D001F9AC8 /* NSCharacterSetViewController.m */; };
+		7C5D60391F14C161001F9AC8 /* NSCoderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C5D60381F14C161001F9AC8 /* NSCoderViewController.m */; };
 		7C74FA871F0F2DF900209412 /* NSAssertionHandlerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C74FA861F0F2DF900209412 /* NSAssertionHandlerViewController.m */; };
 		7C74FA8A1F0F341A00209412 /* NSAttributedStringViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C74FA891F0F341A00209412 /* NSAttributedStringViewController.m */; };
 		7C74FA911F0F7B5D00209412 /* NSAutoreleasePoolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C74FA901F0F7B5D00209412 /* NSAutoreleasePoolViewController.m */; };
@@ -84,6 +85,8 @@
 		7C5D60321F145FEC001F9AC8 /* NSCalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSCalendarViewController.m; path = "Objective-C/Home/Model/NSCalendarViewController.m"; sourceTree = SOURCE_ROOT; };
 		7C5D60341F14AF6D001F9AC8 /* NSCharacterSetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSCharacterSetViewController.h; path = "Objective-C/Home/Model/NSCharacterSetViewController.h"; sourceTree = SOURCE_ROOT; };
 		7C5D60351F14AF6D001F9AC8 /* NSCharacterSetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSCharacterSetViewController.m; path = "Objective-C/Home/Model/NSCharacterSetViewController.m"; sourceTree = SOURCE_ROOT; };
+		7C5D60371F14C161001F9AC8 /* NSCoderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSCoderViewController.h; path = "Objective-C/Home/Model/NSCoderViewController.h"; sourceTree = SOURCE_ROOT; };
+		7C5D60381F14C161001F9AC8 /* NSCoderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSCoderViewController.m; path = "Objective-C/Home/Model/NSCoderViewController.m"; sourceTree = SOURCE_ROOT; };
 		7C74FA851F0F2DF900209412 /* NSAssertionHandlerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSAssertionHandlerViewController.h; path = "Objective-C/Home/Model/NSAssertionHandlerViewController.h"; sourceTree = SOURCE_ROOT; };
 		7C74FA861F0F2DF900209412 /* NSAssertionHandlerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSAssertionHandlerViewController.m; path = "Objective-C/Home/Model/NSAssertionHandlerViewController.m"; sourceTree = SOURCE_ROOT; };
 		7C74FA881F0F341A00209412 /* NSAttributedStringViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSAttributedStringViewController.h; path = "Objective-C/Home/Model/NSAttributedStringViewController.h"; sourceTree = SOURCE_ROOT; };
@@ -1402,6 +1405,8 @@
 				7C5D60321F145FEC001F9AC8 /* NSCalendarViewController.m */,
 				7C5D60341F14AF6D001F9AC8 /* NSCharacterSetViewController.h */,
 				7C5D60351F14AF6D001F9AC8 /* NSCharacterSetViewController.m */,
+				7C5D60371F14C161001F9AC8 /* NSCoderViewController.h */,
+				7C5D60381F14C161001F9AC8 /* NSCoderViewController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -1599,6 +1604,7 @@
 				7C31BBDE1F0C99AE0012AFB5 /* BaseView.m in Sources */,
 				7C77BA671F0B80720035B440 /* UIKitViewController.m in Sources */,
 				7C31BBEB1F0CC5F80012AFB5 /* NSArrayTableViewCell.m in Sources */,
+				7C5D60391F14C161001F9AC8 /* NSCoderViewController.m in Sources */,
 				7C31BBE81F0CC50E0012AFB5 /* WyhModel.m in Sources */,
 				7C47625C1F0B98E600685007 /* NSArrayViewController.m in Sources */,
 				7C444A571EF16C1800F99891 /* UILabelController.m in Sources */,
