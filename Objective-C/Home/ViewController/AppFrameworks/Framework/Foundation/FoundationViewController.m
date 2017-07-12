@@ -8,6 +8,7 @@
 
 #import "FoundationViewController.h"
 
+#import "NSComparisonPredicateViewController.h"
 #import "NSCoderViewController.h"
 #import "NSCharacterSetViewController.h"
 #import "NSCalendarViewController.h"
@@ -21,6 +22,7 @@
 #import "NSAttributedStringViewController.h"
 #import "NSArrayViewController.h"
 #import "NSAssertionHandlerViewController.h"
+static NSString *nSComparisonPredicateViewController=@"NSComparisonPredicateViewController";
 static NSString *nSCoderViewController=@"NSCoderViewController";
 static NSString *nSCharacterSetViewController=@"NSCharacterSetViewController";
 static NSString *nSCalendarViewController=@"NSCalendarViewController";
@@ -70,6 +72,7 @@ static NSString *templateCell = @"templateCell";
         [_dataArray addObject:nSCalendarViewController];
         [_dataArray addObject:nSCharacterSetViewController];
         [_dataArray addObject:nSCoderViewController];
+        [_dataArray addObject:nSComparisonPredicateViewController];
     }
     return _dataArray;
 }
@@ -142,6 +145,10 @@ static NSString *templateCell = @"templateCell";
         [self.navigationController pushViewController:vc animated:YES];
     }else if ([selecTitle isEqualToString:nSCoderViewController]){
         NSCoderViewController *vc  = [NSCoderViewController new];
+        vc.title = selecTitle;
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if ([selecTitle isEqualToString:nSComparisonPredicateViewController]){
+        NSComparisonPredicateViewController *vc  = [NSComparisonPredicateViewController new];
         vc.title = selecTitle;
         [self.navigationController pushViewController:vc animated:YES];
     }
