@@ -40,6 +40,8 @@ static NSString *templateCell = @"templateCell";
         [_titleArray addObject:@"Encoding Geometry-Based Data"];
         [_titleArray addObject:@"Encoding Core Media Time Structures"];
         [_titleArray addObject:@"Decoding General Data"];
+        [_titleArray addObject:@"Decoding Geometry-Based Data"];
+        [_titleArray addObject:@"Decoding Core Media Time Structures"];
     }
     return _titleArray;
 }
@@ -269,7 +271,106 @@ static NSString *templateCell = @"templateCell";
         model40.secondName = @"解码并返回一个先前编码为编码的浮动值:forKey:forKey:forKey:并与字符串键相关联。\n例子：float a = [coder decodeFloatForKey:@\"1\"];";
         [dataArr addObject:model40];
         
+        WyhModel *model41 = [WyhModel new];
+        model41.firstName = @"- (int)decodeIntForKey:(NSString *)key;";
+        model41.secondName = @"解码并返回一个之前编码为encodeInt的int值:forKey:forKey:forKey:forKey:forKey:forKey:forKey:并与字符串键相关联。\n例子：int a = [coder decodeIntForKey:@\"1\"];";
+        [dataArr addObject:model41];
+      
+        WyhModel *model42 = [WyhModel new];
+        model42.firstName = @"- (NSInteger)decodeIntegerForKey:(NSString *)key;";
+        model42.secondName = @"解码并返回一个以前编码为encodeInt的NSInteger值:forKey:forKey:forKey:forKey:forKey:forKey:forKey:并与字符串密钥相关联的值:forKey:forKey:forKey:forKey:forKey:forKey:forKey:forKey:forKey:forKey:forKey:forKey:forKey:forKey:forKey:forKey:forKey。\n例子：NSInteger a = [coder decodeIntegerForKey:@\"1\"];";
+        [dataArr addObject:model42];
+        
+        WyhModel *model43 = [WyhModel new];
+        model43.firstName = @"- (int32_t)decodeInt32ForKey:(NSString *)key;";
+        model43.secondName = @"解码并返回一个32位的整型值，之前用encodeInt编码:forKey:forKey:forKey:forKey:forKey:forKey:forKey:并与字符串键相关联。\n例子：int a = [coder decodeInt32ForKey:@\"1\"];";
+        [dataArr addObject:model43];
+        
+        WyhModel *model44 = [WyhModel new];
+        model44.firstName = @"- (int64_t)decodeInt64ForKey:(NSString *)key;";
+        model44.secondName = @"解码并返回一个32位的整型值，之前用encodeInt编码:forKey:forKey:forKey:forKey:forKey:forKey:forKey:并与字符串键相关联。\n例子：long long a = [coder decodeInt64ForKey:@\"1\"];";
+        [dataArr addObject:model44];
+        
+        WyhModel *model45 = [WyhModel new];
+        model45.firstName = @"- (id)decodeObject;";
+        model45.secondName = @"解码一个之前被编码的objective-编码的objective-对象:方法。\n例子： id a = [coder decodeObject];";
+        [dataArr addObject:model45];
+       
+        WyhModel *model46 = [WyhModel new];
+        model46.firstName = @"- (id)decodeObjectForKey:(NSString *)key;";
+        model46.secondName = @"编码解码并返回一个objective - c对象以前encodeObject:forKey:或encodeConditionalObject:forKey:和与字符串相关的关键。\n例子： id a = [coder decodeObjectForKey:@\"1\"];";
+        [dataArr addObject:model46];
+        
+        WyhModel *model47 = [WyhModel new];
+        model47.firstName = @"- (void)decodeValueOfObjCType:(const char *)type at:(void *)data;";
+        model47.secondName = @"解码一个值，它的objective-e类型由valueType给出。\n例子： const char *a = NULL;\nvoid *b = NULL;\n[coder decodeValueOfObjCType:a at:b];";
+        [dataArr addObject:model47];
+       
+        WyhModel *model48 = [WyhModel new];
+        model48.firstName = @"- (void)decodeValuesOfObjCTypes:(const char *)types, ...;";
+        model48.secondName = @"解码一系列可能不同的objective-a类型。\n例子： const char *a = NULL;\nvoid *b = NULL;\n[coder decodeValuesOfObjCTypes:a];";
+        [dataArr addObject:model48];
+        
+        WyhModel *model49 = [WyhModel new];
+        model49.firstName = @"- (id)decodeObjectOfClass:(Class)aClass forKey:(NSString *)key;";
+        model49.secondName = @"为键解码一个对象，限制为指定的类。\n例子： id a = [coder decodeObjectOfClass:[NSArray class] forKey:@\"1\"];";
+        [dataArr addObject:model49];
+       
+        WyhModel *model50 = [WyhModel new];
+        model50.firstName = @"- (id)decodeObjectOfClasses:(NSSet<Class> *)classes forKey:(NSString *)key;";
+        model50.secondName = @"为键解码一个对象，限制为指定的类。\n例子：NSArray *arr = @[[NSArray class],[NSString class]];\nNSSet *set = [NSSet setWithArray:arr];\nid a = [coder decodeObjectOfClasses:set forKey:@\"1\"];";
+        [dataArr addObject:model50];
+        
+        WyhModel *model51 = [WyhModel new];
+        model51.firstName = @"- (id)decodePropertyListForKey:(NSString *)key;";
+        model51.secondName = @"为键解码一个对象，限制为指定的类。\n例子：id a = [coder decodePropertyListForKey:@\"1\"];";
+        [dataArr addObject:model51];
+        
         [_dataArray addObject:dataArr];
+        
+        //Decoding Geometry-Based Data
+        NSMutableArray *gemeterydataArr = [NSMutableArray new];
+        
+        WyhModel *model52 = [WyhModel new];
+        model52.firstName = @"- (CGPoint)decodeCGPointForKey:(NSString *)key;";
+        model52.secondName = @"解码并返回与接收方存档中指定键相关联的CGPoint结构。\n例子：CGPoint point = [coder decodeCGPointForKey:@\"1\"];";
+        [gemeterydataArr addObject:model52];
+        
+        WyhModel *model53 = [WyhModel new];
+        model53.firstName = @"- (CGRect)decodeCGRectForKey:(NSString *)key;";
+        model53.secondName = @"解码并返回与接收方存档中指定键相关联的CGRect结构。\n例子：CGRect rect = [coder decodeCGRectForKey:@\"1\"];";
+        [gemeterydataArr addObject:model53];
+        
+        WyhModel *model54 = [WyhModel new];
+        model54.firstName = @"- (CGSize)decodeCGSizeForKey:(NSString *)key;";
+        model54.secondName = @"解码并返回与接收方存档中指定键相关联的CGSize结构。\n例子：CGSize size = [coder decodeCGSizeForKey:@\"1\"];";
+        [gemeterydataArr addObject:model54];
+        
+        WyhModel *model55 = [WyhModel new];
+        model55.firstName = @"- (CGAffineTransform)decodeCGAffineTransformForKey:(NSString *)key;";
+        model55.secondName = @"解码并返回与接收方存档中指定键相关联的CGAffineTransform结构。\n例子： CGAffineTransform transform = [coder decodeCGAffineTransformForKey:@\"1\"];";
+        [gemeterydataArr addObject:model55];
+       
+        WyhModel *model56 = [WyhModel new];
+        model56.firstName = @"- (UIEdgeInsets)decodeUIEdgeInsetsForKey:(NSString *)key;";
+        model56.secondName = @"解码并返回与接收者存档中指定的键相关联的ui刀刃集结构。\n例子： UIEdgeInsets inset = [coder decodeUIEdgeInsetsForKey:@\"1\"];";
+        [gemeterydataArr addObject:model56];
+       
+        WyhModel *model57 = [WyhModel new];
+        model57.firstName = @"- (UIOffset)decodeUIOffsetForKey:(NSString *)key;";
+        model57.secondName = @"解码并返回与接收方存档中指定键相关联的ui偏移结构。\n例子： UIOffset offset = [coder decodeUIOffsetForKey:@\"1\"];";
+        [gemeterydataArr addObject:model57];
+       
+        WyhModel *model58 = [WyhModel new];
+        model58.firstName = @"- (CGVector)decodeCGVectorForKey:(NSString *)key;";
+        model58.secondName = @"解码并返回与编码器存档中指定的键相关联的cg矢量数据。\n例子：CGVector vector = [coder decodeCGVectorForKey:@\"1\"];";
+        [gemeterydataArr addObject:model58];
+        
+        [_dataArray addObject:gemeterydataArr];
+        //Decoding Core Media Time Structures
+        NSMutableArray *coreMediaArr = [NSMutableArray new];
+        
+        [_dataArray addObject:coreMediaArr];
     }
     return _dataArray;
 }
