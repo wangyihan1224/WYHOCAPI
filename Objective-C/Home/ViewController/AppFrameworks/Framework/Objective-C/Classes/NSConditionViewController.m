@@ -35,6 +35,9 @@ static NSString *templateCell = @"templateCell";
     if (!_titleArray) {
         _titleArray = [NSMutableArray new];
         [_titleArray addObject:@"NSCondition"];
+        [_titleArray addObject:@"Waiting for the Lock"];
+        [_titleArray addObject:@"Signaling Waiting Threads"];
+        [_titleArray addObject:@"Identifying the Condition"];
     }
     return _titleArray;
 }
@@ -50,6 +53,47 @@ static NSString *templateCell = @"templateCell";
         [titlarr addObject:model];
         
         [_dataArray addObject:titlarr];
+        
+         NSCondition *condition = [NSCondition new];
+        //Waiting for the Lock
+        NSMutableArray *waitArr = [NSMutableArray new];
+        
+        WyhModel *model1 = [WyhModel new];
+        model1.firstName = @"- (void)wait;";
+        model1.secondName = @"阻塞当前线程，直到条件被释放。\n例子： NSCondition *condition = [NSCondition new];\n[condition wait];";
+        [waitArr addObject:model1];
+       
+        WyhModel *model2 = [WyhModel new];
+        model2.firstName = @"- (BOOL)waitUntilDate:(NSDate *)limit;";
+        model2.secondName = @"阻塞当前线程，直到条件被通知或指定的时间限制到达。。\n例子：BOOL iswait = [condition waitUntilDate:[NSDate date]];";
+        [waitArr addObject:model2];
+        
+        [_dataArray addObject:waitArr];
+        
+        //Signaling Waiting Threads
+        NSMutableArray *signalArr = [NSMutableArray new];
+        
+        WyhModel *model3 = [WyhModel new];
+        model3.firstName = @"- (void)signal;";
+        model3.secondName = @"发出信号，唤醒一个正在等待的线程。\n例子：[condition signal];";
+        [signalArr addObject:model3];
+        
+        WyhModel *model4 = [WyhModel new];
+        model4.firstName = @"- (void)broadcast;";
+        model4.secondName = @"发出信号，唤醒所有正在等待的线程。\n例子：[condition broadcast];";
+        [signalArr addObject:model4];
+        
+        [_dataArray addObject:signalArr];
+        
+        //Identifying the Condition
+        NSMutableArray *identifyArr = [NSMutableArray new];
+        
+        WyhModel *model5 = [WyhModel new];
+        model5.firstName = @"@property(copy) NSString *name;";
+        model5.secondName = @"条件的名称。\n例子：NSString *na= condition.name;";
+        [identifyArr addObject:model5];
+        
+        [_dataArray addObject:identifyArr];
     }
     return _dataArray;
 }

@@ -8,6 +8,8 @@
 
 #import "FoundationViewController.h"
 
+#import "NSCountedSetViewController.h"
+#import "NSConditionLockViewController.h"
 #import "NSConditionViewController.h"
 #import "NSCompoundPredicateViewController.h"
 #import "NSComparisonPredicateViewController.h"
@@ -24,6 +26,8 @@
 #import "NSAttributedStringViewController.h"
 #import "NSArrayViewController.h"
 #import "NSAssertionHandlerViewController.h"
+static NSString *nSCountedSetViewController=@"NSCountedSetViewController";
+static NSString *nSConditionLockViewController=@"NSConditionLockViewController";
 static NSString *nSConditionViewController=@"NSConditionViewController";
 static NSString *nSCompoundPredicateViewController=@"NSCompoundPredicateViewController";
 static NSString *nSComparisonPredicateViewController=@"NSComparisonPredicateViewController";
@@ -79,6 +83,8 @@ static NSString *templateCell = @"templateCell";
         [_dataArray addObject:nSComparisonPredicateViewController];
         [_dataArray addObject:nSCompoundPredicateViewController];
         [_dataArray addObject:nSConditionViewController];
+        [_dataArray addObject:nSConditionLockViewController];
+        [_dataArray addObject:nSCountedSetViewController];
     }
     return _dataArray;
 }
@@ -163,6 +169,14 @@ static NSString *templateCell = @"templateCell";
         [self.navigationController pushViewController:vc animated:YES];
     }else if ([selecTitle isEqualToString:nSConditionViewController]){
         NSConditionViewController *vc  = [NSConditionViewController new];
+        vc.title = selecTitle;
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if ([selecTitle isEqualToString:nSConditionLockViewController]){
+        NSConditionLockViewController *vc  = [NSConditionLockViewController new];
+        vc.title = selecTitle;
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if ([selecTitle isEqualToString:nSCountedSetViewController]){
+        NSCountedSetViewController *vc  = [NSCountedSetViewController new];
         vc.title = selecTitle;
         [self.navigationController pushViewController:vc animated:YES];
     }

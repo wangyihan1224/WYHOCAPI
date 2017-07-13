@@ -12,6 +12,8 @@
 		7C2485E51F16290600374FD9 /* NSObjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C2485E41F16290600374FD9 /* NSObjectViewController.m */; };
 		7C26E0491F17088200FB55C1 /* NSCompoundPredicateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C26E0481F17088200FB55C1 /* NSCompoundPredicateViewController.m */; };
 		7C26E04C1F17194700FB55C1 /* NSConditionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C26E04B1F17194700FB55C1 /* NSConditionViewController.m */; };
+		7C26E04F1F171D1500FB55C1 /* NSConditionLockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C26E04E1F171D1500FB55C1 /* NSConditionLockViewController.m */; };
+		7C26E0521F17219B00FB55C1 /* NSCountedSetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C26E0511F17219B00FB55C1 /* NSCountedSetViewController.m */; };
 		7C31BBDB1F0C91090012AFB5 /* NSArrayEmple.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7C31BBDA1F0C91090012AFB5 /* NSArrayEmple.plist */; };
 		7C31BBDE1F0C99AE0012AFB5 /* BaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C31BBDD1F0C99AE0012AFB5 /* BaseView.m */; };
 		7C31BBE81F0CC50E0012AFB5 /* WyhModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C31BBE71F0CC50E0012AFB5 /* WyhModel.m */; };
@@ -58,6 +60,10 @@
 		7C26E0481F17088200FB55C1 /* NSCompoundPredicateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSCompoundPredicateViewController.m; path = "Objective-C/Home/ViewController/AppFrameworks/Framework/Objective-C/Classes/NSCompoundPredicateViewController.m"; sourceTree = SOURCE_ROOT; };
 		7C26E04A1F17194700FB55C1 /* NSConditionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSConditionViewController.h; path = "Objective-C/Home/ViewController/AppFrameworks/Framework/Objective-C/Classes/NSConditionViewController.h"; sourceTree = SOURCE_ROOT; };
 		7C26E04B1F17194700FB55C1 /* NSConditionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSConditionViewController.m; path = "Objective-C/Home/ViewController/AppFrameworks/Framework/Objective-C/Classes/NSConditionViewController.m"; sourceTree = SOURCE_ROOT; };
+		7C26E04D1F171D1500FB55C1 /* NSConditionLockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSConditionLockViewController.h; path = "Objective-C/Home/ViewController/AppFrameworks/Framework/Objective-C/Classes/NSConditionLockViewController.h"; sourceTree = SOURCE_ROOT; };
+		7C26E04E1F171D1500FB55C1 /* NSConditionLockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSConditionLockViewController.m; path = "Objective-C/Home/ViewController/AppFrameworks/Framework/Objective-C/Classes/NSConditionLockViewController.m"; sourceTree = SOURCE_ROOT; };
+		7C26E0501F17219B00FB55C1 /* NSCountedSetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSCountedSetViewController.h; path = "Objective-C/Home/ViewController/AppFrameworks/Framework/Objective-C/Classes/NSCountedSetViewController.h"; sourceTree = SOURCE_ROOT; };
+		7C26E0511F17219B00FB55C1 /* NSCountedSetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSCountedSetViewController.m; path = "Objective-C/Home/ViewController/AppFrameworks/Framework/Objective-C/Classes/NSCountedSetViewController.m"; sourceTree = SOURCE_ROOT; };
 		7C31BBDA1F0C91090012AFB5 /* NSArrayEmple.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = NSArrayEmple.plist; path = "Objective-C/Home/ViewController/AppFrameworks/Framework/WatchKit/NSArrayEmple.plist"; sourceTree = SOURCE_ROOT; };
 		7C31BBDC1F0C99AE0012AFB5 /* BaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseView.h; path = "Objective-C/Home/ViewController/AppFrameworks/Framework/WatchKit/BaseView.h"; sourceTree = SOURCE_ROOT; };
 		7C31BBDD1F0C99AE0012AFB5 /* BaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseView.m; path = "Objective-C/Home/ViewController/AppFrameworks/Framework/WatchKit/BaseView.m"; sourceTree = SOURCE_ROOT; };
@@ -1434,6 +1440,10 @@
 				7C26E0481F17088200FB55C1 /* NSCompoundPredicateViewController.m */,
 				7C26E04A1F17194700FB55C1 /* NSConditionViewController.h */,
 				7C26E04B1F17194700FB55C1 /* NSConditionViewController.m */,
+				7C26E04D1F171D1500FB55C1 /* NSConditionLockViewController.h */,
+				7C26E04E1F171D1500FB55C1 /* NSConditionLockViewController.m */,
+				7C26E0501F17219B00FB55C1 /* NSCountedSetViewController.h */,
+				7C26E0511F17219B00FB55C1 /* NSCountedSetViewController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -1638,6 +1648,7 @@
 				7C74FA911F0F7B5D00209412 /* NSAutoreleasePoolViewController.m in Sources */,
 				7C5D60361F14AF6D001F9AC8 /* NSCharacterSetViewController.m in Sources */,
 				7C74FA8A1F0F341A00209412 /* NSAttributedStringViewController.m in Sources */,
+				7C26E0521F17219B00FB55C1 /* NSCountedSetViewController.m in Sources */,
 				7C74FA971F0F844A00209412 /* NSBundleViewController.m in Sources */,
 				7C77BA641F0B80670035B440 /* ObjectiveCViewController.m in Sources */,
 				7C5D60301F13893D001F9AC8 /* NSCachedURLResponseViewController.m in Sources */,
@@ -1646,6 +1657,7 @@
 				7C444A491EF11B2D00F99891 /* BaseViewController.m in Sources */,
 				7C77BA611F0B80580035B440 /* FoundationViewController.m in Sources */,
 				7CA55C431F063C4800ABF90B /* MediaAndWebViewController.m in Sources */,
+				7C26E04F1F171D1500FB55C1 /* NSConditionLockViewController.m in Sources */,
 				7C444A4E1EF11CB700F99891 /* AppViewController.m in Sources */,
 				7C74FA871F0F2DF900209412 /* NSAssertionHandlerViewController.m in Sources */,
 				7C444A281EF119A000F99891 /* main.m in Sources */,
