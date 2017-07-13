@@ -14,6 +14,7 @@
 		7C26E04C1F17194700FB55C1 /* NSConditionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C26E04B1F17194700FB55C1 /* NSConditionViewController.m */; };
 		7C26E04F1F171D1500FB55C1 /* NSConditionLockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C26E04E1F171D1500FB55C1 /* NSConditionLockViewController.m */; };
 		7C26E0521F17219B00FB55C1 /* NSCountedSetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C26E0511F17219B00FB55C1 /* NSCountedSetViewController.m */; };
+		7C26E0551F1726D700FB55C1 /* NSDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C26E0541F1726D700FB55C1 /* NSDataViewController.m */; };
 		7C31BBDB1F0C91090012AFB5 /* NSArrayEmple.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7C31BBDA1F0C91090012AFB5 /* NSArrayEmple.plist */; };
 		7C31BBDE1F0C99AE0012AFB5 /* BaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C31BBDD1F0C99AE0012AFB5 /* BaseView.m */; };
 		7C31BBE81F0CC50E0012AFB5 /* WyhModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C31BBE71F0CC50E0012AFB5 /* WyhModel.m */; };
@@ -64,6 +65,8 @@
 		7C26E04E1F171D1500FB55C1 /* NSConditionLockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSConditionLockViewController.m; path = "Objective-C/Home/ViewController/AppFrameworks/Framework/Objective-C/Classes/NSConditionLockViewController.m"; sourceTree = SOURCE_ROOT; };
 		7C26E0501F17219B00FB55C1 /* NSCountedSetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSCountedSetViewController.h; path = "Objective-C/Home/ViewController/AppFrameworks/Framework/Objective-C/Classes/NSCountedSetViewController.h"; sourceTree = SOURCE_ROOT; };
 		7C26E0511F17219B00FB55C1 /* NSCountedSetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSCountedSetViewController.m; path = "Objective-C/Home/ViewController/AppFrameworks/Framework/Objective-C/Classes/NSCountedSetViewController.m"; sourceTree = SOURCE_ROOT; };
+		7C26E0531F1726D700FB55C1 /* NSDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSDataViewController.h; path = "Objective-C/Home/ViewController/AppFrameworks/Framework/Objective-C/Classes/NSDataViewController.h"; sourceTree = SOURCE_ROOT; };
+		7C26E0541F1726D700FB55C1 /* NSDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSDataViewController.m; path = "Objective-C/Home/ViewController/AppFrameworks/Framework/Objective-C/Classes/NSDataViewController.m"; sourceTree = SOURCE_ROOT; };
 		7C31BBDA1F0C91090012AFB5 /* NSArrayEmple.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = NSArrayEmple.plist; path = "Objective-C/Home/ViewController/AppFrameworks/Framework/WatchKit/NSArrayEmple.plist"; sourceTree = SOURCE_ROOT; };
 		7C31BBDC1F0C99AE0012AFB5 /* BaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseView.h; path = "Objective-C/Home/ViewController/AppFrameworks/Framework/WatchKit/BaseView.h"; sourceTree = SOURCE_ROOT; };
 		7C31BBDD1F0C99AE0012AFB5 /* BaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseView.m; path = "Objective-C/Home/ViewController/AppFrameworks/Framework/WatchKit/BaseView.m"; sourceTree = SOURCE_ROOT; };
@@ -1444,6 +1447,8 @@
 				7C26E04E1F171D1500FB55C1 /* NSConditionLockViewController.m */,
 				7C26E0501F17219B00FB55C1 /* NSCountedSetViewController.h */,
 				7C26E0511F17219B00FB55C1 /* NSCountedSetViewController.m */,
+				7C26E0531F1726D700FB55C1 /* NSDataViewController.h */,
+				7C26E0541F1726D700FB55C1 /* NSDataViewController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -1641,6 +1646,7 @@
 				7C74FA941F0F815600209412 /* NSBlockOperationViewController.m in Sources */,
 				7C5D60331F145FEC001F9AC8 /* NSCalendarViewController.m in Sources */,
 				7C5D60231F13205B001F9AC8 /* NSBundleNibViewController.m in Sources */,
+				7C26E0551F1726D700FB55C1 /* NSDataViewController.m in Sources */,
 				7C2485E51F16290600374FD9 /* NSObjectViewController.m in Sources */,
 				7CA55C341F063BBD00ABF90B /* AppFrameworksViewController.m in Sources */,
 				7C444A2B1EF119A000F99891 /* AppDelegate.m in Sources */,

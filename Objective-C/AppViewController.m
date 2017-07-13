@@ -21,7 +21,6 @@
 static NSString *appCell = @"appCell";
 static NSString *appFrameworksViewController = @"AppFrameworksViewController";
 static NSString *appServicesViewController = @"AppServicesViewController";
-static NSString *developerToolsViewController = @"DeveloperToolsViewController";
 static NSString *graphicsAndGamesViewController = @"GraphicsAndGamesViewController";
 static NSString *mediaAndWebViewController = @"MediaAndWebViewController";
 static NSString *systemViewController = @"SystemViewController";
@@ -56,7 +55,6 @@ static NSString *systemViewController = @"SystemViewController";
         _dataArray = [NSMutableArray new];
         [_dataArray addObject:appFrameworksViewController];
          [_dataArray addObject:appServicesViewController];
-         [_dataArray addObject:developerToolsViewController];
          [_dataArray addObject:graphicsAndGamesViewController];
          [_dataArray addObject:mediaAndWebViewController];
          [_dataArray addObject:systemViewController];
@@ -82,7 +80,7 @@ static NSString *systemViewController = @"SystemViewController";
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:appCell];
-    cell.textLabel.text = self.dataArray[indexPath.row];
+    cell.textLabel.text = [NSString stringWithFormat:@"%ld、%@",(long)indexPath.row+1,self.dataArray[indexPath.row]];
     return cell;
 }
 //每个cell的高度

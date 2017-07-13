@@ -8,6 +8,7 @@
 
 #import "FoundationViewController.h"
 
+#import "NSDataViewController.h"
 #import "NSCountedSetViewController.h"
 #import "NSConditionLockViewController.h"
 #import "NSConditionViewController.h"
@@ -26,6 +27,7 @@
 #import "NSAttributedStringViewController.h"
 #import "NSArrayViewController.h"
 #import "NSAssertionHandlerViewController.h"
+static NSString *nSDataViewController=@"NSDataViewController";
 static NSString *nSCountedSetViewController=@"NSCountedSetViewController";
 static NSString *nSConditionLockViewController=@"NSConditionLockViewController";
 static NSString *nSConditionViewController=@"NSConditionViewController";
@@ -85,6 +87,7 @@ static NSString *templateCell = @"templateCell";
         [_dataArray addObject:nSConditionViewController];
         [_dataArray addObject:nSConditionLockViewController];
         [_dataArray addObject:nSCountedSetViewController];
+        [_dataArray addObject:nSDataViewController];
     }
     return _dataArray;
 }
@@ -177,6 +180,10 @@ static NSString *templateCell = @"templateCell";
         [self.navigationController pushViewController:vc animated:YES];
     }else if ([selecTitle isEqualToString:nSCountedSetViewController]){
         NSCountedSetViewController *vc  = [NSCountedSetViewController new];
+        vc.title = selecTitle;
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if ([selecTitle isEqualToString:nSDataViewController]){
+        NSDataViewController *vc  = [NSDataViewController new];
         vc.title = selecTitle;
         [self.navigationController pushViewController:vc animated:YES];
     }
