@@ -34,6 +34,7 @@ static NSString *templateCell = @"templateCell";
 -(NSMutableArray *)titleArray{
     if (!_titleArray) {
         _titleArray = [NSMutableArray new];
+        [_titleArray addObject:@"NSCharacterSet"];
         [_titleArray addObject:@"Creating a Standard Character Set"];
         [_titleArray addObject:@"Creating a Character Set for URL Encoding"];
         [_titleArray addObject:@"Creating a Custom Character Set"];
@@ -47,6 +48,16 @@ static NSString *templateCell = @"templateCell";
 -(NSMutableArray *)dataArray{
     if (!_dataArray) {
         _dataArray = [NSMutableArray new];
+        //NSCharacterSet
+        NSMutableArray *titlarr = [NSMutableArray new];
+        
+        WyhModel *model = [WyhModel new];
+        model.firstName = @"NSCharacterSet";
+        model.secondName = @"ns字符对象表示一组兼容unicode的字符。NSString和NSScanner对象使用nsset对象来将字符组合在一起进行搜索操作，这样他们就可以在搜索过程中找到任何一组特定的字符。这个集群的两个公共类，ns字符集和nsmutable字符集，分别声明静态和动态字符集的编程接口";
+        [titlarr addObject:model];
+        
+        [_dataArray addObject:titlarr];
+        
         //Creating a Standard Character Set
         NSMutableArray *creatArr = [NSMutableArray new];
         NSCharacterSet *set = [NSCharacterSet alphanumericCharacterSet];

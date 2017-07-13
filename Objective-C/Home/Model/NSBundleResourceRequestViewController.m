@@ -34,6 +34,7 @@ static NSString *templateCell = @"templateCell";
 -(NSMutableArray *)titleArray{
     if (!_titleArray) {
         _titleArray = [NSMutableArray new];
+        [_titleArray addObject:@"NSBundleResourceRequest"];
         [_titleArray addObject:@"Initializing a Resource Request"];
         [_titleArray addObject:@"Accessing the Configuration"];
         [_titleArray addObject:@"Requesting Resources"];
@@ -47,6 +48,16 @@ static NSString *templateCell = @"templateCell";
 -(NSMutableArray *)dataArray{
     if (!_dataArray) {
         _dataArray = [NSMutableArray new];
+        //NSBundleResourceRequest
+        NSMutableArray *titlarr = [NSMutableArray new];
+        
+        WyhModel *model = [WyhModel new];
+        model.firstName = @"NSBundleResourceRequest";
+        model.secondName = @"一个NSBundleResourceRequest对象管理随需应变资源的可用性。按需资源是app Store上的应用程序内容，只有在你需要的时候才会下载";
+        [titlarr addObject:model];
+        
+        [_dataArray addObject:titlarr];
+        
         //Initializing a Resource Request
         NSMutableArray *initArr = [NSMutableArray new];
         

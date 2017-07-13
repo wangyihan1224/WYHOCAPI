@@ -34,6 +34,7 @@ static NSString *templateCell = @"templateCell";
 -(NSMutableArray *)titleArray{
     if (!_titleArray) {
         _titleArray = [NSMutableArray new];
+        [_titleArray addObject:@"NSByteCountFormatter"];
         [_titleArray addObject:@"Creating Strings from Byte Count"];
         [_titleArray addObject:@"Setting Formatting Styles"];
         [_titleArray addObject:@"Constants"];
@@ -43,6 +44,16 @@ static NSString *templateCell = @"templateCell";
 -(NSMutableArray *)dataArray{
     if (!_dataArray) {
         _dataArray = [NSMutableArray new];
+        //NSByteCountFormatter
+        NSMutableArray *titlarr = [NSMutableArray new];
+        
+        WyhModel *model = [WyhModel new];
+        model.firstName = @"NSByteCountFormatter";
+        model.secondName = @"NSByteCountFormatter类将一个字节计数值转换为一个本地化的描述，该描述使用适当的字节修饰符(KB、MB、GB等)进行格式化";
+        [titlarr addObject:model];
+        
+        [_dataArray addObject:titlarr];
+        
         //Creating Strings from Byte Count
         NSMutableArray *creatArr = [NSMutableArray new];
         NSByteCountFormatter *byteCount = [NSByteCountFormatter new];

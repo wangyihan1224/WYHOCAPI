@@ -63,7 +63,7 @@ static NSString *templateCell = @"templateCell";
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:templateCell];
-    cell.textLabel.text = self.dataArray[indexPath.row];
+    cell.textLabel.text = [NSString stringWithFormat:@"%ld、%@",(long)indexPath.row+1,self.dataArray[indexPath.row]];
     return cell;
 }
 

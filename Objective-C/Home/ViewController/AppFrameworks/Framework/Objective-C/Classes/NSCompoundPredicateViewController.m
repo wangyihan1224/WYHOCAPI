@@ -1,22 +1,22 @@
 //
-//  NSCachedURLResponseViewController.m
+//  NSCompoundPredicateViewController.m
 //  Objective-C
 //
-//  Created by 王乙涵 on 2017/7/10.
+//  Created by 王乙涵 on 2017/7/13.
 //  Copyright © 2017年 simpleway. All rights reserved.
 //
 
-#import "NSCachedURLResponseViewController.h"
+#import "NSCompoundPredicateViewController.h"
 #import "NSArrayTableViewCell.h"
 #import "WyhModel.h"
 static NSString *templateCell = @"templateCell";
-@interface NSCachedURLResponseViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface NSCompoundPredicateViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong)UITableView *wyhTable;
 @property(nonatomic,strong)NSMutableArray *dataArray;
 @property(nonatomic,strong)NSMutableArray *titleArray;
 @end
 
-@implementation NSCachedURLResponseViewController
+@implementation NSCompoundPredicateViewController
 
 -(UITableView *)wyhTable{
     
@@ -34,74 +34,87 @@ static NSString *templateCell = @"templateCell";
 -(NSMutableArray *)titleArray{
     if (!_titleArray) {
         _titleArray = [NSMutableArray new];
-        [_titleArray addObject:@"NSCachedURLResponse"];
-        [_titleArray addObject:@"Creating a cached URL response"];
-        [_titleArray addObject:@"Getting cached URL response properties"];
+        [_titleArray addObject:@"NSCompoundPredicate"];
+        [_titleArray addObject:@"Constructors"];
+        [_titleArray addObject:@"Getting Information About a CompoundPredicate"];
         [_titleArray addObject:@"Constants"];
+        [_titleArray addObject:@"Initializers"];
     }
     return _titleArray;
 }
 -(NSMutableArray *)dataArray{
     if (!_dataArray) {
         _dataArray = [NSMutableArray new];
-        //NSCachedURLResponse
+        //NSCompoundPredicate
         NSMutableArray *titlarr = [NSMutableArray new];
         
         WyhModel *model = [WyhModel new];
-        model.firstName = @"NSCachedURLResponse";
-        model.secondName = @"NSCachedURLResponse对象表示对URL请求的缓存响应。它以NSURLResponse对象的形式提供服务器的响应元数据，以及包含实际缓存内容数据的NSData对象。它的存储策略决定了响应是否应该缓存在磁盘、内存中或根本不存在";
+        model.firstName = @"NSCompoundPredicate";
+        model.secondName = @"nscompound谓词是NSPredicate的一个子类，用于表示逻辑“gate”操作(/或非)和比较操作。";
         [titlarr addObject:model];
         
         [_dataArray addObject:titlarr];
-        
-        //Creating a cached URL response
-        NSMutableArray *creatArr = [NSMutableArray new];
-        NSCachedURLResponse *cacheurl = [[NSCachedURLResponse alloc]initWithResponse:[NSURLResponse new] data:[NSData data]];
+        //Constructors
+        NSMutableArray *constructorArr  = [NSMutableArray new];
+        NSPredicate *cate = [NSPredicate predicateWithFormat:@"a>2"];
+        NSArray *arr = @[cate];
+        NSCompoundPredicate *predicate = [NSCompoundPredicate andPredicateWithSubpredicates:arr];
         WyhModel *model1 = [WyhModel new];
-        model1.firstName = @"- (instancetype)initWithResponse:(NSURLResponse *)response data:(NSData *)data;";
-        model1.secondName = @"nscachedurlresponse初始化一个对象。\n例子：NSCachedURLResponse *cacheurl = [[NSCachedURLResponse alloc]initWithResponse:[NSURLResponse new] data:[NSData data]];";
-        [creatArr addObject:model1];
+        model1.firstName = @"+ (NSCompoundPredicate *)andPredicateWithSubpredicates:(NSArray<NSPredicate *> *)subpredicates;";
+        model1.secondName = @"返回一个新的谓词，该谓词是在给定数组中通过and ing谓词生成的。\n例子：NSPredicate *cate = [NSPredicate predicateWithFormat:@\"2\"];\nNSArray *arr = @[cate];\nNSCompoundPredicate *predicate = [NSCompoundPredicate andPredicateWithSubpredicates:arr];";
+        [constructorArr addObject:model1];
         
         WyhModel *model2 = [WyhModel new];
-        model2.firstName = @"- (instancetype)initWithResponse:(NSURLResponse *)response data:(NSData *)data userInfo:(NSDictionary *)userInfo storagePolicy:(NSURLCacheStoragePolicy)storagePolicy;";
-        model2.secondName = @"nscachedurlresponse初始化一个对象。\n例子：NSCachedURLResponse *cacheurl = [[NSCachedURLResponse alloc]initWithResponse:[NSURLResponse new] data:[NSData data] userInfo:nil];";
-        [creatArr addObject:model2];
-        
-        [_dataArray addObject:creatArr];
-        
-        //Getting cached URL response properties
-        NSMutableArray *getArr = [NSMutableArray new];
+        model2.firstName = @"+ (NSCompoundPredicate *)notPredicateWithSubpredicate:(NSPredicate *)predicate;";
+        model2.secondName = @"返回一个由非指定谓词形成的新谓词。\n例子：NSPredicate *cate = [NSPredicate predicateWithFormat:@\"2\"];\nNSCompoundPredicate *predicate = [NSCompoundPredicate notPredicateWithSubpredicate:cate];";
+        [constructorArr addObject:model2];
         
         WyhModel *model3 = [WyhModel new];
-        model3.firstName = @"@property(readonly, copy) NSData *data;";
-        model3.secondName = @"接收器的缓存数据。。\n例子：NSCachedURLResponse *cacheurl = [[NSCachedURLResponse alloc]initWithResponse:[NSURLResponse new] data:[NSData data] userInfo:nil];\nNSData *data = cacheurl.data;";
-        [getArr addObject:model3];
+        model3.firstName = @"+ (NSCompoundPredicate *)orPredicateWithSubpredicates:(NSArray<NSPredicate *> *)subpredicates;";
+        model3.secondName = @"返回一个由给定数组中的谓词组成的新谓词。\n例子：NSPredicate *cate = [NSPredicate predicateWithFormat:@\"2\"];\nNSArray *arr = @[cate];\nNSCompoundPredicate *predicate = [NSCompoundPredicate orPredicateWithSubpredicates:arr];";
+        [constructorArr addObject:model3];
         
         WyhModel *model4 = [WyhModel new];
-        model4.firstName = @"@property(readonly, copy) NSURLResponse *response;";
-        model4.secondName = @"与接收方关联的URL响应对象。\n例子：NSCachedURLResponse *cacheurl = [[NSCachedURLResponse alloc]initWithResponse:[NSURLResponse new] data:[NSData data] userInfo:nil];\n NSURLResponse *response = cacheurl.response;";
-        [getArr addObject:model4];
+        model4.firstName = @"- (instancetype)initWithType:(NSCompoundPredicateType)type subpredicates:(NSArray<NSPredicate *> *)subpredicates;";
+        model4.secondName = @"使用给定数组的谓词将接收到的接收器返回给给定的类型。\n例子：NSPredicate *cate = [NSPredicate predicateWithFormat:@\"2\"];\nNSArray *arr = @[cate];\n  NSCompoundPredicate *compound = [[NSCompoundPredicate alloc]initWithType:NSNotPredicateType subpredicates:arr];";
+        [constructorArr addObject:model4];
+      
+        [_dataArray addObject:constructorArr];
+        
+        //Getting Information About a CompoundPredicate
+        NSMutableArray *getArr = [NSMutableArray new];
         
         WyhModel *model5 = [WyhModel new];
-        model5.firstName = @"@property(readonly) NSURLCacheStoragePolicy storagePolicy;";
-        model5.secondName = @"接收方的高速缓存存储策略。\n例子：NSCachedURLResponse *cacheurl = [[NSCachedURLResponse alloc]initWithResponse:[NSURLResponse new] data:[NSData data] userInfo:nil];\nNSURLCacheStoragePolicy policy = cacheurl.storagePolicy;";
+        model5.firstName = @"@property(readonly) NSCompoundPredicateType compoundPredicateType;";
+        model5.secondName = @"接收方的谓词类型。\n例子：NSCompoundPredicateType compoundPredicateType=predicate.compoundPredicateType;";
         [getArr addObject:model5];
         
         WyhModel *model6 = [WyhModel new];
-        model6.firstName = @"@property(readonly, copy) NSDictionary *userInfo;";
-        model6.secondName = @"接收者的用户信息字典。\n例子：NSCachedURLResponse *cacheurl = [[NSCachedURLResponse alloc]initWithResponse:[NSURLResponse new] data:[NSData data] userInfo:nil];\n  NSDictionary *userinfo = cacheurl.userInfo;";
+        model6.firstName = @"@property(readonly, copy) NSArray *subpredicates;";
+        model6.secondName = @"接收机的subpredicates。\n例子：NSArray *arr2 = predicate.subpredicates;";
         [getArr addObject:model6];
-      
+        
         [_dataArray addObject:getArr];
+        
         //Constants
         NSMutableArray *constantArr = [NSMutableArray new];
         
         WyhModel *model7 = [WyhModel new];
-        model7.firstName = @"NSURLCacheStoragePolicy";
-        model7.secondName = @"这些常量指定缓存策略的nscachedurlresponse对象使用。\n例子：NSURLCacheStorageAllowed:指定存储在NSURLCache允许无限制\nNSURLCacheStorageAllowedInMemoryOnly:指定存储在NSURLCache是允许的；然而储存应仅限于记忆\nNSURLCacheStorageNotAllowed:指定存储在NSURLCache没有任何时尚允许的，无论是在内存或磁盘上";
+        model7.firstName = @"NSCompoundPredicateType";
+        model7.secondName = @"这些常量描述了nscompound谓词的可能类型。\n例子：NSNotPredicateType:不一个逻辑谓词\nNSAndPredicateType:一个且逻辑谓词\nNSOrPredicateType:一个或逻辑谓词";
         [constantArr addObject:model7];
         
         [_dataArray addObject:constantArr];
+        
+        //Initializers
+        NSMutableArray *initialArr = [NSMutableArray new];
+        
+        WyhModel *model8 = [WyhModel new];
+        model8.firstName = @"- (instancetype)initWithCoder:(NSCoder *)coder;";
+        model8.secondName = @"。\n例子： NSCompoundPredicate *com = [[NSCompoundPredicate alloc]initWithCoder:[NSCoder new]];";
+        [initialArr addObject:model8];
+       
+        [_dataArray addObject:initialArr];
     }
     return _dataArray;
 }

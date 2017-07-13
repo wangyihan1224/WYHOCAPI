@@ -35,6 +35,7 @@ static NSString *templateCell = @"templateCell";
 -(NSMutableArray *)titleArray{
     if (!_titleArray) {
         _titleArray = [NSMutableArray new];
+        [_titleArray addObject:@"NSAutoreleasePool"];
         [_titleArray addObject:@"Managing a Pool"];
         [_titleArray addObject:@"Adding an Object to a Pool"];
     }
@@ -43,6 +44,16 @@ static NSString *templateCell = @"templateCell";
 -(NSMutableArray *)dataArray{
     if (!_dataArray) {
         _dataArray = [NSMutableArray new];
+        //NSAutoreleasePool
+        NSMutableArray *titlarr = [NSMutableArray new];
+        
+        WyhModel *model = [WyhModel new];
+        model.firstName = @"NSAutoreleasePool";
+        model.secondName = @"NSAutoreleasePool类用于支持Cocoa的引用计数的内存管理系统。当池本身被耗尽时，自动释放池存储的对象将被发送一个释放消息";
+        [titlarr addObject:model];
+        
+        [_dataArray addObject:titlarr];
+        
         //Managing a Pool
         NSMutableArray *managingArr = [NSMutableArray new];
        

@@ -8,6 +8,8 @@
 
 #import "FoundationViewController.h"
 
+#import "NSConditionViewController.h"
+#import "NSCompoundPredicateViewController.h"
 #import "NSComparisonPredicateViewController.h"
 #import "NSCoderViewController.h"
 #import "NSCharacterSetViewController.h"
@@ -22,6 +24,8 @@
 #import "NSAttributedStringViewController.h"
 #import "NSArrayViewController.h"
 #import "NSAssertionHandlerViewController.h"
+static NSString *nSConditionViewController=@"NSConditionViewController";
+static NSString *nSCompoundPredicateViewController=@"NSCompoundPredicateViewController";
 static NSString *nSComparisonPredicateViewController=@"NSComparisonPredicateViewController";
 static NSString *nSCoderViewController=@"NSCoderViewController";
 static NSString *nSCharacterSetViewController=@"NSCharacterSetViewController";
@@ -73,6 +77,8 @@ static NSString *templateCell = @"templateCell";
         [_dataArray addObject:nSCharacterSetViewController];
         [_dataArray addObject:nSCoderViewController];
         [_dataArray addObject:nSComparisonPredicateViewController];
+        [_dataArray addObject:nSCompoundPredicateViewController];
+        [_dataArray addObject:nSConditionViewController];
     }
     return _dataArray;
 }
@@ -90,7 +96,7 @@ static NSString *templateCell = @"templateCell";
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:templateCell];
-    cell.textLabel.text = self.dataArray[indexPath.row];
+    cell.textLabel.text = [NSString stringWithFormat:@"%ld、%@",(long)indexPath.row+1,self.dataArray[indexPath.row]];
     return cell;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -149,6 +155,14 @@ static NSString *templateCell = @"templateCell";
         [self.navigationController pushViewController:vc animated:YES];
     }else if ([selecTitle isEqualToString:nSComparisonPredicateViewController]){
         NSComparisonPredicateViewController *vc  = [NSComparisonPredicateViewController new];
+        vc.title = selecTitle;
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if ([selecTitle isEqualToString:nSCompoundPredicateViewController]){
+        NSCompoundPredicateViewController *vc  = [NSCompoundPredicateViewController new];
+        vc.title = selecTitle;
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if ([selecTitle isEqualToString:nSConditionViewController]){
+        NSConditionViewController *vc  = [NSConditionViewController new];
         vc.title = selecTitle;
         [self.navigationController pushViewController:vc animated:YES];
     }

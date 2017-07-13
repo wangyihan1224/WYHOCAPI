@@ -34,6 +34,7 @@ static NSString *templateCell = @"templateCell";
 -(NSMutableArray *)titleArray{
     if (!_titleArray) {
         _titleArray = [NSMutableArray new];
+        [_titleArray addObject:@"NSComparisonPredicate"];
         [_titleArray addObject:@"Creating Comparison Predicates"];
         [_titleArray addObject:@"Getting Information About a Comparison Predicate"];
         [_titleArray addObject:@"Constants"];
@@ -44,6 +45,16 @@ static NSString *templateCell = @"templateCell";
 -(NSMutableArray *)dataArray{
     if (!_dataArray) {
         _dataArray = [NSMutableArray new];
+        //NSComparisonPredicate
+        NSMutableArray *titlarr = [NSMutableArray new];
+        
+        WyhModel *model = [WyhModel new];
+        model.firstName = @"NSComparisonPredicate";
+        model.secondName = @"nscompare on谓词是NSPredicate的一个子类，用来比较表达式。";
+        [titlarr addObject:model];
+        
+        [_dataArray addObject:titlarr];
+        
         //Creating Comparison Predicates
         NSMutableArray *creaArr = [NSMutableArray new];
         NSExpression *pressiong = [NSExpression expressionForAnyKey];

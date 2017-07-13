@@ -34,6 +34,7 @@ static NSString *templateCell = @"templateCell";
 -(NSMutableArray *)titleArray{
     if (!_titleArray) {
         _titleArray = [NSMutableArray new];
+        [_titleArray addObject:@"NSAttributedString"];
         [_titleArray addObject:@"Creating an NSAttributedString Object"];
         [_titleArray addObject:@"Retrieving Character Information"];
         [_titleArray addObject:@"Retrieving Attriute Information"];
@@ -51,6 +52,16 @@ static NSString *templateCell = @"templateCell";
 -(NSMutableArray *)dataArray{
     if (!_dataArray) {
         _dataArray = [NSMutableArray new];
+        //NSAttributedString
+        NSMutableArray *titlarr = [NSMutableArray new];
+        
+        WyhModel *model = [WyhModel new];
+        model.firstName = @"NSAttributedString";
+        model.secondName = @"NSAttributedString对象管理字符字符串和相关的属性集(例如，字体和kerning)，它们适用于字符串中的单个字符或字符范围。字符及其属性的关联称为一个带属性字符串。集群的两个公共类,NSAttributedString NSMutableAttributedString,声明的编程接口只读字符串和修改的字符串,分别";
+        [titlarr addObject:model];
+        
+        [_dataArray addObject:titlarr];
+        
         //Creating an NSAttributedString Object
         NSMutableArray *creatArr =  [NSMutableArray new];
         NSAttributedString *string = [NSAttributedString new];

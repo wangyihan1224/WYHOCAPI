@@ -37,6 +37,7 @@ static NSString *templateCell = @"templateCell";
 -(NSMutableArray *)titleArray{
     if (!_titleArray) {
         _titleArray = [NSMutableArray new];
+        [_titleArray addObject:@"NSCoder"];
         [_titleArray addObject:@"Inspecting a Coder"];
         [_titleArray addObject:@"Encoding General Data"];
         [_titleArray addObject:@"Encoding Geometry-Based Data"];
@@ -55,6 +56,16 @@ static NSString *templateCell = @"templateCell";
 -(NSMutableArray *)dataArray{
     if (!_dataArray) {
         _dataArray = [NSMutableArray new];
+        //NSCoder
+        NSMutableArray *titlarr = [NSMutableArray new];
+        
+        WyhModel *model = [WyhModel new];
+        model.firstName = @"NSCoder";
+        model.secondName = @"NSCoder抽象类声明了具体子类使用的接口，用于在内存和其他格式之间传输对象和其他值。该功能提供了存档的基础(对象和数据项存储在磁盘上)和分布(在不同进程或线程之间复制对象和数据项)。为这些目的而提供的具体子类是NSArchiver、NSUnarchiver、NSKeyedArchiver、NSKeyedUnarchiver和NSPortCoder。NSCoder的具体子类通常被称为编码类，以及这些类的实例作为编码对象(或简单的编码者)。一个只能编码值的编码器对象被称为编码器对象，它只能解码值为解码器对象。";
+        [titlarr addObject:model];
+        
+        [_dataArray addObject:titlarr];
+        
         //Inspecting a Coder
         NSMutableArray *inspectArr = [NSMutableArray new];
         NSCoder *coder = [NSCoder new];

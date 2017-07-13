@@ -34,6 +34,7 @@ static NSString *templateCell = @"templateCell";
 -(NSMutableArray *)titleArray{
     if (!_titleArray) {
         _titleArray = [NSMutableArray new];
+        [_titleArray addObject:@"NSCache"];
         [_titleArray addObject:@"Managing the Name"];
         [_titleArray addObject:@"Managing Cache Size"];
         [_titleArray addObject:@"Managing iscardable Content"];
@@ -46,6 +47,16 @@ static NSString *templateCell = @"templateCell";
 -(NSMutableArray *)dataArray{
     if (!_dataArray) {
         _dataArray = [NSMutableArray new];
+        //NSCache
+        NSMutableArray *titlarr = [NSMutableArray new];
+        
+        WyhModel *model = [WyhModel new];
+        model.firstName = @"NSCache";
+        model.secondName = @"NSCache对象是存储键值对的可变集合，类似于NSDictionary对象。NSCache类提供了一个编程接口，用于添加和删除对象，并根据缓存中的对象的总成本和数量设置驱逐策略";
+        [titlarr addObject:model];
+        
+        [_dataArray addObject:titlarr];
+        
         //Managing the Name
         NSMutableArray *manageArr = [NSMutableArray new];
         NSCache *cache = [NSCache new];

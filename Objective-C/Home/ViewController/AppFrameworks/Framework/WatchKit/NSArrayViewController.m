@@ -35,6 +35,7 @@ static NSString *templateCell = @"templateCell";
 -(NSMutableArray *)titleArray{
     if (!_titleArray) {
         _titleArray = [NSMutableArray new];
+        [_titleArray addObject:@"NSArray"];
         [_titleArray addObject:@"Creating an Array"];
         [_titleArray addObject:@"Initializing an Array"];
         [_titleArray addObject:@"Querying an Array"];
@@ -62,6 +63,15 @@ static NSString *templateCell = @"templateCell";
 //        NSArray *arr = [NSArray new];
         
         _dataArray = [NSMutableArray new];
+        //NSArray
+        NSMutableArray *titlarr = [NSMutableArray new];
+        
+        WyhModel *model = [WyhModel new];
+        model.firstName = @"NSArray";
+        model.secondName = @"NSArray及其子类NSMutableArray管理被称为数组的对象的有序集合。NSArray创建静态数组，NSMutableArray创建动态数组。当需要有序的对象集合时，可以使用数组";
+        [titlarr addObject:model];
+        
+        [_dataArray addObject:titlarr];
         
          //creating an array
         NSMutableArray *creatingArr = [NSMutableArray new];

@@ -1,22 +1,22 @@
 //
-//  NSBlockOperationViewController.m
+//  NSObjectViewController.m
 //  Objective-C
 //
-//  Created by 王乙涵 on 2017/7/7.
+//  Created by 王乙涵 on 2017/7/12.
 //  Copyright © 2017年 simpleway. All rights reserved.
 //
 
-#import "NSBlockOperationViewController.h"
+#import "NSObjectViewController.h"
 #import "NSArrayTableViewCell.h"
 #import "WyhModel.h"
 static NSString *templateCell = @"templateCell";
-@interface NSBlockOperationViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface NSObjectViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong)UITableView *wyhTable;
 @property(nonatomic,strong)NSMutableArray *dataArray;
 @property(nonatomic,strong)NSMutableArray *titleArray;
 @end
 
-@implementation NSBlockOperationViewController
+@implementation NSObjectViewController
 
 -(UITableView *)wyhTable{
     
@@ -34,43 +34,45 @@ static NSString *templateCell = @"templateCell";
 -(NSMutableArray *)titleArray{
     if (!_titleArray) {
         _titleArray = [NSMutableArray new];
-        [_titleArray addObject:@"NSBlockOperation"];
-        [_titleArray addObject:@"A"];
+         [_titleArray addObject:@"Initializing a Class"];
+        [_titleArray addObject:@"Creating,Copying,and Deallocating Objects"];
     }
     return _titleArray;
 }
 -(NSMutableArray *)dataArray{
     if (!_dataArray) {
         _dataArray = [NSMutableArray new];
-        //NSBlockOperation
-        NSMutableArray *titlarr = [NSMutableArray new];
-        
-        WyhModel *model = [WyhModel new];
-        model.firstName = @"NSBlockOperation";
-        model.secondName = @"NSBlockOperation类是NSOperation的一个具体子类，它管理一个或多个块的并发执行。您可以使用这个对象一次性地执行几个块，而不必为每个块创建单独的操作对象。当执行多个块时，只有当所有块完成执行时，操作本身才被认为是完成的。";
-        [titlarr addObject:model];
-        
-        [_dataArray addObject:titlarr];
-        
-        NSMutableArray *arr = [NSMutableArray new];
+        //Initializing a Class
+        NSMutableArray *initArr = [NSMutableArray new];
         
         WyhModel *model1 = [WyhModel new];
-        model1.firstName = @"+ (instancetype)blockOperationWithBlock:(void (^)(void))block;";
-        model1.secondName = @"创建并返回一个NSBlockOperation对象并将指定的块添加到它。\n例子：  NSBlockOperation *operation = [NSBlockOperation blockOperationWithBlock:^{\n}]; ";
-        [arr addObject:model1];
+        model1.firstName = @"+ (void)initialize;";
+        model1.secondName = @"在收到第一个消息之前初始化该类。\n例子：[NSObject initialize];";
+        [initArr addObject:model1];
         
         WyhModel *model2 = [WyhModel new];
-        model2.firstName = @"- (void)addExecutionBlock:(void (^)(void))block;";
-        model2.secondName = @"将指定的块添加到接收方的块列表中以执行。\n例子：  NSBlockOperation *operation = [NSBlockOperation blockOperationWithBlock:^{\n}];\n[operation addExecutionBlock :^{\n}]; ";
-        [arr addObject:model2];
+        model2.firstName = @"+ (void)load;";
+        model2.secondName = @"每当在objective-a中添加类或类别时，就会调用;在加载时实现这个方法来执行类特定的行为。\n例子：[NSObject load];";
+        [initArr addObject:model2];
+        
+        [_dataArray addObject:initArr];
+        
+        //Creating,Copying,and Deallocating Objects
+        NSMutableArray *deallocatArr = [NSMutableArray new];
         
         WyhModel *model3 = [WyhModel new];
-        model3.firstName = @"@property(readonly, copy) NSArray<void (^)(void)> *executionBlocks;";
-        model3.secondName = @"与接收方相关联的块。\n例子：  NSBlockOperation *operation = [NSBlockOperation blockOperationWithBlock:^{\n}];\nNSArray *arr2 = operation.executionBlocks; ";
-        [arr addObject:model3];
-    
+        model3.firstName = @"+ (instancetype)alloc;";
+        model3.secondName = @"返回一个接收类的新实例。\n例子：[NSObject alloc];";
+        [deallocatArr addObject:model3];
         
-        [_dataArray addObject:arr];
+        WyhModel *model4 = [WyhModel new];
+        model4.firstName = @"+ (instancetype)allocWithZone:(struct _NSZone *)zone;";
+        model4.secondName = @"返回一个接收类的新实例。\n例子：[NSObject alloc];";
+        [deallocatArr addObject:model4];
+        
+       
+        [_dataArray addObject:deallocatArr];
+        
     }
     return _dataArray;
 }

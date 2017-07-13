@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		2E9ED6A6277284CF04753CF1 /* libPods-Objective-C.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC6EBF780F90F2B9F817FAFC /* libPods-Objective-C.a */; };
 		7C2485E11F16092400374FD9 /* NSComparisonPredicateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C2485E01F16092400374FD9 /* NSComparisonPredicateViewController.m */; };
+		7C2485E51F16290600374FD9 /* NSObjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C2485E41F16290600374FD9 /* NSObjectViewController.m */; };
+		7C26E0491F17088200FB55C1 /* NSCompoundPredicateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C26E0481F17088200FB55C1 /* NSCompoundPredicateViewController.m */; };
+		7C26E04C1F17194700FB55C1 /* NSConditionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C26E04B1F17194700FB55C1 /* NSConditionViewController.m */; };
 		7C31BBDB1F0C91090012AFB5 /* NSArrayEmple.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7C31BBDA1F0C91090012AFB5 /* NSArrayEmple.plist */; };
 		7C31BBDE1F0C99AE0012AFB5 /* BaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C31BBDD1F0C99AE0012AFB5 /* BaseView.m */; };
 		7C31BBE81F0CC50E0012AFB5 /* WyhModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C31BBE71F0CC50E0012AFB5 /* WyhModel.m */; };
@@ -49,6 +52,12 @@
 		0EBB9B3491D9C50013382E22 /* Pods-Objective-C.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Objective-C.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Objective-C/Pods-Objective-C.debug.xcconfig"; sourceTree = "<group>"; };
 		7C2485DF1F16092400374FD9 /* NSComparisonPredicateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSComparisonPredicateViewController.h; path = "Objective-C/Home/Model/NSComparisonPredicateViewController.h"; sourceTree = SOURCE_ROOT; };
 		7C2485E01F16092400374FD9 /* NSComparisonPredicateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSComparisonPredicateViewController.m; path = "Objective-C/Home/Model/NSComparisonPredicateViewController.m"; sourceTree = SOURCE_ROOT; };
+		7C2485E31F16290600374FD9 /* NSObjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSObjectViewController.h; sourceTree = "<group>"; };
+		7C2485E41F16290600374FD9 /* NSObjectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSObjectViewController.m; sourceTree = "<group>"; };
+		7C26E0471F17088200FB55C1 /* NSCompoundPredicateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSCompoundPredicateViewController.h; path = "Objective-C/Home/ViewController/AppFrameworks/Framework/Objective-C/Classes/NSCompoundPredicateViewController.h"; sourceTree = SOURCE_ROOT; };
+		7C26E0481F17088200FB55C1 /* NSCompoundPredicateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSCompoundPredicateViewController.m; path = "Objective-C/Home/ViewController/AppFrameworks/Framework/Objective-C/Classes/NSCompoundPredicateViewController.m"; sourceTree = SOURCE_ROOT; };
+		7C26E04A1F17194700FB55C1 /* NSConditionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSConditionViewController.h; path = "Objective-C/Home/ViewController/AppFrameworks/Framework/Objective-C/Classes/NSConditionViewController.h"; sourceTree = SOURCE_ROOT; };
+		7C26E04B1F17194700FB55C1 /* NSConditionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSConditionViewController.m; path = "Objective-C/Home/ViewController/AppFrameworks/Framework/Objective-C/Classes/NSConditionViewController.m"; sourceTree = SOURCE_ROOT; };
 		7C31BBDA1F0C91090012AFB5 /* NSArrayEmple.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = NSArrayEmple.plist; path = "Objective-C/Home/ViewController/AppFrameworks/Framework/WatchKit/NSArrayEmple.plist"; sourceTree = SOURCE_ROOT; };
 		7C31BBDC1F0C99AE0012AFB5 /* BaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseView.h; path = "Objective-C/Home/ViewController/AppFrameworks/Framework/WatchKit/BaseView.h"; sourceTree = SOURCE_ROOT; };
 		7C31BBDD1F0C99AE0012AFB5 /* BaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseView.m; path = "Objective-C/Home/ViewController/AppFrameworks/Framework/WatchKit/BaseView.m"; sourceTree = SOURCE_ROOT; };
@@ -132,6 +141,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7C2485E21F1628F200374FD9 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				7C2485E31F16290600374FD9 /* NSObjectViewController.h */,
+				7C2485E41F16290600374FD9 /* NSObjectViewController.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		7C444A1A1EF119A000F99891 = {
 			isa = PBXGroup;
 			children = (
@@ -344,9 +362,9 @@
 		7CA55BAE1F06318A00ABF90B /* Objective-C */ = {
 			isa = PBXGroup;
 			children = (
+				7C2485E21F1628F200374FD9 /* Classes */,
 				7CA55C4C1F065CA100ABF90B /* Reference */,
 				7CA55C4D1F065CA100ABF90B /* Protocols */,
-				7CA55C4E1F065CA100ABF90B /* Classes */,
 				7C77BA621F0B80670035B440 /* ObjectiveCViewController.h */,
 				7C77BA631F0B80670035B440 /* ObjectiveCViewController.m */,
 			);
@@ -1412,6 +1430,10 @@
 				7C5D60381F14C161001F9AC8 /* NSCoderViewController.m */,
 				7C2485DF1F16092400374FD9 /* NSComparisonPredicateViewController.h */,
 				7C2485E01F16092400374FD9 /* NSComparisonPredicateViewController.m */,
+				7C26E0471F17088200FB55C1 /* NSCompoundPredicateViewController.h */,
+				7C26E0481F17088200FB55C1 /* NSCompoundPredicateViewController.m */,
+				7C26E04A1F17194700FB55C1 /* NSConditionViewController.h */,
+				7C26E04B1F17194700FB55C1 /* NSConditionViewController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -1428,13 +1450,6 @@
 			children = (
 			);
 			path = Protocols;
-			sourceTree = "<group>";
-		};
-		7CA55C4E1F065CA100ABF90B /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Classes;
 			sourceTree = "<group>";
 		};
 		7CA55C4F1F065CA700ABF90B /* ExtendedTypes */ = {
@@ -1616,6 +1631,7 @@
 				7C74FA941F0F815600209412 /* NSBlockOperationViewController.m in Sources */,
 				7C5D60331F145FEC001F9AC8 /* NSCalendarViewController.m in Sources */,
 				7C5D60231F13205B001F9AC8 /* NSBundleNibViewController.m in Sources */,
+				7C2485E51F16290600374FD9 /* NSObjectViewController.m in Sources */,
 				7CA55C341F063BBD00ABF90B /* AppFrameworksViewController.m in Sources */,
 				7C444A2B1EF119A000F99891 /* AppDelegate.m in Sources */,
 				7CA55C3D1F063C0200ABF90B /* GraphicsAndGamesViewController.m in Sources */,
@@ -1626,6 +1642,7 @@
 				7C77BA641F0B80670035B440 /* ObjectiveCViewController.m in Sources */,
 				7C5D60301F13893D001F9AC8 /* NSCachedURLResponseViewController.m in Sources */,
 				7C5D602A1F13760C001F9AC8 /* NSByteCountFormatterViewController.m in Sources */,
+				7C26E04C1F17194700FB55C1 /* NSConditionViewController.m in Sources */,
 				7C444A491EF11B2D00F99891 /* BaseViewController.m in Sources */,
 				7C77BA611F0B80580035B440 /* FoundationViewController.m in Sources */,
 				7CA55C431F063C4800ABF90B /* MediaAndWebViewController.m in Sources */,
@@ -1636,6 +1653,7 @@
 				7C2485E11F16092400374FD9 /* NSComparisonPredicateViewController.m in Sources */,
 				7C5D60271F136C9F001F9AC8 /* NSBundleResourceRequestViewController.m in Sources */,
 				7CA55C371F063BCE00ABF90B /* AppServicesViewController.m in Sources */,
+				7C26E0491F17088200FB55C1 /* NSCompoundPredicateViewController.m in Sources */,
 				7CA55C401F063C3C00ABF90B /* SystemViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

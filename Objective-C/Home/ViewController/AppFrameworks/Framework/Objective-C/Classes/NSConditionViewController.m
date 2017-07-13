@@ -1,22 +1,22 @@
 //
-//  NSAssertionHandlerViewController.m
+//  NSConditionViewController.m
 //  Objective-C
 //
-//  Created by 王乙涵 on 2017/7/7.
+//  Created by 王乙涵 on 2017/7/13.
 //  Copyright © 2017年 simpleway. All rights reserved.
 //
 
-#import "NSAssertionHandlerViewController.h"
+#import "NSConditionViewController.h"
 #import "NSArrayTableViewCell.h"
 #import "WyhModel.h"
 static NSString *templateCell = @"templateCell";
-@interface NSAssertionHandlerViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface NSConditionViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong)UITableView *wyhTable;
 @property(nonatomic,strong)NSMutableArray *dataArray;
 @property(nonatomic,strong)NSMutableArray *titleArray;
 @end
 
-@implementation NSAssertionHandlerViewController
+@implementation NSConditionViewController
 
 -(UITableView *)wyhTable{
     
@@ -34,64 +34,24 @@ static NSString *templateCell = @"templateCell";
 -(NSMutableArray *)titleArray{
     if (!_titleArray) {
         _titleArray = [NSMutableArray new];
-        [_titleArray addObject:@"NSAssertionHandler"];
-        [_titleArray addObject:@"Handling Assertion Filures"];
-        [_titleArray addObject:@"Constants"];
-        
-}
+        [_titleArray addObject:@"NSCondition"];
+    }
     return _titleArray;
 }
 -(NSMutableArray *)dataArray{
     if (!_dataArray) {
         _dataArray = [NSMutableArray new];
-        //NSAssertionHandler
+        //NSCondition
         NSMutableArray *titlarr = [NSMutableArray new];
         
         WyhModel *model = [WyhModel new];
-        model.firstName = @"NSAssertionHandler";
-        model.secondName = @"ns果断处理程序对象被自动创建来处理错误的断言。断言宏，比如NSAssert和NSCAssert，用于评估一个条件，如果条件值为false，宏将一个字符串传递给一个用于描述故障的ns断言处理程序对象。每个线程都有自己的ns断言处理程序对象。调用时,断言处理程序输出一个错误消息,包括方法和类(或函数)和提出了一个NSInternalInconsistencyException包含断言";
+        model.firstName = @"NSCondition";
+        model.secondName = @"nsclass类实现了一个条件变量，它的语义遵循用于posix样式条件的语义。条件对象在给定线程中充当锁和检查点。当它测试条件并执行由条件触发的任务时，锁保护您的代码。检查点行为要求在线程执行其任务之前，条件是正确的。虽然条件不是真的，但是线程阻塞了。它仍然被阻塞，直到另一个线程发出条件对象的信号";
         [titlarr addObject:model];
         
         [_dataArray addObject:titlarr];
-        
-        
-//          NSAssertionHandler *handler = [NSAssertionHandler currentHandler];
-        
-        //Handling Assertion Filures
-        NSMutableArray *handArr = [NSMutableArray new];
-        
-        WyhModel *model1 = [WyhModel new];
-        model1.firstName = @"@property(class, readonly, strong) NSAssertionHandler *currentHandler;";
-        model1.secondName = @"返回与当前线程相关联的ns断言处理程序对象。\n例子：  NSAssertionHandler *handler = [NSAssertionHandler currentHandler];";
-        [handArr addObject:model1];
-      
-        WyhModel *model2 = [WyhModel new];
-        model2.firstName = @"- (void)handleFailureInFunction:(NSString *)functionName file:(NSString *)fileName lineNumber:(NSInteger)line description:(NSString *)format, ...;";
-        model2.secondName = @"日志(使用NSLog)一个错误消息，其中包括函数的名称、文件的名称和行号。\n例子：  NSAssertionHandler *handler = [NSAssertionHandler currentHandler];\n[handler handleFailureInFunction:@\"函数的名称\" file:@\"文件的名称\" lineNumber:1 description:@\"描述\"];";
-        [handArr addObject:model2];
-      
-        WyhModel *model3 = [WyhModel new];
-        model3.firstName = @"- (void)handleFailureInMethod:(SEL)selector object:(id)object file:(NSString *)fileName lineNumber:(NSInteger)line description:(NSString *)format, ...;";
-        model3.secondName = @"日志(使用NSLog)一个错误消息，其中包括失败的方法的名称、对象的类名、源文件的名称和行号。\n例子：   [handler handleFailureInMethod:@selector(handlertest) object:self file:@\"源文件的名称\" lineNumber:1 description:@\"描述\"];";
-        [handArr addObject:model3];
-       
-        [_dataArray addObject:handArr];
-        
-        //Constants
-        NSMutableArray *constantsArr = [NSMutableArray new];
-        
-        WyhModel *model4 = [WyhModel new];
-        model4.firstName = @"NSAssertionHandlerKey";
-        model4.secondName = @"这个常量引用了每个线程断言处理程序对象的线程字典中的一个键。\n例子：   NSAssertionHandlerKey:在线程字典中具有相应值的键  handleFailureInMethod:object:file:lineNumber:description: and handleFailureInFunction:file:lineNumber:description:";
-        [constantsArr addObject:model4];
-        
-        [_dataArray addObject:constantsArr];
     }
     return _dataArray;
-}
-
--(void)handlertest{
-    NSLog(@"handlertest handlertest handlertest");;
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -137,6 +97,7 @@ static NSString *templateCell = @"templateCell";
     
     return [self.titleArray indexOfObject:title];
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
